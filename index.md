@@ -1,7 +1,7 @@
-# Web AR in 2020
+# Web 3D in 2021
 
-## [Presentation](./ar_presentation_20200203.html)
+## [Presentation](./web3d_presentation_20210127.html)
 
-## [Projects](./ar_projects_20200203.html)
+## [Projects](./web3d_projects_20210127.html)
 
 ## Source: https://github.com/fdoganis/slides

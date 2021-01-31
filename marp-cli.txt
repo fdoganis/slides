@@ -1,0 +1,58 @@
+# On Windows
+
+# Install choco
+
+## Start PowerShell in Admin mode
+
+Then check:
+
+```
+Get-ExecutionPolicy
+```
+
+Run
+
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+# Install marp-cli
+
+```
+choco install marp-cli
+```
+
+## Generate slides!
+
+```
+marp --pdf D:\Dev\xrcourse\slides\ar_presentation.md
+```
+
+Problem: no HTML: script tags are not interpreted but displayed. Could we ignore them? Preprocess?
+
+```
+marp --html --pdf --allow-local-files D:\Dev\xrcourse\slides\ar_presentation.md
+```
+
+
+Problem: margin is wrong. trying:
+
+```
+marp --html  --theme D:\Dev\slides\gaia169.css --pdf --allow-local-files D:\Dev\xrcourse\slides\ar_presentation.md
+```
+
+with gaia169.css:
+
+```css
+/* @theme gaia169 */
+
+@import 'gaia';
+
+section {
+  width: 1920px;
+  height: 1080px;
+}
+
+```
+
+

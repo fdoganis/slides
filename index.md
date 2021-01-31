@@ -4,4 +4,14 @@
 
 ## [Projects](./web3d_projects_20210127.html)
 
+---
+
+# Web AR in 2021
+
+## [Presentation](./ar_presentation_20210201.html)
+
+## [Projects](./ar_projects_20210201.html)
+
+---
+
 ## Source: https://github.com/fdoganis/slides

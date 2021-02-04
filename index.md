@@ -12,6 +12,7 @@
 
 ## [Projects](./ar_projects_20210201.html)
 
+## [Extra: body tracking](./bodytracking.md)
 ---
 
 ## Source: https://github.com/fdoganis/slides

@@ -1,8 +1,8 @@
 # Atelier Web 3D AR VR 2021
 
-## [Presentation](https://filetransfer.extranet.3ds.com/)
+## [Atelier de programmation](./Atelier_programmation_Web3D_AR_VR.html)
 
-## [Projects](./web3d_projects_20210127.html)
+## [Présentation générale](https://filetransfer.extranet.3ds.com/)
 
 ---
 

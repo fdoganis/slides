@@ -12,9 +12,24 @@
 <h1><strong>Introduction à la Réalité Augmentée</strong></h1>
 
 <p>Fivos DOGANIS</p>
-<script src="http://threejs.org/build/three.min.js"></script>
-<div id="canvas">
-<script type="text/javascript">
+<iframe style=
+"position: absolute;
+top: '1px';
+bottom: 1px;
+left: 1px;
+right: 1px;
+width:100%;
+height: 100%;
+border: 0;" srcdoc ="\
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset='utf-8'>
+    <script src='http://threejs.org/build/three.min.js'></script>
+</head>
+<body>
+<div id='canvas'>
+<script type='text/javascript'>
     var container, camera, scene, renderer, mesh,
     mouse = { x: 0, y: 0 },
     objects = [],
@@ -22,13 +37,13 @@
     CANVAS_HEIGHT = 200;
     container = document.getElementById( 'canvas' );
     container.style.position = 'absolute';
-    container.style.bottom = '-5%';
-    container.style.left = '8%';
+    container.style.bottom = '-7%';
+    container.style.left = '7%';
     container.style.width = '100%';
     container.style.zIndex = '1';
-    container.style.userSelect = "none";
-    container.style.webkitUserSelect = "none";
-    container.style.MozUserSelect = "none";
+    container.style.userSelect = 'none';
+    container.style.webkitUserSelect = 'none';
+    container.style.MozUserSelect = 'none';
     document.body.appendChild( container );
     renderer = new THREE.WebGLRenderer({alpha: true, antialias:true});
     renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
@@ -63,6 +78,9 @@
         render();
     })();
 </script>
+</body>
+</html>" >
+</iframe>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="invert" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="lead" data-footer="photo de couverture: www.instagram.com/steveroe_" data-theme="gaia" class="lead" style="--class:lead;--footer:photo de couverture: www.instagram.com/steveroe_;--theme:gaia;">
 <h1>whoami</h1>

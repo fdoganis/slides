@@ -8,11 +8,11 @@
 
 ---
 
-# Web AR in 2021
+# Web AR in 2022
 
-## [Presentation](./ar_presentation_20210206.html)
+## [Presentation](./ar_presentation_20220206.html)
 
-## [Projects](./ar_projects_20210201.html)
+## [Projects](./ar_projects_20220206.html)
 
 ## [Extra: body tracking](./bodytracking.md)
 

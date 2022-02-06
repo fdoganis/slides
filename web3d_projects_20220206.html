@@ -1,0 +1,1364 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDAgMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwIDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNSIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{-webkit-animation-name:__bespoke_marp__!important;animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current next" minmax(140px,1fr) "current note" 2fr "info    note" 3em/2fr 1fr;height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{word-wrap:break-word;box-sizing:border-box;font-size:1.1em;height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;scrollbar-color:hsla(0,0%,93%,.5) transparent;scrollbar-width:thin;white-space:pre-wrap;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap");div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section .hljs{background:#000;color:#f8f8f8;display:block;overflow-x:auto;padding:.5em}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-quote{color:#aeaeae;font-style:italic}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#e28964}div#p>svg>foreignObject>section .hljs-string{color:#65b042}div#p>svg>foreignObject>section .hljs-subst{color:#daefa3}div#p>svg>foreignObject>section .hljs-link,div#p>svg>foreignObject>section .hljs-regexp{color:#e9c062}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section,div#p>svg>foreignObject>section .hljs-tag,div#p>svg>foreignObject>section .hljs-title{color:#89bdff}div#p>svg>foreignObject>section .hljs-class .hljs-title,div#p>svg>foreignObject>section .hljs-doctag{text-decoration:underline}div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-number,div#p>svg>foreignObject>section .hljs-symbol{color:#3387cc}div#p>svg>foreignObject>section .hljs-params,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#3e87e3}div#p>svg>foreignObject>section .hljs-attribute{color:#cda869}div#p>svg>foreignObject>section .hljs-meta{color:#8996a8}div#p>svg>foreignObject>section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#p>svg>foreignObject>section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-selector-class{color:#9b703f}div#p>svg>foreignObject>section .hljs-selector-id{color:#8b98ab}div#p>svg>foreignObject>section .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section .hljs-strong{font-weight:700}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:580px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin:.5em 0 0}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit}div#p>svg>foreignObject>section h1{font-size:1.8em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.3em}div#p>svg>foreignObject>section h4{font-size:1.1em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section p{margin:1em 0 0}div#p>svg>foreignObject>section ol>li,div#p>svg>foreignObject>section ul>li{margin:.3em 0 0}div#p>svg>foreignObject>section ol>li>p,div#p>svg>foreignObject>section ul>li>p{margin:.6em 0 0}div#p>svg>foreignObject>section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#p>svg>foreignObject>section pre{display:block;margin:1em 0 0;min-height:1em;overflow:visible}div#p>svg>foreignObject>section pre code{box-sizing:border-box;font-size:.7em;margin:0;min-width:100%;padding:.5em}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:calc(580px - 1em)}div#p>svg>foreignObject>section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#p>svg>foreignObject>section blockquote:before{left:0;top:0}div#p>svg>foreignObject>section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section mark{background:transparent}div#p>svg>foreignObject>section table{border-collapse:collapse;border-spacing:0;margin:1em 0 0}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-style:solid;border-width:1px;padding:.2em .4em}div#p>svg>foreignObject>section:after,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#p>svg>foreignObject>section:after{--marpit-root-font-size:66%}div#p>svg>foreignObject>section header{top:0}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{left:0;right:0}div#p>svg>foreignObject>section footer{bottom:0}div#p>svg>foreignObject>section{word-wrap:break-word;--color-background:#fff8e1;--color-background-stripe:rgba(69,90,100,.1);--color-foreground:#455a64;--color-dimmed:#6a7a7d;--color-highlight:#0288d1;background-color:var(--color-background);background-image:linear-gradient(135deg,hsla(0,0%,53%,0),hsla(0,0%,53%,.02) 50%,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.05));color:var(--color-foreground);font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;font-size:35px;height:720px;letter-spacing:1.25px;line-height:1.35;padding:70px;width:1280px}div#p>svg>foreignObject>section{--marpit-root-font-size:35px}div#p>svg>foreignObject>section:after{bottom:0;font-size:80%;right:0}div#p>svg>foreignObject>section:after{--marpit-root-font-size:80%}div#p>svg>foreignObject>section a,div#p>svg>foreignObject>section mark{color:var(--color-highlight)}div#p>svg>foreignObject>section code{background:var(--color-dimmed);color:var(--color-background)}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:var(--color-highlight)}div#p>svg>foreignObject>section pre>code{background:var(--color-foreground)}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header,div#p>svg>foreignObject>section section:after{color:var(--color-dimmed)}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-color:var(--color-foreground)}div#p>svg>foreignObject>section table thead th{background:var(--color-foreground);color:var(--color-background)}div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe,transparent)}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section.invert{--color-background:#455a64;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#dad8c8;--color-highlight:#81d4fa}div#p>svg>foreignObject>section.gaia{--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa}div#p>svg>foreignObject>section.lead{display:flex;flex-flow:column nowrap;justify-content:center}div#p>svg>foreignObject>section.lead h1,div#p>svg>foreignObject>section.lead h2,div#p>svg>foreignObject>section.lead h3,div#p>svg>foreignObject>section.lead h4,div#p>svg>foreignObject>section.lead h5,div#p>svg>foreignObject>section.lead h6{text-align:center}div#p>svg>foreignObject>section.lead h1 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h2 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h3 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h4 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h5 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h6 svg[data-marp-fitting=svg]{--preserve-aspect-ratio:xMidYMid meet}div#p>svg>foreignObject>section.lead p{text-align:center}div#p>svg>foreignObject>section.lead blockquote>h1,div#p>svg>foreignObject>section.lead blockquote>h2,div#p>svg>foreignObject>section.lead blockquote>h3,div#p>svg>foreignObject>section.lead blockquote>h4,div#p>svg>foreignObject>section.lead blockquote>h5,div#p>svg>foreignObject>section.lead blockquote>h6,div#p>svg>foreignObject>section.lead blockquote>p{text-align:left}div#p>svg>foreignObject>section.lead blockquote svg[data-marp-fitting=svg]:not([data-marp-fitting-math]){--preserve-aspect-ratio:xMinYMin meet}div#p>svg>foreignObject>section.lead ol>li>p,div#p>svg>foreignObject>section.lead ul>li>p{text-align:left}div#p>svg>foreignObject>section.lead table{margin-left:auto;margin-right:auto}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-theme="gaia" class="invert" style="--class:invert;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://ipfs.io/ipfs/Qmd91vgr2dxRxFdaaRRVWNmqhfqejB2UbRRgsEnbyPxWP4&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="1" data-class="invert" data-theme="gaia" class="invert" style="--class:invert;--theme:gaia;" data-marpit-advanced-background="content">
+<h1><strong>Création d'applications 3D</strong></h1>
+<h2><strong>en utilisant les technologies du Web</strong></h2>
+<p>Fivos Doganis | <a href="mailto:fivos.doganis@gmail.com">fivos.doganis@gmail.com</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="invert" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-footer="image de couverture: https://hicetnunc.art/objkt/627718" data-theme="gaia" style="--footer:image de couverture: https://hicetnunc.art/objkt/627718;--theme:gaia;">
+<h1>Intérêt du Web pour la 3D</h1>
+<ul>
+<li>expériences <strong>mobiles</strong></li>
+<li>technologies <strong>libres</strong>
+<ul>
+<li><strong>cross-platform</strong>, pas d'installation, pas de store</li>
+<li>ouvertes</li>
+<li><strong>non-propiétaires</strong> (contrairement à Unity ou Unreal)</li>
+<li><strong>gratuites</strong></li>
+</ul>
+</li>
+<li>interfaçage avec de nombreuses APIs web existantes</li>
+</ul>
+<footer>image de couverture: <a href="https://hicetnunc.art/objkt/627718">https://hicetnunc.art/objkt/627718</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-theme="gaia" data-marpit-pagination="3" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Etapes</h1>
+<ul>
+<li>Run</li>
+<li>Debug</li>
+<li>Build</li>
+<li>Modify</li>
+<li>Create</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="gaia" data-marpit-pagination="4" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Run: Demo</h1>
+<ul>
+<li>Vérifier que votre smartphone supporte le scan de <a href="https://en.wikipedia.org/wiki/QR_code">QR code</a></li>
+<li>iOS : app Camera par défault</li>
+<li>Android
+<ul>
+<li>utiliser Google Chrome + bouton scan</li>
+<li>ou installer une application fiable de scan de QR code
+<ul>
+<li>Kaspersky, <strong>Trend Micro</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Solutions 100% web
+<ul>
+<li><a href="http://webqr.com">webqr.com</a></li>
+<li><a href="http://qrcodescan.in">qrcodescan.in</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="gaia" data-marpit-pagination="5" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Debug</h1>
+<ul>
+<li>There will be bugs :)</li>
+<li>F12</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger"><code>debugger</code> statement</a></li>
+<li>Tips:
+<ul>
+<li><a href="https://webglfundamentals.org/webgl/lessons/webgl-setup-and-installation.html">https://webglfundamentals.org/webgl/lessons/webgl-setup-and-installation.html</a></li>
+<li><a href="https://r105.threejsfundamentals.org/threejs/lessons/threejs-debugging-javascript.html">https://r105.threejsfundamentals.org/threejs/lessons/threejs-debugging-javascript.html</a></li>
+<li><a href="https://www.khronos.org/webgl/wiki/Debugging">https://www.khronos.org/webgl/wiki/Debugging</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="gaia" data-marpit-pagination="6" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Build: outils</h1>
+<ul>
+<li>
+<p>Développement web</p>
+<ul>
+<li>navigateur (Firefox, Chrome, Safari Mobile)</li>
+<li>Git (facultatif mais très utile)</li>
+<li>éditeur (VSCode), ou <a href="https://glitch.com/">Glitch</a> (aucune installation!)</li>
+</ul>
+</li>
+<li>
+<p>Technologies: HTML, JS, CSS, WebGL, THREE.js</p>
+</li>
+<li>
+<p>Optionnel:</p>
+<ul>
+<li>OpenStreetMap, OpenLayers, CesiumJS, <a href="https://geoservices.ign.fr/documentation/diffusion/telechargement-donnees-libres.html">Géoservices IGN</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-theme="gaia" data-marpit-pagination="7" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Installation du navigateur</h1>
+<ul>
+<li>Firefox installé par défaut
+<ul>
+<li>devrait suffir!</li>
+</ul>
+</li>
+<li>Chrome
+<ul>
+<li>pour tester la compatibilité et certaines fonctionnalités</li>
+<li>installer la dernière version (97+) sur mobile</li>
+<li>installer Chromium sur desktop
+<ul>
+<li>version open-source sans services propriétaires</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-bash"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>sudo apt-get install chromium-browser
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-theme="gaia" data-marpit-pagination="8" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Installation de Git</h1>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>sudo apt-get install git
+
+git config --global user.name &quot;myusername&quot;
+git config --global user.email myname@mymailprovider.com
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-theme="gaia" data-marpit-pagination="9" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1><a href="https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/">Installation de l'éditeur VSCode</a></h1>
+<pre><code class="language-bash"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>sudo apt update
+sudo apt install software-properties-common apt-transport-https wget
+
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+
+sudo add-apt-repository <span class="hljs-string">&quot;deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main&quot;</span>
+
+sudo apt install code
+</span></span></foreignObject></svg></code></pre>
+<p><a href="https://unix.stackexchange.com/questions/452020/">Supprimer les warnings GPG</a></p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>sudo gpgconf --kill dirmngr
+sudo chown -R $USER:$USER ~/.gnupg
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-theme="gaia" data-marpit-pagination="10" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Customisation</h1>
+<ul>
+<li>Eviter clignottement de la UI en modifiant les préférences:</li>
+</ul>
+<pre><code class="language-bash"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-built_in">set</span> window.titleBarStyle to custom
+</span></span></foreignObject></svg></code></pre>
+<ul>
+<li>Extensions conseillées
+<ul>
+<li><a href="hhttps://marketplace.visualstudio.com/items?itemName=yandeu.five-server">Five Server</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=cesium.gltf-vscode">glTF Tools</a></li>
+<li><a href="https://github.com/racz16/WebGL-GLSL-Editor">WebGL GLSL Editor</a>,</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=circledev.glsl-canvas">glsl-canvas</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-theme="gaia" data-marpit-pagination="11" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Développement en local</h1>
+<ul>
+<li>Impossible de charger un fichier depuis le disque sans action utilisateur</li>
+<li>CORS: <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/CORS">Cross Origin Resource Sharing</a>
+<ul>
+<li>une des nombreuses mesures de sécurité des navigateurs web</li>
+</ul>
+</li>
+</ul>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> nécessité de lancer un serveur, comme <a href="https://marketplace.visualstudio.com/items?itemName=yandeu.five-server">Five Server</a>, ou encore:</p>
+<pre><code class="language-shell"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> /home/somedir</span>
+<span class="hljs-meta">$</span><span class="bash"> python -m SimpleHTTPServer</span>
+</span></span></foreignObject></svg></code></pre>
+<p>Puis aller sur <code>http://localhost:8000</code></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-theme="gaia" data-marpit-pagination="12" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Glitch: éditeur interactif en ligne</h1>
+<p><img src="https://aws1.discourse-cdn.com/business6/uploads/glitch/original/2X/6/63bf00cd3adcc2f2d9ee808d52941634f26e01bc.png" alt="" /></p>
+<ul>
+<li><a href="https://glitch.com/">https://glitch.com/</a></li>
+<li><a href="https://glitch.com/~threejs">Exemple THREE.js</a></li>
+</ul>
+<p>Mais aussi <a href="http://Codepen.io">Codepen.io</a>, <a href="http://Repl.it">Repl.it</a> etc.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-class="invert lead" data-theme="gaia" class="invert lead" data-marpit-pagination="13" data-marpit-pagination-total="85" style="--paginate:true;--class:invert lead;--theme:gaia;">
+<h1>Exercices WebGL</h1>
+<ul>
+<li>webglacademy</li>
+<li>webglfundamentals</li>
+<li>webgl2fundamentals</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-theme="gaia" data-marpit-pagination="14" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Vérifier que WebGL est supporté</h1>
+<ul>
+<li><a href="https://caniuse.com/webgl">https://caniuse.com/webgl</a></li>
+<li><a href="https://webglreport.com/">https://webglreport.com/</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-theme="gaia" data-marpit-pagination="15" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<p><strong>Programme minimaliste</strong>: permet de tester que WebGL fonctionne<br />
+<img class="emoji" draggable="false" alt="⚠️" src="https://twemoji.maxcdn.com/2/svg/26a0.svg" data-marp-twemoji=""/> aucun test d'erreur, pour plus de clarté (<em>don't do this at home!</em> <img class="emoji" draggable="false" alt="😉" src="https://twemoji.maxcdn.com/2/svg/1f609.svg" data-marp-twemoji=""/>)</p>
+<pre><code class="language-html"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&#x27;utf-8&#x27;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&#x27;640&#x27;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&#x27;480&#x27;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">const</span> canvas = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;canvas&#x27;</span>);
+        <span class="hljs-comment">/** <span class="hljs-doctag">@type <span class="hljs-type">{WebGLRenderingContext}</span> </span>*/</span>
+        <span class="hljs-keyword">const</span> gl = canvas.getContext(<span class="hljs-string">&#x27;webgl&#x27;</span>); <span class="hljs-comment">// instead of &#x27;2d&#x27;</span>
+        gl.clearColor(<span class="hljs-number">1.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">1.</span>); <span class="hljs-comment">// RGBA: opaque red</span>
+        gl.clear(gl.COLOR_BUFFER_BIT); <span class="hljs-comment">// uses current color (state machine)</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="gaia" style="--theme:gaia;"><iframe style=
+"position: absolute;
+top: 110px;
+bottom: 110px;
+left: 320px;
+right: 320px;
+width:100%;
+height: 100%;
+border: 0;" srcdoc ="\
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <canvas width='640' height='480'></canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const gl = canvas.getContext('webgl');
+        gl.clearColor(1., 0., 0., 1.);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+    </script>
+</body>
+</html>" >
+</iframe>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-theme="gaia" data-marpit-pagination="17" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<p><a href="https://webglfundamentals.org/webgl/lessons/webgl-smallest-programs.html"><strong>Programme minimaliste &quot;utile&quot;</strong></a>: des shaders, sans vertex buffer</p>
+<p>Ajouter ce code à la suite de <code>gl.clear</code>:</p>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-comment">// vertex shader</span>
+    <span class="hljs-keyword">const</span> vs_source = <span class="hljs-string">`
+    void main() {
+        gl_Position = vec4(0., 0., 0., 1.);  // center
+        gl_PointSize = 120.0;
+    }`</span>;
+
+    <span class="hljs-comment">// fragment shader</span>
+    <span class="hljs-keyword">const</span> fs_source = <span class="hljs-string">`
+    precision mediump float;
+
+    void main() {
+        gl_FragColor = vec4(0., 1., 0., 1.);  // green
+    }`</span>;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-theme="gaia" data-marpit-pagination="18" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<p>Suite du code: <a href="https://github.com/gfxfundamentals/webgl-fundamentals/blob/master/webgl/resources/webgl-utils.js">fonctions utiles</a> (toujours sans test d'erreur!)</p>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">buildShader</span>(<span class="hljs-params">gl, shaderSource, shaderType</span>) </span>{
+        <span class="hljs-keyword">const</span> shader = gl.createShader(shaderType); <span class="hljs-comment">// Create the shader object</span>
+        gl.shaderSource(shader, shaderSource); <span class="hljs-comment">// Load the shader source</span>
+        gl.compileShader(shader); <span class="hljs-comment">// Compile the shader</span>
+        <span class="hljs-keyword">return</span> shader;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createProgram</span>(<span class="hljs-params">gl, shaders</span>) </span>{
+        <span class="hljs-keyword">const</span> program = gl.createProgram();
+        shaders.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">shader</span>) </span>{
+            gl.attachShader(program, shader);
+        });
+        gl.linkProgram(program);
+        <span class="hljs-keyword">return</span> program;
+    }
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-theme="gaia" data-marpit-pagination="19" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<p>Suite et fin du code: chargement des shaders, du programme et rendu</p>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
+    <span class="hljs-comment">// load and compile the shaders</span>
+    <span class="hljs-keyword">const</span> vs = buildShader(gl, vs_source, gl.VERTEX_SHADER);
+    <span class="hljs-keyword">const</span> fs = buildShader(gl, fs_source, gl.FRAGMENT_SHADER);
+    
+    <span class="hljs-comment">// Create program on the GPU!</span>
+    <span class="hljs-keyword">const</span> program = createProgram(gl, [vs, fs]);
+    
+    <span class="hljs-comment">// Set current program (WebGL is a state machine!)</span>
+    gl.useProgram(program);
+
+    <span class="hljs-comment">// Draw 1 big point, see shaders </span>
+    <span class="hljs-keyword">const</span> offset = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">const</span> count = <span class="hljs-number">1</span>;
+    gl.drawArrays(gl.POINTS, offset, count);
+    
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-theme="gaia" style="--theme:gaia;"><iframe style=
+"position: absolute;
+top: 110px;
+bottom: 110px;
+left: 320px;
+right: 320px;
+width:100%;
+height: 100%;
+border: 0;" srcdoc ="\
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <canvas width='640' height='480'></canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const gl = canvas.getContext('webgl'); // instead of '2d'
+        gl.clearColor(1., 0., 0., 1.0);
+        gl.clear(gl.COLOR_BUFFER_BIT); 
+         // vertex shader
+    const vs_source = `
+    void main() {
+        gl_Position = vec4(0., 0., 0., 1.);  // center
+        gl_PointSize = 120.0;
+    }`;
+    // fragment shader
+    const fs_source = `
+    precision mediump float;
+    void main() {
+        gl_FragColor = vec4(0., 1., 0., 1.);  // green
+    }`;
+    function buildShader(gl, shaderSource, shaderType) {
+        const shader = gl.createShader(shaderType); // Create the shader object
+        gl.shaderSource(shader, shaderSource); // Load the shader source
+        gl.compileShader(shader); // Compile the shader
+        return shader;
+    }
+    function createProgram(gl, shaders) {
+        const program = gl.createProgram();
+        shaders.forEach(function(shader) {
+            gl.attachShader(program, shader);
+        });
+        gl.linkProgram(program);
+        return program;
+    }
+    // load and compile the shaders
+    const vs = buildShader(gl, vs_source, gl.VERTEX_SHADER);
+    const fs = buildShader(gl, fs_source, gl.FRAGMENT_SHADER);
+    // setup GLSL program
+    const program = createProgram(gl, [vs, fs]);
+    gl.useProgram(program);
+    // Draw 1 big point, see shaders 
+    const offset = 0;
+    const count = 1;
+    gl.drawArrays(gl.POINTS, offset, count);
+    </script>
+</body>
+</html>" >
+</iframe>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#000000" data-class="lead invert" data-theme="gaia" class="lead invert" style="--background-color:#000000;--class:lead invert;--theme:gaia;background-color:#000000;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;http://webglworkshop.com/presentations/images/iknowwebgl.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="21" data-background-color="#000000" data-class="lead invert" data-theme="gaia" class="lead invert" style="--background-color:#000000;--class:lead invert;--theme:gaia;background-color:#000000;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="lead invert" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="#000000" data-class="lead invert" data-theme="gaia" class="lead invert" style="--background-color:#000000;--class:lead invert;--theme:gaia;background-color:#000000;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;http://webglworkshop.com/presentations/images/showme.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="22" data-background-color="#000000" data-class="lead invert" data-theme="gaia" class="lead invert" style="--background-color:#000000;--class:lead invert;--theme:gaia;background-color:#000000;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="lead invert" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="lead" data-theme="gaia" class="lead" style="--class:lead;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;http://webglworkshop.com/presentations/images/result.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="23" data-class="lead" data-theme="gaia" class="lead" style="--class:lead;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="lead" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="24" data-marpit-pagination-total="85" style="--paginate:true;--class:lead invert;--theme:gaia;">
+<h1><a href="http://webglworkshop.com/presentations/Workshop28-webgl2.html">Mon premier triangle</a></h1>
+<p>voir <a href="https://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html">webglfundamentals</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="25" data-marpit-pagination-total="85" style="--paginate:true;--class:lead;--theme:gaia;">
+<h1>Initialisation</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="26" data-marpit-pagination-total="85" style="--paginate:true;--class:lead;--theme:gaia;">
+<h2>1 . Data</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-theme="gaia" data-marpit-pagination="27" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>Description de la géométrie, avec des <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array">Float32Array</a></li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">const</span> vertices = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Float32Array</span>([
+    <span class="hljs-number">0.5</span>,  <span class="hljs-number">0.5</span>,
+    -<span class="hljs-number">0.5</span>,  <span class="hljs-number">0.5</span>,
+    -<span class="hljs-number">0.5</span>, -<span class="hljs-number">0.5</span>]); <span class="hljs-comment">// 2D points: 3 * (x, y) coordinates </span>
+</span></span></foreignObject></svg></code></pre>
+<ul>
+<li>Création du Vertex Buffer Object (VBO) + <strong>UPLOAD</strong> vers le GPU</li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">const</span> vbo = gl.createBuffer(); <span class="hljs-comment">// create Vertex Buffer Object (VBO) id</span>
+<span class="hljs-comment">// Set current VBO: bind &#x27;vbo&#x27; to the ARRAY_BUFFER bind point,</span>
+<span class="hljs-comment">//  a global variable internal to WebGL (state machine!)</span>
+gl.bindBuffer(gl.ARRAY_BUFFER, vbo); 
+<span class="hljs-comment">// UPLOAD current VBO to GPU, where it will be processed by the shaders</span>
+<span class="hljs-comment">// <span class="hljs-doctag">NOTE:</span> STATIC_DRAW: hint for WebGL: our data won&#x27;t change</span>
+gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW); 
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="28" data-marpit-pagination-total="85" style="--paginate:true;--class:lead;--theme:gaia;">
+<h2>2 . Shaders</h2>
+<p>qui utilisent les données du buffer</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-footer="https://webglfundamentals.org/webgl/lessons/webgl-precision-issues.html)" data-theme="gaia" data-marpit-pagination="29" data-marpit-pagination-total="85" style="--paginate:true;--footer:https://webglfundamentals.org/webgl/lessons/webgl-precision-issues.html);--theme:gaia;">
+<ul>
+<li>Vertex Shader: gl_Position sera utilisée par le fragment shader</li>
+</ul>
+<pre><code class="language-glsl"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-keyword">attribute</span> <span class="hljs-type">vec2</span> a_position; <span class="hljs-comment">// IN, from buffer: 2D point</span>
+    <span class="hljs-type">void</span> main() {
+        <span class="hljs-built_in">gl_Position</span> = <span class="hljs-type">vec4</span>(a_position, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>); <span class="hljs-comment">// a_position.x, a_position.y, 0, 1, used by the fragment shader</span>
+    }
+</span></span></foreignObject></svg></code></pre>
+<ul>
+<li>Fragment Shader</li>
+</ul>
+<pre><code class="language-glsl"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-keyword">precision</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">float</span>; <span class="hljs-comment">// float accuracy: lowp, mediump, highp</span>
+    <span class="hljs-keyword">uniform</span> <span class="hljs-type">vec4</span> u_color; <span class="hljs-comment">// UNIFORM == CONSTANT for entire shader program</span>
+                
+    <span class="hljs-type">void</span> main() {
+        <span class="hljs-built_in">gl_FragColor</span> = u_color; <span class="hljs-comment">// final framebuffer color: RGBA</span>
+    } 
+</span></span></foreignObject></svg></code></pre>
+<footer><a href="https://webglfundamentals.org/webgl/lessons/webgl-precision-issues.html">https://webglfundamentals.org/webgl/lessons/webgl-precision-issues.html</a>)</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-theme="gaia" data-marpit-pagination="30" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Détection des erreurs de compilation</h1>
+<p>À appeler avant glUseProgram, optionnel mais bien utile <img class="emoji" draggable="false" alt="😉" src="https://twemoji.maxcdn.com/2/svg/1f609.svg" data-marp-twemoji=""/></p>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkShaders</span>(<span class="hljs-params">gl, vs, fs, program</span>) </span>{
+    <span class="hljs-keyword">if</span> (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) 
+        <span class="hljs-built_in">console</span>.error(gl.getShaderInfoLog(vs));
+    
+    <span class="hljs-keyword">if</span> (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) 
+        <span class="hljs-built_in">console</span>.error(gl.getShaderInfoLog(fs));
+    
+    <span class="hljs-keyword">if</span> (!gl.getProgramParameter(program, gl.LINK_STATUS)) 
+        <span class="hljs-built_in">console</span>.error(gl.getProgramInfoLog(program));
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="31" data-marpit-pagination-total="85" style="--paginate:true;--class:lead;--theme:gaia;">
+<h2>3 . Connexion entre Buffer et Shaders</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-theme="gaia" data-marpit-pagination="32" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>
+<p>Récupération des variables utilisées dans les shaders</p>
+<ul>
+<li>appel potentiellement coûteux</li>
+<li>à effectuer à l'initialisation</li>
+<li>sera utilisé lors du rendu</li>
+</ul>
+</li>
+<li>
+<p><img class="emoji" draggable="false" alt="⚠️" src="https://twemoji.maxcdn.com/2/svg/26a0.svg" data-marp-twemoji=""/> respecter le même nom que celui défini dans le shader</p>
+<ul>
+<li>nom arbitraire, choisi par le développeur!</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// Retrieve &#x27;u_color&#x27; shader UNIFORM variable as an id</span>
+<span class="hljs-keyword">const</span> u_colorLoc = gl.getUniformLocation(program, <span class="hljs-string">&#x27;u_color&#x27;</span>);	
+
+<span class="hljs-comment">// Retrieve &#x27;a_position&#x27; shader ATTRIBUTE variable as an id</span>
+<span class="hljs-keyword">const</span> a_positionLoc = gl.getAttribLocation(program, <span class="hljs-string">&#x27;a_position&#x27;</span>);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="33" data-marpit-pagination-total="85" style="--paginate:true;--class:lead;--theme:gaia;">
+<h2>4 . Rendu!</h2>
+<p>Les buffers, les shaders sont en place, il faut encore:</p>
+<ul>
+<li>définir des états</li>
+<li>décrire le layout du buffer (souvent complexe!)</li>
+<li>donner des instructions pour dessiner la scène</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-footer="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer" data-theme="gaia" data-marpit-pagination="34" data-marpit-pagination-total="85" style="--paginate:true;--footer:https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer;--theme:gaia;">
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    gl.clearColor(<span class="hljs-number">0.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">1.</span>); <span class="hljs-comment">// Set current clear color (black)</span>
+    gl.clear(gl.COLOR_BUFFER_BIT); <span class="hljs-comment">// Clear the canvas to current color</span>
+
+    gl.useProgram(program); <span class="hljs-comment">// Set current program (pair of shaders)</span>
+    
+    <span class="hljs-comment">// Set the color (constant triangle color, see shader)</span>
+    gl.uniform4fv(u_colorLoc, [<span class="hljs-number">1.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>]);
+    <span class="hljs-comment">// Tell WebGL how to take data from the VBO</span>
+    <span class="hljs-comment">// and supply it to the attribute in the shader.</span>
+    gl.enableVertexAttribArray(a_positionLoc); <span class="hljs-comment">// Turn the attribute on</span>
+    gl.bindBuffer(gl.ARRAY_BUFFER, vbo); <span class="hljs-comment">// set current vbo</span>
+    <span class="hljs-comment">// Tell the attribute how to get data out of positionBuffer</span>
+    <span class="hljs-comment">// (ARRAY_BUFFER)</span>
+    <span class="hljs-keyword">const</span> size = <span class="hljs-number">2</span>; <span class="hljs-comment">// 2 components per iteration</span>
+    <span class="hljs-keyword">const</span> type = gl.FLOAT; <span class="hljs-comment">// the data is 32bit floats</span>
+    <span class="hljs-keyword">const</span> normalize = <span class="hljs-literal">false</span>; <span class="hljs-comment">// don&#x27;t normalize the data</span>
+    <span class="hljs-comment">// stride: 0 = move forward size * sizeof(type) each iteration</span>
+    <span class="hljs-comment">// to get the next position</span>
+    <span class="hljs-keyword">const</span> stride = <span class="hljs-number">0</span>;        
+    <span class="hljs-keyword">const</span> offset = <span class="hljs-number">0</span>; <span class="hljs-comment">// start at the beginning of the buffer</span>
+    gl.vertexAttribPointer(a_positionLoc, size, type, normalize, stride, offset);
+
+</span></span></foreignObject></svg></code></pre>
+<footer><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer">https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-theme="gaia" data-marpit-pagination="35" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>Rendu, avec <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays">drawArrays</a></li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-comment">// primitiveType == gl.TRIANGLES:</span>
+    <span class="hljs-comment">// each time our vertex shader is run 3 times,</span>
+    <span class="hljs-comment">// WebGL will draw a triangle</span>
+    <span class="hljs-comment">// based on the 3 values we set gl_Position to (see shader)</span>
+    <span class="hljs-keyword">const</span> primitiveType = gl.TRIANGLES;
+    
+    <span class="hljs-comment">// Start index of the first vertex</span>
+    <span class="hljs-comment">// Must be a valid multiple of the size of the given type.</span>
+    <span class="hljs-keyword">const</span> startIndex = <span class="hljs-number">0</span>;
+
+    <span class="hljs-comment">// Execute our vertex shader 3 times,</span>
+    <span class="hljs-comment">// using 2 elements from the array (see size 2 above)</span>
+    <span class="hljs-comment">// setting a_position.x and a_position.y</span>
+    <span class="hljs-keyword">const</span> count = <span class="hljs-number">3</span>;
+    gl.drawArrays(primitiveType, startIndex, count);
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-class="lead" data-theme="gaia" class="lead" style="--class:lead;--theme:gaia;"><iframe style=
+"position: absolute;
+top: 110px;
+bottom: 110px;
+left: 320px;
+right: 320px;
+width:100%;
+height: 100%;
+border: 0;" srcdoc ="\
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <canvas width='640' height='480'></canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const gl = canvas.getContext('webgl'); // instead of '2d'
+        gl.clearColor(0., 0., 0., 1.0);
+        gl.clear(gl.COLOR_BUFFER_BIT); 
+         // vertex shader
+    const vs_source = `
+    attribute vec2 a_position; // in, from buffer: 2D point
+    void main() {
+        gl_Position = vec4(a_position, 0.0, 1.0); // a_position.x, a_position.y, 0, 1
+    }
+    `;
+    // fragment shader
+    const fs_source = `
+    precision mediump float; // float accuracy: lowp, mediump, highp
+    uniform vec4 u_color; // UNIFORM == CONSTANT for entire shader program                
+    void main() {
+        gl_FragColor = u_color; // final framebuffer color: RGBA
+    }
+    `;
+    function buildShader(gl, shaderSource, shaderType) {
+        const shader = gl.createShader(shaderType); // Create the shader object
+        gl.shaderSource(shader, shaderSource); // Load the shader source
+        gl.compileShader(shader); // Compile the shader
+        return shader;
+    }
+    function createProgram(gl, shaders) {
+        const program = gl.createProgram();
+        shaders.forEach(function(shader) {
+            gl.attachShader(program, shader);
+        });
+        gl.linkProgram(program);
+        return program;
+    }
+    // load and compile the shaders
+    const vs = buildShader(gl, vs_source, gl.VERTEX_SHADER);
+    const fs = buildShader(gl, fs_source, gl.FRAGMENT_SHADER);
+    // setup GLSL program
+    const program = createProgram(gl, [vs, fs]);
+    function checkShaders(gl, vs, fs, program) {
+    if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
+        console.error(gl.getShaderInfoLog(vs));
+    }
+    if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
+        console.error(gl.getShaderInfoLog(fs));
+    } 
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+        console.error(gl.getProgramInfoLog(program));
+    }
+}
+checkShaders(gl, vs, fs, program);
+const vertices = new Float32Array([
+    0.5,  0.5,
+    -0.5,  0.5,
+    -0.5, -0.5]); // 2D points: 3 * (x, y) coordinates 
+const vbo = gl.createBuffer(); // create Vertex Buffer Object (VBO) id
+gl.bindBuffer(gl.ARRAY_BUFFER, vbo); // set current VBO (WebGL is a state machine!)
+// UPLOAD current VBO to GPU,
+// where it will be processed by the shaders
+// NOTE: STATIC_DRAW: hint for WebGL: our data won't change
+gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW); 
+// Retrieve 'u_color' shader UNIFORM variable as an id
+const u_colorLoc = gl.getUniformLocation(program, 'u_color');	
+// Retrieve 'a_position' shader ATTRIBUTE variable as an id
+const a_positionLoc = gl.getAttribLocation(program, 'a_position');
+    gl.clearColor(0., 0., 0., 1.); // Set current clear color (black)
+    gl.clear(gl.COLOR_BUFFER_BIT); // Clear the canvas to current color
+    gl.useProgram(program); // Set current program (pair of shaders)
+    // Set the color (constant triangle color, see shader)
+    gl.uniform4fv(u_colorLoc, [1.0, 0.0, 0.0, 1.0]);
+    // Tell WebGL how to take data from the VBO
+    // and supply it to the attribute in the shader.
+    gl.enableVertexAttribArray(a_positionLoc); // Turn the attribute on
+    gl.bindBuffer(gl.ARRAY_BUFFER, vbo); // set current vbo
+    // Tell the attribute how to get data out of positionBuffer
+    // (ARRAY_BUFFER)
+    const size = 2; // 2 components per iteration
+    const type = gl.FLOAT; // the data is 32bit floats
+    const normalize = false; // don't normalize the data
+    // stride: 0 = move forward size * sizeof(type) each iteration
+    // to get the next position
+    const stride = 0;        
+    const offset = 0; // start at the beginning of the buffer
+    gl.vertexAttribPointer(a_positionLoc, size, type, normalize, stride, offset);
+    // primitiveType == gl.TRIANGLES:
+    // each time our vertex shader is run 3 times,
+    // WebGL will draw a triangle
+    // based on the 3 values we set gl_Position to (see shader)
+    const primitiveType = gl.TRIANGLES;
+    // Start index of the first vertex
+    const startIndex = 0;
+    // Execute our vertex shader 3 times,
+    // using 2 elements from the array (see size 2 above)
+    // setting a_position.x and a_position.y
+    const count = 3;
+    gl.drawArrays(primitiveType, startIndex, count);
+    </script>
+</body>
+</html>" >
+</iframe>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="37" data-marpit-pagination-total="85" style="--paginate:true;--class:lead;--theme:gaia;">
+<h1>Presque!</h1>
+<p>Il faut ajouter une couleur par vertex<br />
+au lieu de la couleur de type <code>uniform</code><br />
+cf. <a href="https://webglfundamentals.org/webgl/lessons/webgl-how-it-works.html">webglfundamentals</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="38" data-marpit-pagination-total="85" style="--paginate:true;--class:lead;--theme:gaia;">
+<h2>1 . Data</h2>
+<p>on ajoute un attribut de couleur par vertex<br />
+avec un nouveau tableau, et un nouveau buffer!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-theme="gaia" data-marpit-pagination="39" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap> <span class="hljs-comment">// 2D points: 3 * (x, y) coordinates </span>
+  <span class="hljs-comment">// (sqrt(3) / 2 - 0.5) * 640 / 480 == 0.4880338..</span>
+<span class="hljs-keyword">const</span> vertices = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Float32Array</span>([-<span class="hljs-number">0.75</span>,  -<span class="hljs-number">0.5</span>,
+                                    <span class="hljs-number">0.75</span>,  -<span class="hljs-number">0.5</span>,
+                                    <span class="hljs-number">0.</span>, <span class="hljs-number">0.49</span>]);
+<span class="hljs-comment">// create Vertex Buffer Object (VBO) id</span>
+<span class="hljs-keyword">const</span> vertexBuffer = gl.createBuffer(); 
+
+ <span class="hljs-comment">// set current VBO (WebGL is a state machine!)</span>
+gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+
+<span class="hljs-comment">// UPLOAD vertexBuffer VBO to GPU,</span>
+gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW); 
+
+
+ <span class="hljs-comment">// ** NEW **</span>
+
+ <span class="hljs-comment">// RGB colors: 3 * (r, g, b, a) values</span>
+<span class="hljs-keyword">const</span> colors = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Float32Array</span>([   <span class="hljs-number">1.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">1.</span>,
+                                    <span class="hljs-number">0.</span>, <span class="hljs-number">1.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">1.</span>,
+                                    <span class="hljs-number">0.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">1.</span>, <span class="hljs-number">1.</span>]);  
+                                    <span class="hljs-comment">// create Vertex Buffer Object (VBO) id</span>
+<span class="hljs-keyword">const</span> colorBuffer = gl.createBuffer(); 
+
+ <span class="hljs-comment">// set current VBO (WebGL is a state machine!)</span>
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+
+<span class="hljs-comment">// UPLOAD colorBuffer VBO to GPU,</span>
+gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW);           
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="40" data-marpit-pagination-total="85" style="--paginate:true;--class:lead;--theme:gaia;">
+<h2>2 . Shaders</h2>
+<p>on utilise le nouvel attribut de couleur, que l'on nomme <code>a_color</code><br />
+(ou <code>mapetitecouleurparvertex</code> mais ça fait moins pro)</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-theme="gaia" data-marpit-pagination="41" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>Vertex Shader: nouvelle variable de type <code>varying</code></li>
+</ul>
+<pre><code class="language-glsl"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-keyword">attribute</span> <span class="hljs-type">vec2</span> a_position; <span class="hljs-comment">// IN, from buffer: 2D point</span>
+    <span class="hljs-keyword">attribute</span> <span class="hljs-type">vec3</span> a_color; <span class="hljs-comment">// IN, from buffer: RGB color</span>
+
+    <span class="hljs-keyword">varying</span> <span class="hljs-type">vec3</span> v_color; <span class="hljs-comment">// OUT, to fragment shader</span>
+
+    <span class="hljs-type">void</span> main() {
+        v_color = a_color; <span class="hljs-comment">// color passthrough, sent to fragment shader</span>
+        
+        <span class="hljs-built_in">gl_Position</span> = <span class="hljs-type">vec4</span>(a_position, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>); <span class="hljs-comment">// used by the fragment shader</span>
+    }
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-paginate="true" data-theme="gaia" data-marpit-pagination="42" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>Fragment Shader</li>
+</ul>
+<pre><code class="language-glsl"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-keyword">precision</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">float</span>; <span class="hljs-comment">// float accuracy: lowp, mediump, highp</span>
+
+    <span class="hljs-keyword">varying</span> <span class="hljs-type">vec3</span> v_color; <span class="hljs-comment">// IN, INTERPOLATED color from vertex shader</span>
+                         
+    <span class="hljs-type">void</span> main() {
+        <span class="hljs-built_in">gl_FragColor</span> = <span class="hljs-type">vec4</span>(v_color, <span class="hljs-number">1.</span>); <span class="hljs-comment">// final framebuffer color: RGBA</span>
+    } 
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="43" data-marpit-pagination-total="85" style="--paginate:true;--class:lead;--theme:gaia;">
+<h2>3 . Connexion entre Buffers et Shaders</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-paginate="true" data-theme="gaia" data-marpit-pagination="44" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>
+<p>Récupération des variables utilisées dans les shaders</p>
+<ul>
+<li>appel potentiellement coûteux</li>
+<li>à effectuer à l'initialisation</li>
+<li>seront utilisées lors du rendu</li>
+</ul>
+</li>
+<li>
+<p><img class="emoji" draggable="false" alt="⚠️" src="https://twemoji.maxcdn.com/2/svg/26a0.svg" data-marp-twemoji=""/> respecter les noms définis dans le shader</p>
+</li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
+<span class="hljs-comment">// Retrieve &#x27;a_color&#x27; shader ATTRIBUTE variable as an id</span>
+<span class="hljs-keyword">const</span> a_colorLoc = gl.getAttribLocation(program, <span class="hljs-string">&#x27;a_color&#x27;</span>);	
+
+<span class="hljs-comment">// Retrieve &#x27;a_position&#x27; shader ATTRIBUTE variable as an id</span>
+<span class="hljs-keyword">const</span> a_positionLoc = gl.getAttribLocation(program, <span class="hljs-string">&#x27;a_position&#x27;</span>);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="45" data-marpit-pagination-total="85" style="--paginate:true;--class:lead;--theme:gaia;">
+<h2>4 . Rendu!</h2>
+<p>Les buffers, les shaders sont en place, reste à:</p>
+<ul>
+<li>définir des états</li>
+<li>décrire le layout du buffer</li>
+<li>donner des instructions pour dessiner la scène</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-paginate="true" data-theme="gaia" data-marpit-pagination="46" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    gl.clearColor(<span class="hljs-number">0.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">1.</span>); 
+    gl.clear(gl.COLOR_BUFFER_BIT);
+
+    gl.useProgram(program); <span class="hljs-comment">// Set current program</span>
+
+{
+    <span class="hljs-comment">// Turn the attribute on</span>
+    gl.enableVertexAttribArray(a_positionLoc); 
+    gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer); <span class="hljs-comment">// set current vbo</span>
+    <span class="hljs-comment">// Tell the attribute how to get data out of positionBuffer</span>
+    <span class="hljs-comment">// (ARRAY_BUFFER)</span>
+    <span class="hljs-keyword">const</span> size = <span class="hljs-number">2</span>; <span class="hljs-comment">// 2 components per iteration</span>
+    <span class="hljs-keyword">const</span> type = gl.FLOAT; <span class="hljs-comment">// the data is 32bit floats</span>
+    <span class="hljs-keyword">const</span> normalize = <span class="hljs-literal">false</span>; <span class="hljs-comment">// don&#x27;t normalize the data</span>
+    <span class="hljs-comment">// stride: 0 = move forward size * sizeof(type) each iteration</span>
+    <span class="hljs-comment">// to get the next position</span>
+    <span class="hljs-keyword">const</span> stride = <span class="hljs-number">0</span>;        
+    <span class="hljs-keyword">const</span> offset = <span class="hljs-number">0</span>; <span class="hljs-comment">// start at the beginning of the buffer</span>
+    gl.vertexAttribPointer(a_positionLoc, size, type, normalize, stride, offset);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-theme="gaia" data-marpit-pagination="47" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>Mêmes étapes pour le colorBuffer<br />
+NOTE: Refactoring! Dans la vraie vie on évite de se répéter: <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a></li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>{
+    <span class="hljs-comment">// Tell WebGL how to take data from the VBO</span>
+    <span class="hljs-comment">// and supply it to the attribute in the shader.</span>
+    gl.enableVertexAttribArray(a_colorLoc); <span class="hljs-comment">// Turn the attribute on</span>
+    gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+    <span class="hljs-comment">// Tell the color attribute how to get data out of colorBuffer (ARRAY_BUFFER)</span>
+    <span class="hljs-keyword">const</span> size = <span class="hljs-number">4</span>; <span class="hljs-comment">// <span class="hljs-doctag">NOTE:</span> 4 components per iteration</span>
+    <span class="hljs-keyword">const</span> type = gl.FLOAT; <span class="hljs-comment">// the data is 32bit floats</span>
+    <span class="hljs-keyword">const</span> normalize = <span class="hljs-literal">false</span>; <span class="hljs-comment">// don&#x27;t normalize the data</span>
+    <span class="hljs-comment">// stride: 0 = move forward size * sizeof(type) each iteration</span>
+    <span class="hljs-comment">// to get the next position</span>
+    <span class="hljs-keyword">const</span> stride = <span class="hljs-number">0</span>;        
+    <span class="hljs-keyword">const</span> offset = <span class="hljs-number">0</span>; <span class="hljs-comment">// start at the beginning of the buffer</span>
+    gl.vertexAttribPointer( a_colorLoc, size, type, normalize, stride, offset);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-theme="gaia" data-marpit-pagination="48" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>Rendu: code inchangé!</li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-comment">// primitiveType == gl.TRIANGLES:</span>
+    <span class="hljs-comment">// each time our vertex shader is run 3 times,</span>
+    <span class="hljs-comment">// WebGL will draw a triangle</span>
+    <span class="hljs-comment">// based on the 3 values we set gl_Position to (see shader)</span>
+    <span class="hljs-keyword">const</span> primitiveType = gl.TRIANGLES;
+    
+    <span class="hljs-comment">// Start index of the first vertex</span>
+    <span class="hljs-comment">// Must be a valid multiple of the size of the given type.</span>
+    <span class="hljs-keyword">const</span> startIndex = <span class="hljs-number">0</span>;
+
+    <span class="hljs-comment">// Execute our vertex shader 3 times,</span>
+    <span class="hljs-comment">// using 2 elements from the array (see size 2 above)</span>
+    <span class="hljs-comment">// setting a_position.x and a_position.y</span>
+    <span class="hljs-keyword">const</span> count = <span class="hljs-number">3</span>;
+    gl.drawArrays(primitiveType, startIndex, count);
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-theme="gaia" style="--theme:gaia;"><iframe style=
+"position: absolute;
+top: 110px;
+bottom: 110px;
+left: 320px;
+right: 320px;
+width:100%;
+height: 100%;
+border: 0;" srcdoc ="
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <canvas width='640' height='480'></canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const gl = canvas.getContext('webgl'); // instead of '2d'
+        gl.clearColor(0., 0., 0., 1.0);
+        gl.clear(gl.COLOR_BUFFER_BIT); 
+         // vertex shader
+    const vs_source = `
+    attribute vec2 a_position; // IN, from buffer: 2D point
+    attribute vec3 a_color; // IN, from buffer: RGB color
+    varying vec3 v_color; // OUT, to fragment shader
+    void main() {
+        v_color = a_color; // color passthrough, sent to fragment shader
+        gl_Position = vec4(a_position, 0.0, 1.0); // used by the fragment shader
+    }
+    `;
+    // fragment shader
+    const fs_source = `
+    precision mediump float; // float accuracy: lowp, mediump, highp
+    varying vec3 v_color; // IN, INTERPOLATED color from vertex shader              
+    void main() {
+        gl_FragColor = vec4(v_color, 1.); // final framebuffer color: RGBA
+    } 
+    `;
+    function buildShader(gl, shaderSource, shaderType) {
+        const shader = gl.createShader(shaderType); // Create the shader object
+        gl.shaderSource(shader, shaderSource); // Load the shader source
+        gl.compileShader(shader); // Compile the shader
+        return shader;
+    }
+    function createProgram(gl, shaders) {
+        const program = gl.createProgram();
+        shaders.forEach(function(shader) {
+            gl.attachShader(program, shader);
+        });
+        gl.linkProgram(program);
+        return program;
+    }
+    // load and compile the shaders
+    const vs = buildShader(gl, vs_source, gl.VERTEX_SHADER);
+    const fs = buildShader(gl, fs_source, gl.FRAGMENT_SHADER);
+    // setup GLSL program
+    const program = createProgram(gl, [vs, fs]);
+    function checkShaders(gl, vs, fs, program) {
+    if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
+        console.error(gl.getShaderInfoLog(vs));
+    }
+    if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
+        console.error(gl.getShaderInfoLog(fs));
+    }
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+        console.error(gl.getProgramInfoLog(program));
+    }
+}
+checkShaders(gl, vs, fs, program);
+ // 2D points: 3 * (x, y) coordinates 
+const vertices = new Float32Array([-0.5,  -0.5,
+                                    0.5,  -0.5,
+                                    0., 0.49]);
+// create Vertex Buffer Object (VBO) id
+const vertexBuffer = gl.createBuffer(); 
+ // set current VBO (WebGL is a state machine!)
+gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+// UPLOAD vertexBuffer VBO to GPU,
+gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW); 
+ // ** NEW **
+ // RGB colors: 3 * (r, g, b) values
+ const colors = new Float32Array([   1., 0., 0., 1.,
+                                    0., 1., 0., 1.,
+                                    0., 0., 1., 1.]);  
+                                    // create Vertex Buffer Object (VBO) id  
+                                    // create Vertex Buffer Object (VBO) id
+const colorBuffer = gl.createBuffer(); 
+ // set current VBO (WebGL is a state machine!)
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+// UPLOAD colorBuffer VBO to GPU,
+gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW);           
+// Retrieve 'a_color' shader ATTRIBUTE variable as an id
+const a_colorLoc = gl.getAttribLocation(program, 'a_color');	
+// Retrieve 'a_position' shader ATTRIBUTE variable as an id
+const a_positionLoc = gl.getAttribLocation(program, 'a_position');
+    gl.clearColor(0., 0., 0., 1.); 
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.useProgram(program); // Set current program
+{
+    // Turn the attribute on
+    gl.enableVertexAttribArray(a_positionLoc); 
+    gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer); // set current vbo
+    // Tell the attribute how to get data out of positionBuffer
+    // (ARRAY_BUFFER)
+    const size = 2; // 2 components per iteration
+    const type = gl.FLOAT; // the data is 32bit floats
+    const normalize = false; // don't normalize the data
+    // stride: 0 = move forward size * sizeof(type) each iteration
+    // to get the next position
+    const stride = 0;        
+    const offset = 0; // start at the beginning of the buffer
+    gl.vertexAttribPointer(
+        a_positionLoc, size, type, normalize, stride, offset);
+}
+{
+    // Tell WebGL how to take data from the VBO
+    // and supply it to the attribute in the shader.
+    gl.enableVertexAttribArray(a_colorLoc); // Turn the attribute on
+    gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+    // Tell the color attribute how to get data out of colorBuffer (ARRAY_BUFFER)
+    var size = 4; // 4 components per iteration
+    var type = gl.FLOAT; // the data is 32bit floats
+    var normalize = false; // don't normalize the data
+    // stride: 0 = move forward size * sizeof(type) each iteration
+    // to get the next position
+    var stride = 0;        
+    var offset = 0; // start at the beginning of the buffer
+    gl.vertexAttribPointer( a_colorLoc, size, type, normalize, stride, offset);
+}
+    // primitiveType == gl.TRIANGLES:
+    // each time our vertex shader is run 3 times,
+    // WebGL will draw a triangle
+    // based on the 3 values we set gl_Position to (see shader)
+    const primitiveType = gl.TRIANGLES;
+    // Start index of the first vertex
+    const startIndex = 0;
+    // Execute our vertex shader 3 times,
+    // using 2 elements from the array (see size 2 above)
+    // setting a_position.x and a_position.y
+    const count = 3;
+    gl.drawArrays(primitiveType, startIndex, count);
+    </script>
+</body>
+</html> ">
+</iframe>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-class="lead invert" data-theme="gaia" class="lead invert" style="--class:lead invert;--theme:gaia;">
+<h1><img class="emoji" draggable="false" alt="💪" src="https://twemoji.maxcdn.com/2/svg/1f4aa.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="😎" src="https://twemoji.maxcdn.com/2/svg/1f60e.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="🎉" src="https://twemoji.maxcdn.com/2/svg/1f389.svg" data-marp-twemoji=""/></h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="51" data-marpit-pagination-total="85" style="--paginate:true;--class:lead invert;--theme:gaia;">
+<h1>Variantes</h1>
+<ul>
+<li><a href="http://www.webglacademy.com/courses.php?courses=0_1_20_2_3_4_23_5_6_7_10#1">Un seul buffer entrelacé</a>, et indexé + gl.DrawElements</li>
+<li>est-ce vraiment une <a href="https://www.khronos.org/opengl/wiki/Vertex_Specification_Best_Practices">optimisation</a>?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="52" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://io7m.com/documents/history-vertex-spec/dist/va_ptr.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="52" data-paginate="true" data-theme="gaia" data-marpit-pagination="52" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="52" data-marpit-pagination-total="85"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-paginate="true" data-theme="gaia" data-marpit-pagination="53" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>  <span class="hljs-comment">// POINTS : position + color</span>
+  <span class="hljs-keyword">const</span> vertexBuffer = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Float32Array</span>([
+    -<span class="hljs-number">0.5</span>, -<span class="hljs-number">0.5</span>, <span class="hljs-comment">// vertex 1 : left</span>
+    <span class="hljs-number">1.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">0.</span>, <span class="hljs-comment">// color 1 : red</span>
+    <span class="hljs-number">0.5</span>, -<span class="hljs-number">0.5</span>, <span class="hljs-comment">// vertex 2 : right</span>
+    <span class="hljs-number">0.</span>, <span class="hljs-number">1.</span> , <span class="hljs-number">0.</span>, <span class="hljs-comment">// color 2 : green</span>
+    <span class="hljs-number">0.</span>, <span class="hljs-number">0.48</span>, <span class="hljs-comment">// vertex 3 : top</span>
+    <span class="hljs-number">0.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">1.</span> <span class="hljs-comment">// color 3 : blue</span>
+  ]);
+
+  <span class="hljs-keyword">const</span> vbo = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
+  gl.bufferData(gl.ARRAY_BUFFER, vertexBuffer, gl.STATIC_DRAW); <span class="hljs-comment">// send to GPU</span>
+
+  <span class="hljs-comment">// FACES : indices</span>
+  <span class="hljs-keyword">const</span> indices = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint16Array</span>([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]);
+  <span class="hljs-keyword">var</span> indexBuffer = gl.createBuffer ();
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW); <span class="hljs-comment">// send to GPU</span>
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-paginate="true" data-theme="gaia" data-marpit-pagination="54" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>Rendu : <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements">gl.DrawElements</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">window.requestAnimationFrame</a></li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    gl.enableVertexAttribArray(a_colorLoc);
+    gl.enableVertexAttribArray(a_positionLoc);
+    gl.useProgram(program);
+    gl.clearColor(<span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>);
+    <span class="hljs-keyword">const</span> animate = <span class="hljs-function">() =&gt;</span> {
+        gl.viewport(<span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>, canvas.width, canvas.height);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+
+        gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
+
+        gl.vertexAttribPointer(a_positionLoc, <span class="hljs-number">2</span>, gl.FLOAT, <span class="hljs-literal">false</span>,<span class="hljs-number">4</span>*(<span class="hljs-number">2</span>+<span class="hljs-number">3</span>),<span class="hljs-number">0</span>) ;
+        gl.vertexAttribPointer(a_colorLoc, <span class="hljs-number">3</span>, gl.FLOAT, <span class="hljs-literal">false</span>,<span class="hljs-number">4</span>*(<span class="hljs-number">2</span>+<span class="hljs-number">3</span>),<span class="hljs-number">2</span>*<span class="hljs-number">4</span>) ;
+
+        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+        gl.drawElements(gl.TRIANGLES, <span class="hljs-number">3</span>, gl.UNSIGNED_SHORT, <span class="hljs-number">0</span>);
+        gl.flush();
+        <span class="hljs-built_in">window</span>.requestAnimationFrame(animate);
+    };
+    animate();
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-paginate="true" data-theme="gaia" data-marpit-pagination="55" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Autres exemples</h1>
+<ul>
+<li><a href="http://www.webglacademy.com/courses.php?courses=0_1_20_2_3_4_23_5_6_7_10#2">triangle qui tourne</a>
+<ul>
+<li><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> utilisation de <strong>matrices</strong></li>
+</ul>
+</li>
+<li><a href="http://www.webglacademy.com/courses.php?courses=0_1_20_2_3_4_23_5_6_7_10#3">cube qui tourne</a>
+<ul>
+<li><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> buffer avancé</li>
+</ul>
+</li>
+<li><a href="http://www.webglacademy.com/courses.php?courses=0_1_20_2_3_4_23_5_6_7_10#5">textures</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-paginate="true" data-theme="gaia" data-marpit-pagination="56" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Optimisations</h1>
+<p><a href="https://webgl2fundamentals.org/webgl/lessons/webgl1-to-webgl2.html#Vertex-Array-Objects">Vertex Array Object</a> :<br />
+Optimize render time! Always use it!</p>
+<ul>
+<li><a href="https://io7m.com/documents/history-vertex-spec/">histoire</a> résumée des buffers, vocabulaire, structures, schémas</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57" data-paginate="true" data-theme="gaia" data-marpit-pagination="57" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>WebGL 1 (available everywhere)</li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap> <span class="hljs-keyword">const</span> ext = gl.getExtension(<span class="hljs-string">&quot;OES_vertex_array_object&quot;</span>);
+<span class="hljs-keyword">if</span> (!ext) { <span class="hljs-comment">// tell user they don&#x27;t have the required extension or work around it</span>
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-keyword">const</span> someVAO = ext.createVertexArrayOES();
+}
+</span></span></foreignObject></svg></code></pre>
+<ul>
+<li>WebGL 2</li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">var</span> someVAO = gl.createVertexArray();
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-paginate="true" data-theme="gaia" data-marpit-pagination="58" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// at init time</span>
+<span class="hljs-keyword">for</span> each model / geometry / ...
+    <span class="hljs-keyword">var</span> vao = gl.createVertexArray();
+    gl.bindVertexArray(vao);
+    <span class="hljs-keyword">for</span> each attribute
+    gl.enableVertexAttribArray(...);
+    gl.bindBuffer(gl.ARRAY_BUFFER, bufferForAttribute);
+    gl.vertexAttribPointer(...);
+    <span class="hljs-keyword">if</span> indexed geometry
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+    gl.bindVertexArray(<span class="hljs-literal">null</span>);
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// draw</span>
+    gl.bindVertexArray(vaoForGeometry); <span class="hljs-comment">// only 1 DrawCall</span>
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// clean</span>
+    gl.bindVertexArray(<span class="hljs-literal">null</span>); <span class="hljs-comment">//Always unbind the VAO when you&#x27;re done</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" data-paginate="true" data-theme="gaia" data-marpit-pagination="59" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1><a href="https://blog.mozvr.com/a-painter-performance-optimizations/">Optimisations</a></h1>
+<p>Quelle que soit l'API!</p>
+<ul>
+<li>Profiling</li>
+<li>&quot;Batching&quot;:
+<ul>
+<li>Texture Atlas</li>
+<li>Degenerate Triangle Strips</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="60" data-marpit-pagination-total="85" style="--paginate:true;--class:lead invert;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://blog.mozvr.com/content/images/2018/02/a-painter-optimization-1.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="60" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="60" data-marpit-pagination-total="85" style="--paginate:true;--class:lead invert;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="lead invert" style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="60" data-marpit-pagination-total="85"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="61" data-marpit-pagination-total="85" style="--paginate:true;--class:lead invert;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://blog.mozvr.com/content/images/2018/02/a-painter-optimization-4.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="61" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="61" data-marpit-pagination-total="85" style="--paginate:true;--class:lead invert;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="lead invert" style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="61" data-marpit-pagination-total="85"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62" data-paginate="true" data-class="invert lead" data-theme="gaia" class="invert lead" data-marpit-pagination="62" data-marpit-pagination-total="85" style="--paginate:true;--class:invert lead;--theme:gaia;">
+<h1>Plus de shaders</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="63" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://www.slashcam.de/images/news/g600/book_of_shaders-15883_PIC1-600.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="63" data-paginate="true" data-theme="gaia" data-marpit-pagination="63" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="http://thebookofshaders.com/">The Book of Shaders</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="63" data-marpit-pagination-total="85"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="64" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://patriciogonzalezvivo.github.io/PixelSpiritDeck/imgs/library_cards.png&quot;);background-size:95%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="64" data-paginate="true" data-theme="gaia" data-marpit-pagination="64" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://patriciogonzalezvivo.github.io/PixelSpiritDeck/">PixelSpiritDeck</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="64" data-marpit-pagination-total="85"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-footer="https://www.shadertoy.com/user/Shakemayster" data-theme="gaia" data-marpit-pagination="65" data-marpit-pagination-total="85" style="--paginate:true;--footer:https://www.shadertoy.com/user/Shakemayster;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://www.shadertoy.com/media/shaders/ldlcRf.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="65" data-paginate="true" data-footer="https://www.shadertoy.com/user/Shakemayster" data-theme="gaia" data-marpit-pagination="65" data-marpit-pagination-total="85" style="--paginate:true;--footer:https://www.shadertoy.com/user/Shakemayster;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://www.shadertoy.com/">ShaderToy</a></p>
+<footer><a href="https://www.shadertoy.com/user/Shakemayster">https://www.shadertoy.com/user/Shakemayster</a></footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="65" data-marpit-pagination-total="85"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" data-paginate="true" data-theme="gaia" data-marpit-pagination="66" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Editeurs en ligne</h1>
+<ul>
+<li><a href="http://shdr.bkcore.com/">http://shdr.bkcore.com/</a></li>
+<li><a href="https://shaderfrog.com/">https://shaderfrog.com/</a></li>
+<li><a href="http://glslb.in/">http://glslb.in/</a></li>
+<li><a href="http://glslsandbox.com/">http://glslsandbox.com/</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67" data-paginate="true" data-theme="gaia" data-marpit-pagination="67" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>APIs plus avancées</h1>
+<ul>
+<li><a href="https://webgl2fundamentals.org/webgl/lessons/webgl2-whats-new.html">WebGL 2.0</a>
+<ul>
+<li>nouveaux shaders: in, out, flexibilité, draw_buffers, UBO</li>
+</ul>
+</li>
+<li><a href="https://dmnsgn.medium.com/graphics-on-the-web-and-beyond-with-webgpu-13c4ba049039">WebGPU</a>
+<ul>
+<li>généralise les concepts des VAO à tous les attributs et les états</li>
+</ul>
+</li>
+<li><a href="https://threejs.org/">THREE.js</a> <img class="emoji" draggable="false" alt="⭐" src="https://twemoji.maxcdn.com/2/svg/2b50.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="⭐" src="https://twemoji.maxcdn.com/2/svg/2b50.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="⭐" src="https://twemoji.maxcdn.com/2/svg/2b50.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="⭐" src="https://twemoji.maxcdn.com/2/svg/2b50.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="⭐" src="https://twemoji.maxcdn.com/2/svg/2b50.svg" data-marp-twemoji=""/>
+<ul>
+<li>API de plus haut niveau: abstraction de WebGL! <img class="emoji" draggable="false" alt="🎉" src="https://twemoji.maxcdn.com/2/svg/1f389.svg" data-marp-twemoji=""/>
+<ul>
+<li>SceneGraph (comme OpenInventor) granularité: <s>buffers</s> <s>triangles</s> objets 3D!</li>
+</ul>
+</li>
+<li>migration transparente vers WebGL2, WebGPU etc.</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68" data-class="invert lead" data-theme="gaia" class="invert lead" style="--class:invert lead;--theme:gaia;">
+<blockquote>
+<p>I implemented WebGL in Chrome and my name is on the spec so I have some clue how it works</p>
+</blockquote>
+<blockquote>
+<p>TL;DR<br />
+<strong>If you want to get stuff done use three.js.</strong></p>
+</blockquote>
+<p><a href="https://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html#comment-5186363246">Gregg Tavares</a> (@greggman)</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69" data-paginate="true" data-class="invert lead" data-theme="gaia" class="invert lead" data-marpit-pagination="69" data-marpit-pagination-total="85" style="--paginate:true;--class:invert lead;--theme:gaia;">
+<h1>THREE.js</h1>
+<p>Aperçu interactif<br />
+by<br />
+David Lyons<br />
+<a href="https://davidlyons.dev/threejs-intro">https://davidlyons.dev/threejs-intro</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70" data-theme="gaia" style="--theme:gaia;"><iframe style=
+"position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+overflow: hidden;
+visibility: block;
+width: 101%;
+height: 110%;
+border: 0;"
+   src="https://davidlyons.dev/threejs-intro/#slide-0">
+   </iframe>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71" data-paginate="true" data-theme="gaia" data-marpit-pagination="71" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>THREE.js avancé</h1>
+<ul>
+<li>
+<p>l'API, permet toujours le contrôle bas niveau (WebGL)): <a href="https://r105.threejsfundamentals.org/threejs/lessons/threejs-custom-geometry.html">BufferGeometry</a> + <a href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_buffergeometry_rawshader.html">RawShaderMaterial</a></p>
+<ul>
+<li>conversion d'une texture de terrain en 3D</li>
+<li>voir aussi <a href="http://www.webglacademy.com/courses.php?courses=19_25_27_33_34#33">webglacademy</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://r105.threejsfundamentals.org/threejs/lessons/threejs-custom-buffergeometry.html">Géométrie Custom, Indexée, dynamique</a></p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="72" data-paginate="true" data-theme="gaia" data-marpit-pagination="72" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h2>Good coding practices</h2>
+<ul>
+<li>
+<p>il faut <a href="https://threejsfundamentals.org/threejs/lessons/threejs-prerequisites.html">moderniser le code JavaScript</a>!</p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices">WebGL best practices</a></p>
+</li>
+<li>
+<p><a href="https://hackmd.io/@jgilbert/WebGLBestPractices#WebGL-2">WebGL2 best practices</a></p>
+</li>
+<li>
+<p><a href="https://blog.tojicode.com/2012/10/oesvertexarrayobject-extension.html?m=1">réduire les Draw Calls</a></p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="73" data-paginate="true" data-theme="gaia" data-marpit-pagination="73" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Debugging tips</h1>
+<p><a href="https://r105.threejsfundamentals.org/threejs/lessons/threejs-debugging-javascript.html">https://r105.threejsfundamentals.org/threejs/lessons/threejs-debugging-javascript.html</a></p>
+<p>Rendering on demand (onTouch) + dat.gui<br />
+<a href="https://r105.threejsfundamentals.org/threejs/lessons/threejs-rendering-on-demand.html">https://r105.threejsfundamentals.org/threejs/lessons/threejs-rendering-on-demand.html</a></p>
+<p>Nice dat.gui: see transparency and fog (helper classes etc)<br />
+<a href="https://r105.threejsfundamentals.org/threejs/lessons/threejs-fog.html">https://r105.threejsfundamentals.org/threejs/lessons/threejs-fog.html</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="74" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://cdn.dribbble.com/users/2813/screenshots/2123957/chill-the-lion.gif&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="74" data-paginate="true" data-theme="gaia" data-marpit-pagination="74" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1>Exercices THREE.js</h1>
+<ul>
+<li><a href="https://r105.threejsfundamentals.org">threejsfundamentals</a>
+<ul>
+<li>LA référence: désormais <a href="https://threejs.org/manual/">doc officielle</a></li>
+</ul>
+</li>
+<li><a href="http://yakudoo.com/">Karim Maaloul</a>
+<ul>
+<li>mise en pratique
+<ul>
+<li><a href="http://yakudoo.com/work/webgl-experiments/">animaux</a></li>
+<li><a href="http://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/">aviator</a></li>
+<li><a href="https://www.epic.net/en/case-study/redbull-airdrop-game/">red bull</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="74" data-marpit-pagination-total="85"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="75" data-paginate="true" data-class="invert lead" data-theme="gaia" class="invert lead" data-marpit-pagination="75" data-marpit-pagination-total="85" style="--paginate:true;--class:invert lead;--theme:gaia;">
+<h1>Projets THREE.js</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="76" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;https://stemkoski.github.io/Three.js/html-images/Color-Explorer.png&quot;);"></figure><figure style="background-image:url(&quot;https://stemkoski.github.io/Three.js/html-images/Shapes.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="76" data-paginate="true" data-theme="gaia" data-marpit-pagination="76" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1>Exemples</h1>
+
+<ul>
+<li>
+<p><a href="https://threejs.org/examples/">Officiels</a></p>
+<ul>
+<li>à jour!
+<ul>
+<li><img class="emoji" draggable="false" alt="⚠️" src="https://twemoji.maxcdn.com/2/svg/26a0.svg" data-marp-twemoji=""/> l'API de THREE.js change souvent!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://stemkoski.github.io/Three.js/">Lee Stemkoski</a></p>
+<ul>
+<li>datent (code à rafraîchir)</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="76" data-marpit-pagination-total="85"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77" data-class="lead invert" data-theme="gaia" class="lead invert" style="--class:lead invert;--theme:gaia;">
+<h1>Idées de projets</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="78" data-paginate="true" data-theme="gaia" data-marpit-pagination="78" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Fun</h1>
+<ul>
+<li>Adapter du code existant pour exploiter THREE
+<ul>
+<li>jeux de plateau</li>
+<li>jeux &quot;Flash&quot;</li>
+<li>jeux videos connus (mini-games)</li>
+<li>ajout de son, de physique<br />
+<a href="https://codepen.io/ste-vg/full/BazEQbY">Christmas Cannon</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="79" data-paginate="true" data-theme="gaia" data-marpit-pagination="79" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>Autres idées</h1>
+<ul>
+<li>implement effect
+<ul>
+<li>raytracing, SSAO, OIT, NPR</li>
+</ul>
+</li>
+<li>image processing, OpenCV</li>
+<li>physics (ammo.js)
+<ul>
+<li>pool, bowling, domino, jenga, stacks</li>
+</ul>
+</li>
+<li><a href="https://www.jotform.com/blog/particles-animation-codepen-97659/">particles</a>: <a href="https://codepen.io/rachsmith/pen/LpZbmZ">text / image to cloud of cubes</a></li>
+<li>WebRTC pong</li>
+<li>animal crossing</li>
+<li>site perso, CV interactif: <a href="https://r105.threejsfundamentals.org/threejs/lessons/threejs-multiple-scenes.html">HTML layout</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="80" data-paginate="true" data-theme="gaia" data-marpit-pagination="80" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<h1>GIS Links</h1>
+<p><a href="http://www.itowns-project.org/itowns/examples/index.html#3dtiles_25d">http://www.itowns-project.org/itowns/examples/index.html#3dtiles_25d</a></p>
+<p><a href="http://www.itowns-project.org/itowns/examples/#source_stream_wfs_3d">http://www.itowns-project.org/itowns/examples/#source_stream_wfs_3d</a></p>
+<p><a href="https://geoservices.ign.fr/documentation/utilisation_web/wmts-cesiumjs.html">https://geoservices.ign.fr/documentation/utilisation_web/wmts-cesiumjs.html</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="81" data-paginate="true" data-theme="gaia" data-marpit-pagination="81" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<p><a href="http://learningthreejs.com/blog/2013/08/02/how-to-do-a-procedural-city-in-100lines/">http://learningthreejs.com/blog/2013/08/02/how-to-do-a-procedural-city-in-100lines/</a></p>
+<p><a href="https://codepen.io/photonlines/pen/JzaLYJ">https://codepen.io/photonlines/pen/JzaLYJ</a></p>
+<p><a href="https://douglasduhaime.com/posts/visualizing-tsne-maps-with-three-js.html">https://douglasduhaime.com/posts/visualizing-tsne-maps-with-three-js.html</a></p>
+<p><a href="https://openlayers.org/en/latest/examples/wmts.html">https://openlayers.org/en/latest/examples/wmts.html</a></p>
+<p><a href="https://www.3ds.com/insights/customer-stories/rennes-metropole">https://www.3ds.com/insights/customer-stories/rennes-metropole</a></p>
+<p><a href="https://www.usinenouvelle.com/article/simulation-de-singapour-a-rennes-comment-la-ville-tire-profit-de-son-double-virtuel.N1018329">https://www.usinenouvelle.com/article/simulation-de-singapour-a-rennes-comment-la-ville-tire-profit-de-son-double-virtuel.N1018329</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="82" data-paginate="true" data-theme="gaia" data-marpit-pagination="82" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<p><a href="https://docs.mapbox.com/mapbox-gl-js/example/3d-buildings/">https://docs.mapbox.com/mapbox-gl-js/example/3d-buildings/</a></p>
+<p><a href="https://osmbuildings.org">https://osmbuildings.org</a></p>
+<p><a href="https://github.com/Microsoft/USBuildingFootprints">https://github.com/Microsoft/USBuildingFootprints</a></p>
+<p><a href="https://wiki.openstreetmap.org/wiki/Simple_3D_buildings">https://wiki.openstreetmap.org/wiki/Simple_3D_buildings</a></p>
+<p><a href="https://threejs.org/examples/#misc_controls_map">https://threejs.org/examples/#misc_controls_map</a></p>
+<p>Extrude using geo json:<br />
+<a href="https://threejs.org/examples/webgl_geometry_extrude_shapes2.html">https://threejs.org/examples/webgl_geometry_extrude_shapes2.html</a></p>
+<p>From height field to 3D grid mesh<br />
+<a href="https://blog.mastermaps.com/2013/10/terrain-building-with-threejs.html?m=1">https://blog.mastermaps.com/2013/10/terrain-building-with-threejs.html?m=1</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="83" data-paginate="true" data-theme="gaia" data-marpit-pagination="83" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<p>Infinitown<br />
+<a href="https://demos.littleworkshop.fr/infinitown">https://demos.littleworkshop.fr/infinitown</a></p>
+<p>OSMBuildings 3D<br />
+<a href="https://github.com/OSMBuildings/OSMBuildings">https://github.com/OSMBuildings/OSMBuildings</a></p>
+<p>OpenLayers<br />
+<a href="https://openlayers.org">https://openlayers.org</a></p>
+<p>Leaflet<br />
+<a href="https://leafletjs.com">https://leafletjs.com</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="84" data-paginate="true" data-theme="gaia" data-marpit-pagination="84" data-marpit-pagination-total="85" style="--paginate:true;--theme:gaia;">
+<p>More:<br />
+<a href="https://www.sitepoint.com/3d-maps-with-eegeo-and-leaflet/">https://www.sitepoint.com/3d-maps-with-eegeo-and-leaflet/</a></p>
+<p>Other tech:<br />
+<a href="https://www.igismap.com/everything-about-web-3d-map-examples-tools-library-and-uses/">https://www.igismap.com/everything-about-web-3d-map-examples-tools-library-and-uses/</a></p>
+<p>Terrain<br />
+<a href="https://felixpalmer.github.io/procedural-gl-js/docs/">https://felixpalmer.github.io/procedural-gl-js/docs/</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="85" data-class="invert lead" data-theme="gaia" class="invert lead" style="--class:invert lead;--theme:gaia;">
+<h1>Fin!</h1>
+</section>
+<script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>**************************</p><p>Voir Readme / TODO</p><p>**************************</p><p>![bg 140%](https://images.unsplash.com/photo-1589431882969-f74b941beb0e)</p><p>![bg](https://images.unsplash.com/photo-1505299344687-ee45ad431f9b)</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>&lt;!-- _footer: photo de couverture: Mitchell Kavan https://unsplash.com/@mtk</p><p>&lt;!-- _footer: photo de couverture: Steven Ramon https://unsplash.com/@ssttevven</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.5.2/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";const e=document.body,t=(...e)=>history.replaceState(...e),n="presenter",r="next",o=["",n,r],a="data-bespoke-marp-",i=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},s=()=>e.dataset.bespokeView,l=e=>new URLSearchParams(location.search).get(e),c=(e,n={})=>{var r;const o={location,setter:t,...n},a=new URLSearchParams(o.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?a.set(t,n):a.delete(t)}try{o.setter({...null!==(r=window.history.state)&&void 0!==r?r:{}},"",i(a,o.location))}catch(e){console.error(e)}},d=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(e){return!1}})(),f=e=>{try{return localStorage.getItem(e)}catch(e){return null}},u=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},m=e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}},g=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},p=e=>{e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach((e=>e.classList.add("bespoke-marp-slide"))),e.on("activate",(t=>{const n="bespoke-marp-active",r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach((e=>{e.classList.remove(n),g(e,!0)})),o.add(n),g(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}}))},v=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${a}fragment`,(i?"":"in")+"active");const s=`${a}current-fragment`;t===r&&n===o?e.setAttribute(s,"current"):e.removeAttribute(s)}))})),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",(({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}})),e.on("prev",(({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)})),o(0,0)},h=document,y=()=>!(!h.fullscreenEnabled&&!h.webkitFullscreenEnabled),x=()=>!(!h.fullscreenElement&&!h.webkitFullscreenElement),w=e=>{e.fullscreen=()=>{y()&&(async()=>{return x()?null===(e=h.exitFullscreen||h.webkitExitFullscreen)||void 0===e?void 0:e.call(h):((e=h.body)=>{var t;return null===(t=e.requestFullscreen||e.webkitRequestFullscreen)||void 0===t?void 0:t.call(e)})();var e})()},document.addEventListener("keydown",(t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!y()||(e.fullscreen(),t.preventDefault())}))},b="bespoke-marp-inactive",k=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout((()=>{r.add(b),o()}),e),r.contains(b)&&(r.remove(b),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},E=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],L=e=>{e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(E.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))},$=e=>{window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute(`${a}load`,e)}}))},P=({interval:e=250}={})=>t=>{document.addEventListener("keydown",(e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,o=0;t.parent.addEventListener("wheel",(a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),(null==e?void 0:e.parentElement)&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const l=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let f;(a.deltaX>0||a.deltaY>0)&&(f="next"),(a.deltaX<0||a.deltaY<0)&&(f="prev"),f&&(t[f](),o=Date.now())}))},S=(e=".bespoke-marp-osc")=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${a}osc=${JSON.stringify(e)}]`).forEach(n)};return y()||n("fullscreen",(e=>e.style.display="none")),d||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?null==e||e.fullscreen():"presenter"===n&&e.openPresenterView()}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:o})=>{n("prev",(e=>e.disabled=0===t&&0===o)),n("next",(n=>n.disabled=t===e.slides.length-1&&o===r.length-1))})),e.on("marp-active",(()=>g(t,!1))),e.on("marp-inactive",(()=>g(t,!0))),y()&&(e=>{for(const t of["","webkit"])h.addEventListener(t+"fullscreenchange",e)})((()=>n("fullscreen",(e=>e.classList.toggle("exit",y()&&x())))))}},I=e=>{window.addEventListener("message",(t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}}))};var T=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let A=e=>String(e).replace(/[&<>"']/g,(e=>`&${C[e]};`)),C={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},N="dangerouslySetInnerHTML",K={className:"class",htmlFor:"for"},O={};function D(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==N&&(r+=` ${K[e]?K[e]:A(e)}="${A(t[e])}"`);r+=">"}if(-1===T.indexOf(e)){if(t[N])r+=t[N].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===O[e]?e:A(e)}r+=e?`</${e}>`:""}return O[r]=!0,r}const M=({children:e})=>D(null,null,...e),q="bespoke-marp-presenter-",_={container:`${q}container`,next:`${q}next`,nextContainer:`${q}next-container`,noteContainer:`${q}note-container`,infoContainer:`${q}info-container`,infoPage:`${q}info-page`,infoPageText:`${q}info-page-text`,infoPagePrev:`${q}info-page-prev`,infoPageNext:`${q}info-page-next`,infoTime:`${q}info-time`,infoTimer:`${q}info-timer`},U=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=_.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",D(M,null,D("div",{class:_.nextContainer},D("iframe",{class:_.next,src:"?view=next"})),D("div",{class:_.noteContainer}),D("div",{class:_.infoContainer},D("div",{class:_.infoPage},D("button",{class:_.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),D("span",{class:_.infoPageText}),D("button",{class:_.infoPageNext,tabindex:"-1",title:"Next"},"Next")),D("time",{class:_.infoTime,title:"Current time"}),D("div",{class:_.infoTimer})))),t})(e.parent)),(e=>{r(_.nextContainer).addEventListener("click",(()=>e.next()));const t=r(_.next),n=(o=t,(e,t)=>{var n;return null===(n=o.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var o;t.addEventListener("load",(()=>{r(_.nextContainer).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>n(e,t)))}));const a=document.querySelectorAll(".bespoke-marp-note");a.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(_.noteContainer).appendChild(e)})),e.on("activate",(()=>a.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide()))))),e.on("activate",(({index:t})=>{r(_.infoPageText).textContent=`${t+1} / ${e.slides.length}`}));const i=r(_.infoPagePrev),s=r(_.infoPageNext);i.addEventListener("click",(t=>{i.blur(),e.prev({fragment:!t.shiftKey})})),s.addEventListener("click",(t=>{s.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{i.disabled=0===t&&0===r,s.disabled=t===e.slides.length-1&&r===n.length-1}));const l=()=>r(_.infoTime).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)},V=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:X},presenterUrl:{enumerable:!0,get:F}}),d&&document.addEventListener("keydown",(t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))};function X(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,q+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function F(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),i(e)}const B=e=>{const t=s();return t===r&&e.appendChild(document.createElement("span")),{"":V,[n]:U,[r]:I}[t]},R=e=>{e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))},j=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},H=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),l=o(0,r(n||0,a[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((j(location.hash.slice(1))||1)-1,t.fragment?j(l("f")||""):null)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||c({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{o(),window.addEventListener("hashchange",(()=>r((()=>{o({fragment:!1}),c({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>o()))})),n=!1}),0)}},Y=(e={})=>{var n;const r=e.key||(null===(n=window.history.state)||void 0===n?void 0:n.marpBespokeSyncKey)||Math.random().toString(36).slice(2),o=`bespoke-marp-sync-${r}`;var a;a={marpBespokeSyncKey:r},c({},{setter:(e,...n)=>t({...e,...a},...n)});const i=()=>{const e=f(o);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=i(),n={...t,...e(t)};return u(o,JSON.stringify(n)),n},l=()=>{window.removeEventListener("pageshow",l),s((e=>({reference:(e.reference||0)+1})))};return e=>{l(),Object.defineProperty(e,"syncKey",{value:r,enumerable:!0});let t=!0;setTimeout((()=>{e.on("fragment",(e=>{t&&s((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(n=>{if(n.key===o&&n.oldValue&&n.newValue){const r=JSON.parse(n.oldValue),o=JSON.parse(n.newValue);if(r.index!==o.index||r.fragmentIndex!==o.fragmentIndex)try{t=!1,e.slide(o.index,{fragment:o.fragmentIndex})}finally{t=!0}}}));const n=()=>{const{reference:e}=i();void 0===e||e<=1?m(o):s((()=>({reference:e-1})))};window.addEventListener("pagehide",(e=>{e.persisted&&window.addEventListener("pageshow",l),n()})),e.on("destroy",n)}},{PI:J,abs:W,sqrt:z,atan2:G}=Math,Q={passive:!0},Z=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",(({touches:e})=>{r=1===e.length?a(e[0]):void 0}),Q),o.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=z(W(n)**2+W(o)**2),r.radian=G(n,o)}else r=void 0})),o.addEventListener("touchend",(o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+J)%(2*J)-J;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}}),Q)},ee="_tA",te=e=>{const t=document.documentTransition;if(!t)return;let n;e._tP=!1;const r=(n,{back:r,cond:o})=>a=>{const i=e.slides[e.slide()].querySelector("section[data-transition]");if(!i)return!0;const s=document.querySelector(".bespoke-marp-osc"),l=s?[s]:void 0;if(e._tP){if(a._tA){e._tP=!1;try{t.start({sharedElements:l}).catch((()=>{}))}catch(e){}return!0}}else{if(!o(a))return!0;e._tP=t.prepare({rootTransition:a.back||r?i.dataset.transitionBack:i.dataset.transition,sharedElements:l}).then((()=>n(a))).catch((()=>n(a)))}return!1};e.on("prev",r((t=>e.prev({...t,[ee]:!0})),{back:!0,cond:e=>{var t;return e.index>0&&!((null===(t=e.fragment)||void 0===t||t)&&n.fragmentIndex>0)}})),e.on("next",r((t=>e.next({...t,[ee]:!0})),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout((()=>{e.on("slide",r((t=>e.slide(t.index,{...t,[ee]:!0})),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))}),0),e.on("fragment",(e=>{n=e}))};let ne;const re=()=>(void 0===ne&&(ne="wakeLock"in navigator&&navigator.wakeLock),ne),oe=async()=>{const e=re();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},ae=async()=>{if(!re())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await oe(),e};((t=document.getElementById("p"))=>{(()=>{const t=l("view");e.dataset.bespokeView=t===r||t===n?t:""})();const a=(e=>{const t=l(e);return c({[e]:void 0}),t})("sync")||void 0;var i,d,f,u,m,g,h,y,x,b,E,I;i=t,d=((...e)=>{const t=o.findIndex((e=>s()===e));return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[1,1,0],Y({key:a})],[[1,1,1],B(t)],[[1,1,0],L],[[1,1,1],p],[[1,0,0],k()],[[1,1,1],$],[[1,1,1],H({history:!1})],[[1,1,0],P()],[[1,1,0],w],[[1,0,0],R],[[1,1,0],Z()],[[1,0,0],S()],[[1,0,0],te],[[1,1,1],v],[[1,1,0],ae]),u=1===(i.parent||i).nodeType?i.parent||i:document.querySelector(i.parent||i),m=[].filter.call("string"==typeof i.slides?u.querySelectorAll(i.slides):i.slides||u.children,(function(e){return"SCRIPT"!==e.nodeName})),g={},h=function(e,t){return(t=t||{}).index=m.indexOf(e),t.slide=e,t},b=function(e,t){m[e]&&(f&&x("deactivate",h(f,t)),f=m[e],x("activate",h(f,t)))},E=function(e,t){var n=m.indexOf(f)+e;x(e>0?"next":"prev",h(f,t))&&b(n,t)},I={off:y=function(e,t){g[e]=(g[e]||[]).filter((function(e){return e!==t}))},on:function(e,t){return(g[e]||(g[e]=[])).push(t),y.bind(null,e,t)},fire:x=function(e,t){return(g[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},slide:function(e,t){if(!arguments.length)return m.indexOf(f);x("slide",h(m[e],t))&&b(e,t)},next:E.bind(null,1),prev:E.bind(null,-1),parent:u,slides:m,destroy:function(e){x("destroy",h(f,e)),g={}}},(d||[]).forEach((function(e){e(I)})),f||b(0)})()}();</script></body></html>

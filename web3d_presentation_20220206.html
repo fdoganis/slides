@@ -1,0 +1,888 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDAgMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwIDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNSIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{-webkit-animation-name:__bespoke_marp__!important;animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current next" minmax(140px,1fr) "current note" 2fr "info    note" 3em/2fr 1fr;height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{word-wrap:break-word;box-sizing:border-box;font-size:1.1em;height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;scrollbar-color:hsla(0,0%,93%,.5) transparent;scrollbar-width:thin;white-space:pre-wrap;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap");div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section .hljs{background:#000;color:#f8f8f8;display:block;overflow-x:auto;padding:.5em}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-quote{color:#aeaeae;font-style:italic}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#e28964}div#p>svg>foreignObject>section .hljs-string{color:#65b042}div#p>svg>foreignObject>section .hljs-subst{color:#daefa3}div#p>svg>foreignObject>section .hljs-link,div#p>svg>foreignObject>section .hljs-regexp{color:#e9c062}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section,div#p>svg>foreignObject>section .hljs-tag,div#p>svg>foreignObject>section .hljs-title{color:#89bdff}div#p>svg>foreignObject>section .hljs-class .hljs-title,div#p>svg>foreignObject>section .hljs-doctag{text-decoration:underline}div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-number,div#p>svg>foreignObject>section .hljs-symbol{color:#3387cc}div#p>svg>foreignObject>section .hljs-params,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#3e87e3}div#p>svg>foreignObject>section .hljs-attribute{color:#cda869}div#p>svg>foreignObject>section .hljs-meta{color:#8996a8}div#p>svg>foreignObject>section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#p>svg>foreignObject>section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-selector-class{color:#9b703f}div#p>svg>foreignObject>section .hljs-selector-id{color:#8b98ab}div#p>svg>foreignObject>section .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section .hljs-strong{font-weight:700}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:580px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin:.5em 0 0}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit}div#p>svg>foreignObject>section h1{font-size:1.8em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.3em}div#p>svg>foreignObject>section h4{font-size:1.1em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section p{margin:1em 0 0}div#p>svg>foreignObject>section ol>li,div#p>svg>foreignObject>section ul>li{margin:.3em 0 0}div#p>svg>foreignObject>section ol>li>p,div#p>svg>foreignObject>section ul>li>p{margin:.6em 0 0}div#p>svg>foreignObject>section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#p>svg>foreignObject>section pre{display:block;margin:1em 0 0;min-height:1em;overflow:visible}div#p>svg>foreignObject>section pre code{box-sizing:border-box;font-size:.7em;margin:0;min-width:100%;padding:.5em}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:calc(580px - 1em)}div#p>svg>foreignObject>section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#p>svg>foreignObject>section blockquote:before{left:0;top:0}div#p>svg>foreignObject>section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section mark{background:transparent}div#p>svg>foreignObject>section table{border-collapse:collapse;border-spacing:0;margin:1em 0 0}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-style:solid;border-width:1px;padding:.2em .4em}div#p>svg>foreignObject>section:after,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#p>svg>foreignObject>section:after{--marpit-root-font-size:66%}div#p>svg>foreignObject>section header{top:0}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{left:0;right:0}div#p>svg>foreignObject>section footer{bottom:0}div#p>svg>foreignObject>section{word-wrap:break-word;--color-background:#fff8e1;--color-background-stripe:rgba(69,90,100,.1);--color-foreground:#455a64;--color-dimmed:#6a7a7d;--color-highlight:#0288d1;background-color:var(--color-background);background-image:linear-gradient(135deg,hsla(0,0%,53%,0),hsla(0,0%,53%,.02) 50%,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.05));color:var(--color-foreground);font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;font-size:35px;height:720px;letter-spacing:1.25px;line-height:1.35;padding:70px;width:1280px}div#p>svg>foreignObject>section{--marpit-root-font-size:35px}div#p>svg>foreignObject>section:after{bottom:0;font-size:80%;right:0}div#p>svg>foreignObject>section:after{--marpit-root-font-size:80%}div#p>svg>foreignObject>section a,div#p>svg>foreignObject>section mark{color:var(--color-highlight)}div#p>svg>foreignObject>section code{background:var(--color-dimmed);color:var(--color-background)}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:var(--color-highlight)}div#p>svg>foreignObject>section pre>code{background:var(--color-foreground)}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header,div#p>svg>foreignObject>section section:after{color:var(--color-dimmed)}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-color:var(--color-foreground)}div#p>svg>foreignObject>section table thead th{background:var(--color-foreground);color:var(--color-background)}div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe,transparent)}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section.invert{--color-background:#455a64;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#dad8c8;--color-highlight:#81d4fa}div#p>svg>foreignObject>section.gaia{--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa}div#p>svg>foreignObject>section.lead{display:flex;flex-flow:column nowrap;justify-content:center}div#p>svg>foreignObject>section.lead h1,div#p>svg>foreignObject>section.lead h2,div#p>svg>foreignObject>section.lead h3,div#p>svg>foreignObject>section.lead h4,div#p>svg>foreignObject>section.lead h5,div#p>svg>foreignObject>section.lead h6{text-align:center}div#p>svg>foreignObject>section.lead h1 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h2 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h3 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h4 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h5 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h6 svg[data-marp-fitting=svg]{--preserve-aspect-ratio:xMidYMid meet}div#p>svg>foreignObject>section.lead p{text-align:center}div#p>svg>foreignObject>section.lead blockquote>h1,div#p>svg>foreignObject>section.lead blockquote>h2,div#p>svg>foreignObject>section.lead blockquote>h3,div#p>svg>foreignObject>section.lead blockquote>h4,div#p>svg>foreignObject>section.lead blockquote>h5,div#p>svg>foreignObject>section.lead blockquote>h6,div#p>svg>foreignObject>section.lead blockquote>p{text-align:left}div#p>svg>foreignObject>section.lead blockquote svg[data-marp-fitting=svg]:not([data-marp-fitting-math]){--preserve-aspect-ratio:xMinYMin meet}div#p>svg>foreignObject>section.lead ol>li>p,div#p>svg>foreignObject>section.lead ul>li>p{text-align:left}div#p>svg>foreignObject>section.lead table{margin-left:auto;margin-right:auto}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-theme="gaia" class="invert" style="--class:invert;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://bafybeifdf6t2elc24tlxggq4r4h7vgyvrkevojokjzu4ekkrxxqrswfqrm.ipfs.infura-ipfs.io/&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="1" data-class="invert" data-theme="gaia" class="invert" style="--class:invert;--theme:gaia;" data-marpit-advanced-background="content">
+<h1><strong>Programmation Web 3D</strong></h1>
+
+<p>Fivos DOGANIS</p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="invert" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="lead" data-footer="image de couverture: https://versum.xyz/token/versum/4130" data-theme="gaia" class="lead" style="--class:lead;--footer:image de couverture: https://versum.xyz/token/versum/4130;--theme:gaia;">
+<h1>whoami</h1>
+<p><img class="emoji" draggable="false" alt="💼" src="https://twemoji.maxcdn.com/2/svg/1f4bc.svg" data-marp-twemoji=""/> <a href="http://linkedin.com/in/fivosdoganis">linkedin.com/in/fivosdoganis</a><br />
+<img class="emoji" draggable="false" alt="📧" src="https://twemoji.maxcdn.com/2/svg/1f4e7.svg" data-marp-twemoji=""/> <a href="mailto:fivos.doganis@gmail.com">fivos.doganis@gmail.com</a><br />
+<img class="emoji" draggable="false" alt="🐦" src="https://twemoji.maxcdn.com/2/svg/1f426.svg" data-marp-twemoji=""/> <a href="twitter.com/fdoganis">@fdoganis</a></p>
+<footer>image de couverture: <a href="https://versum.xyz/token/versum/4130">https://versum.xyz/token/versum/4130</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="3" data-marpit-pagination-total="95" style="--paginate:true;--class:invert;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;https://www.cs.vu.nl/~eliens/manuals/art-pc211/Image24.gif&quot;);"></figure><figure style="background-image:url(&quot;https://d3i71xaburhd42.cloudfront.net/2f341ad9dcd2a14822db65acd8862f05301b9e2e/3-Figure3-1.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="3" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="3" data-marpit-pagination-total="95" style="--paginate:true;--class:invert;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1><img src="https://www.gdr-isis.fr/wp-content/uploads/2021/05/isep.png" alt="" style="height:110px;" /></h1>
+<h1><img src="https://www.hull.ac.uk/site-elements/img/layout/header/logo/UoH-logo-white.svg" alt="" style="height:120px;" /></h1>
+<p><a href="https://www.hull.ac.uk/">University of Hull</a></p>
+<ul>
+<li>Master of Science by Research (2001)<br />
+<em>Augemented Reality in Archaeology: Registration Issues</em></li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="invert" style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="3" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="4" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://i2.wp.com/www.augmented-reality.fr/wp-content/uploads/2013/06/ICAR-r%C3%A9alit%C3%A9-augment%C3%A9e.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="4" data-paginate="true" data-theme="gaia" data-marpit-pagination="4" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1><img src="https://journals.sagepub.com/pb-assets/societylogos/SRI_society1_logo.gif" alt="" style="height:110px;" /></h1>
+<p><a href="http://www.ircad.fr/research/computer">IRCAD</a> (2002 - 2003)</p>
+<ul>
+<li>Institut de Recherche contre les Cancers de l'Appareil Digestif</li>
+<li>Startup
+<ul>
+<li>équipe Virtual-Surg</li>
+</ul>
+</li>
+<li>Ingénieur Réalité Augmentée</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="4" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="5" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://blogs.3ds.com/perspectives/wp-content/uploads/sites/22/image_o2.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="5" data-paginate="true" data-theme="gaia" data-marpit-pagination="5" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2><img src="https://www.3ds.com/statics/menu/2/assets/img/logo/3ds-dark.svg" alt="" style="height:80px;" /></h2>
+<p><a href="http://www.3ds.com">Dassault Systèmes</a> (2003+)</p>
+<ul>
+<li>Ingénieur Visualisation 3D
+<ul>
+<li>Scenegraph</li>
+<li>Matériaux</li>
+<li>Géometrie, Maillage</li>
+</ul>
+</li>
+<li>Ingénieur Réalité Virtuelle et Réalité Augmentée</li>
+<li>Ingénieur de Recherche</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="5" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="gaia" style="--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://mir-s3-cdn-cf.behance.net/project_modules/disp/fe992223150669.5631e0be40f6a.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="6" data-theme="gaia" style="--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="gaia" style="--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://avion2017.files.wordpress.com/2016/11/file6qr0kfd3emgg25p8o1h.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="7" data-theme="gaia" style="--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="gaia" style="--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://inhabitat.com/wp-content/blogs.dir/1/files/2014/06/Frank-Gehry-Louis-Vuitton2.jpg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="8" data-theme="gaia" style="--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="9" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2019/07/Singapore1-640x360.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-theme="gaia" data-marpit-pagination="9" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="9" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="white" data-theme="gaia" style="--background-color:white;--theme:gaia;background-color:white;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://mms.businesswire.com/media/20140521006320/fr/417031/4/Dassault_Systemes_pharm.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="10" data-background-color="white" data-theme="gaia" style="--background-color:white;--theme:gaia;background-color:white;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="gaia" style="--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://3dexperiencelab.3ds.com/sites/default/files/livingheart-keyvisual.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="11" data-theme="gaia" style="--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-theme="gaia" data-marpit-pagination="12" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>Objectifs du cours</h1>
+<ul>
+<li>Démo
+<ul>
+<li>Exemples d'applications</li>
+</ul>
+</li>
+<li>Théorie
+<ul>
+<li>Histoire de la 3D sur le Web</li>
+<li>Concepts: Architecture, Pipeline, API</li>
+</ul>
+</li>
+<li>Pratique
+<ul>
+<li>Programmation Web 3D
+<ul>
+<li>WebGL, THREE.js</li>
+<li>Autres APIs</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-theme="gaia" data-marpit-pagination="13" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>Planning <img class="emoji" draggable="false" alt="📅" src="https://twemoji.maxcdn.com/2/svg/1f4c5.svg" data-marp-twemoji=""/></h1>
+<ul>
+<li>
+<p><strong>Jour 1</strong></p>
+<ul>
+<li><strong>Théorie</strong> <img class="emoji" draggable="false" alt="📖" src="https://twemoji.maxcdn.com/2/svg/1f4d6.svg" data-marp-twemoji=""/></li>
+<li><strong>Exercices</strong> pratiques <strong>WebGL</strong> <img class="emoji" draggable="false" alt="💻" src="https://twemoji.maxcdn.com/2/svg/1f4bb.svg" data-marp-twemoji=""/></li>
+<li>Déjeuner <img class="emoji" draggable="false" alt="🍱" src="https://twemoji.maxcdn.com/2/svg/1f371.svg" data-marp-twemoji=""/></li>
+<li><strong>Théorie</strong> + <strong>exercice</strong> complet <strong>THREE.js</strong> <img class="emoji" draggable="false" alt="🎮" src="https://twemoji.maxcdn.com/2/svg/1f3ae.svg" data-marp-twemoji=""/></li>
+<li>Exploration des exemples + choix du <strong>projet</strong> personnel <img class="emoji" draggable="false" alt="⚗️" src="https://twemoji.maxcdn.com/2/svg/2697.svg" data-marp-twemoji=""/></li>
+</ul>
+</li>
+<li>
+<p><strong>Jour 2</strong></p>
+<ul>
+<li>Evaluation: <strong>Quizz</strong> ~20 min <img class="emoji" draggable="false" alt="🖊️" src="https://twemoji.maxcdn.com/2/svg/1f58a.svg" data-marp-twemoji=""/></li>
+<li><strong>Projet</strong> personnel <img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> points bonus! <img class="emoji" draggable="false" alt="⭐" src="https://twemoji.maxcdn.com/2/svg/2b50.svg" data-marp-twemoji=""/></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-class="lead invert" data-theme="gaia" class="lead invert" style="--class:lead invert;--theme:gaia;">
+<h1>Applications Web 3D</h1>
+<ul>
+<li>Jeux</li>
+<li>e-Commerce</li>
+<li>Création de modèles 3D</li>
+<li>Exploration de données 3D</li>
+<li>Art interactif</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="15" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://www.pixelsprite.fr/wp-content/uploads/2019/05/Classic.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-theme="gaia" data-marpit-pagination="15" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://classic.minecraft.net/"><strong>Minecraft Classic</strong></a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="15" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="16" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://freefrontend.com/assets/img/three-js-games/The-Aviator-Three-JS-Game.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-theme="gaia" data-marpit-pagination="16" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://tympanus.net/Tutorials/TheAviator/">Aviator</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="16" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="17" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;http://designinteractif.gobelins.fr/wp-content/uploads/2018/07/02.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-theme="gaia" data-marpit-pagination="17" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="http://designinteractif.gobelins.fr/2018/07/05/heraclos/">Heraclos, (Gobelins)</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="17" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="18" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://lh3.googleusercontent.com/p23feUh1kc0fPF1lGWx8KHCjll1Zagy-CGZvGTH0gR8jdz4sCrubieqPiO0jI4oERSE=s1200&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-theme="gaia" data-marpit-pagination="18" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://artsandculture.google.com/experiment/blob-opera/AAHWrq360NcGbw">Blob Opera (Google)</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="18" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="19" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://photos5.appleinsider.com/gallery/38681-73745-iphone-12-studio-example-xl.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-theme="gaia" data-marpit-pagination="19" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://experience.apple/iphone">Apple iPhone Studio</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="19" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="20" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://thefwa.com/dyn/resources/Case_Model_Case/slide1/4/134/1457953861/1364_span9/BMW_Gallery_900-C1LN.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-theme="gaia" data-marpit-pagination="20" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://playcanv.as/p/RqJJ9oU9/">BMW</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="20" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="21" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://henryegloff.com/media/ouigo-webgl-game-example-1536x1056.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-theme="gaia" data-marpit-pagination="21" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="http://letsplay.ouigo.com/">OUIGO</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="21" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="22" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;http://shawntoneil.com/3d_printing_notes/sculptgl.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-theme="gaia" data-marpit-pagination="22" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://stephaneginier.com/sculptgl/">SculptGL</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="22" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="23" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://www.solidworks.com/sites/default/files/2019-12/Subdivison%20Modeling.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-theme="gaia" data-marpit-pagination="23" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://www.solidworks.com/fr/product/3d-sculptor">3D Sculptor (Dassault Systèmes)</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="23" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="24" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://develop3d.com/wp-content/uploads/2019/11/Standard_Content.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-theme="gaia" data-marpit-pagination="24" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://www.onshape.com/en/">OnShape (PTC)</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="24" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="25" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://images.adsttc.com/media/images/575e/f093/e58e/cedb/9a00/0046/newsletter/Screen_Shot_2016-06-13_at_12.45.19_PM.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-theme="gaia" data-marpit-pagination="25" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://sketchfab.com/">SketchFab (Epic)</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="25" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="26" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://www.ac-coaching.fr/wp-content/uploads/2012/02/Zygote-Body.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-theme="gaia" data-marpit-pagination="26" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://www.zygotebody.com/">Zygote Body</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="26" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="27" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://scitechdaily.com/images/Lunar-Sample-Astromaterials-3D-Explorer.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-theme="gaia" data-marpit-pagination="27" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="https://ares.jsc.nasa.gov/astromaterials3d/">NASA</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="27" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="28" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;http://www.itowns-project.org/images/montage.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-theme="gaia" data-marpit-pagination="28" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<p><a href="http://www.itowns-project.org/">iTowns (IGN)</a></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="28" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="lead invert" data-theme="gaia" class="lead invert" style="--class:lead invert;--theme:gaia;">
+<h1>Histoire</h1>
+<p>Origines et avenir de la 3D sur le Web</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-theme="gaia" class="invert" style="--class:invert;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;http://www.9emeart.fr/uploads/images/large/5243.jpeg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="30" data-class="invert" data-theme="gaia" class="invert" style="--class:invert;--theme:gaia;" data-marpit-advanced-background="content">
+<h2><em>&quot;Dis Papy, c'était comment la 3D avant?&quot;</em></h2>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="invert" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="white" data-theme="gaia" style="--background-color:white;--theme:gaia;background-color:white;background-image:none;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;https://xsisupport.files.wordpress.com/2011/12/jurrasic_park__ilm_cgi_before_n_after.gif&quot;);"></figure><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Silicon_Graphics_Indy.jpg/768px-Silicon_Graphics_Indy.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="31" data-background-color="white" data-theme="gaia" style="--background-color:white;--theme:gaia;background-color:white;background-image:none;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1><a href="https://www.slideshare.net/Mark_Kilgard/sigraph-asia-2008-modern-opengl-presentation/13-13OpenGLs_PrehistoryIRIS_GL_1Window_system">Préhistoire</a> (1983 - 1993)</h1>
+<ul>
+<li>uniquement sur machines Silicon Graphics (SGI)
+<ul>
+<li>IRIX OS</li>
+</ul>
+</li>
+<li>IRIS GL (1983)
+<ul>
+<li>API <strong>proche du hardware</strong></li>
+</ul>
+</li>
+<li>IRIS Inventor (1988)</li>
+<li><strong>OpenGL 1.0</strong> (1993)
+<ul>
+<li>API ouverte, Multi-OS</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="white" data-theme="gaia" data-marpit-pagination="32" data-marpit-pagination-total="95" style="--paginate:true;--background-color:white;--theme:gaia;background-color:white;background-image:none;--marpit-advanced-background-split:20%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/fr/9/91/Logo_3dfx.jpg&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/en/3/3b/DirectX_1_logo.png&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/OpenGL_ES_Nov14.svg/800px-OpenGL_ES_Nov14.svg.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="32" data-paginate="true" data-background-color="white" data-theme="gaia" data-marpit-pagination="32" data-marpit-pagination-total="95" style="--paginate:true;--background-color:white;--theme:gaia;background-color:white;background-image:none;--marpit-advanced-background-split:20%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1><a href="https://stanford.edu/class/ee267/lectures/lecture2.pdf">Fixed Pipeline</a> (1993 - 2004)</h1>
+<ul>
+<li>3dfx Glide API (1996)
+<ul>
+<li>Voodoo: &quot;Carte d'&quot;accéleration 3D&quot; grand public</li>
+</ul>
+</li>
+<li>Microsoft Direct X API (1997)
+<ul>
+<li>Windows-only <img class="emoji" draggable="false" alt="☹️" src="https://twemoji.maxcdn.com/2/svg/2639.svg" data-marp-twemoji=""/></li>
+</ul>
+</li>
+<li><strong>OpenGL ES</strong> (2004)
+<ul>
+<li><strong>Subset</strong> pour &quot;Embedded Systems&quot; <img class="emoji" draggable="false" alt="📱" src="https://twemoji.maxcdn.com/2/svg/1f4f1.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="🎮" src="https://twemoji.maxcdn.com/2/svg/1f3ae.svg" data-marp-twemoji=""/></li>
+<li><a href="https://www.khronos.org/assets/uploads/developers/library/2015-siggraph/3D-BOF-SIGGRAPH_Aug15.pdf"><em>&quot;most widely deployed 3D graphics API&quot;</em></a></li>
+</ul>
+</li>
+<li><strong>OpenGL 2.0</strong> (2004)
+<ul>
+<li><strong><a href="https://fr.wikipedia.org/wiki/OpenGL_Shading_Language">GLSL</a></strong> Shaders <img class="emoji" draggable="false" alt="🎉" src="https://twemoji.maxcdn.com/2/svg/1f389.svg" data-marp-twemoji=""/></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="32" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="white" data-theme="gaia" data-marpit-pagination="33" data-marpit-pagination-total="95" style="--paginate:true;--background-color:white;--theme:gaia;background-color:white;background-image:none;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Nvidia_old_logo.svg/1280px-Nvidia_old_logo.svg.png&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Sega-Saturn-JP-Mk1-Console-Set.jpg/800px-Sega-Saturn-JP-Mk1-Console-Set.jpg&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Xbox-Console-Set.png/800px-Xbox-Console-Set.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="33" data-paginate="true" data-background-color="white" data-theme="gaia" data-marpit-pagination="33" data-marpit-pagination-total="95" style="--paginate:true;--background-color:white;--theme:gaia;background-color:white;background-image:none;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
+<ul>
+<li>
+<p>Création de nVIDIA (1993)<br />
+</p>
+</li>
+<li>
+<p>NV1 dans la <strong>SEGA Saturn</strong> (1994)<br />
+</p>
+</li>
+<li>
+<p>GeForce 256 (1999)</p>
+<ul>
+<li>popularisation du terme <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit"><strong>GPU</strong></a>: <strong>G</strong>raphics <strong>P</strong>rocessing <strong>U</strong>nit, Transform &amp; Ligthing</li>
+</ul>
+</li>
+<li>
+<p>GeForce 3 (2001): NV2A dans la <strong>Xbox</strong> de Microsoft, <strong>programmable shading</strong><br />
+</p>
+</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="33" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="34" data-marpit-pagination-total="95" style="--paginate:true;--class:invert;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/N64-Console-Set.png/800px-N64-Console-Set.png&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/0/07/Dreamcast-Console-Set.png&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Gamecube-console.png/514px-Gamecube-console.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="34" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="34" data-marpit-pagination-total="95" style="--paginate:true;--class:invert;--theme:gaia;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1>Autres acteurs</h1>
+<ul>
+<li><strong>SGI</strong> + <strong>Nintendo</strong>: Project Reality / <strong>N64</strong> (1996)
+<ul>
+<li>SGI disparait en 2006 <img class="emoji" draggable="false" alt="💀" src="https://twemoji.maxcdn.com/2/svg/1f480.svg" data-marp-twemoji=""/></li>
+</ul>
+</li>
+</ul>
+<h2></h2>
+
+<ul>
+<li>
+<p><strong>Imagination Technologies</strong> (<strong>PowerVR</strong> GPU) + <strong>Sega</strong>: <strong>Dreamcast</strong> (1998)<br />
+</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units#Second_generation">Intel i740</a> (1998) : OS en 3D</p>
+</li>
+<li>
+<p><strong>ATI (AMD)</strong> + <strong>Nintendo</strong>: <strong>Gamecube</strong> (2001)<br />
+</p>
+</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="invert" style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="34" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="gaia" style="--theme:gaia;--marpit-advanced-background-split:19%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/3/3f/OpenGL_ES_logo_%28Nov14%29.svg&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/7/76/Mozilla_Firefox_logo_2013.svg&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/2/25/WebGL_Logo.svg&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;https://photos5.appleinsider.com/gallery/29149-46701-000-3x2-iPhone-history-xl.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="81%" height="720"><section id="35" data-theme="gaia" style="--theme:gaia;--marpit-advanced-background-split:19%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1><a href="https://slideplayer.com/slide/16710114/">Shaders, Mobile, Web</a> (2004+)</h1>
+<ul>
+<li>OpenGL ES 2.0 (2007)
+<ul>
+<li>Subset <strong>mobile avec shaders</strong></li>
+</ul>
+</li>
+<li>Canvas 3D (2007), ancêtre de <strong>WebGL</strong>
+<ul>
+<li>créé par <a href="https://en.wikipedia.org/wiki/Vladimir_Vuki%C4%87evi%C4%87"><strong>Vladimir Vukićević</strong></a> chez Mozilla</li>
+</ul>
+</li>
+<li><strong>WebGL 1.0</strong> (<strong>2011</strong>) <img class="emoji" draggable="false" alt="⭐" src="https://twemoji.maxcdn.com/2/svg/2b50.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="🎉" src="https://twemoji.maxcdn.com/2/svg/1f389.svg" data-marp-twemoji=""/>
+<ul>
+<li>fonctionnalités de OpenGL ES 2.0</li>
+</ul>
+</li>
+<li>OpenGL ES 3.0 (2012), <strong>3.1</strong> (2014): <strong>sans Apple</strong> <img class="emoji" draggable="false" alt="😢" src="https://twemoji.maxcdn.com/2/svg/1f622.svg" data-marp-twemoji=""/></li>
+<li><strong>WebGL 2.0</strong> (2017)
+<ul>
+<li>fonctionnalités de OpenGL ES 3.0</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="lead invert" data-theme="gaia" class="lead invert" style="--class:lead invert;--theme:gaia;--marpit-advanced-background-split:25%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/3/3b/Vladimir_Vuki%C4%87evi%C4%87_at_the_2010_Mozilla_Summit_in_Whistler%2C_British_Columbia%2C_Canada.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="75%" height="720"><section id="36" data-class="lead invert" data-theme="gaia" class="lead invert" style="--class:lead invert;--theme:gaia;--marpit-advanced-background-split:25%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<blockquote>
+<p><strong>Before WebGL</strong>, you couldn’t really do 3D on the web at all.<br />
+There was <strong>powerful 3D hardware</strong> everywhere on both desktops and mobile phones, but <strong>the web couldn’t tap into any of it.</strong><br />
+There were some <strong>plugins</strong>, but users had to do an extra <strong>installation step</strong> that was a huge obstacle to adoption.<br />
+All the browser vendors knew that this was a <strong>challenge</strong> that needed to be resolved, which is why we came together as a <strong>Khronos</strong> Working Group.</p>
+</blockquote>
+<p><a href="https://architosh.com/2019/02/webgl-2-0-why-its-the-path-to-stable-open-standards-based-3d-web-graphics/2/">Vladimir Vukićević</a> (WebGL creator, WebVR guru)</p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="lead invert" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="37" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://player.slideplayer.com/97/16710114/slides/slide_4.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-theme="gaia" data-marpit-pagination="37" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="37" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-theme="gaia" data-marpit-pagination="38" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>WebGL architecture: software stack</h1>
+<ul>
+<li>Code: HTML + CSS + JS
+<ul>
+<li>code JS de la page web appelle API WebGL</li>
+</ul>
+</li>
+<li>Browser:
+<ul>
+<li>navigateur interprète le JS (moteur JS)</li>
+<li>convertit calls WebGL en calls OpenGL (binding)</li>
+</ul>
+</li>
+<li>OS + Driver: les calls OpenGL sont convertis
+<ul>
+<li>en calls DirectX sous Windows, Metal chez Apple (via <a href="https://en.wikipedia.org/wiki/ANGLE_(software)">ANGLE</a>)</li>
+<li>en calls OpenGL ou OpenGL ES sur les autres OS</li>
+</ul>
+</li>
+<li>CPU + GPU: exécutent le code!</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-theme="gaia" data-marpit-pagination="39" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>Conséquences sur les performances</h1>
+<ul>
+<li>Code JS interprété en moyenne 10x plus lent que le code natif
+<ul>
+<li>sauf astuces comme <a href="https://webassembly.org/">WebAssembly</a></li>
+</ul>
+</li>
+<li>Code natif mobile environ 10x plus lent que code natif sur desktop</li>
+<li>Recommandations
+<ul>
+<li>minimiser les appels depuis le JS, favoriser les shaders</li>
+<li>une fois que les shaders sont compilés et les données sont sur le GPU, le code est presque aussi rapide en JS qu'en natif!</li>
+<li>attention à la mémoire: utiliser compression de modèles <a href="https://google.github.io/draco/">Draco</a> et de texture <a href="https://www.khronos.org/blog/google-and-binomial-contribute-basis-universal-texture-format-to-khronos-gltf-3d-transmission-open-standard">Basis</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="40" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;http://eux-blog-static.bj.bcebos.com/relations.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-theme="gaia" data-marpit-pagination="40" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content">
+<h2>Evolution</h2>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="40" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="41" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://player.slideplayer.com/97/16710114/slides/slide_5.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-theme="gaia" data-marpit-pagination="41" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="41" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="lead invert" data-theme="gaia" class="lead invert" style="--class:lead invert;--theme:gaia;--marpit-advanced-background-split:55%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://www.wattagnet.com/ext/resources/Images-by-month-year/16_11/16_11-poultry/Dodo-bird.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="45%" height="720" x="55%"><section id="42" data-class="lead invert" data-theme="gaia" class="lead invert" style="--class:lead invert;--theme:gaia;--marpit-advanced-background-split:55%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
+<h1>La fin d'une API?</h1>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="lead invert" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="43" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://www.ozone3d.net/public/jegx/201502/opengl-next-vulkan-slide01.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="43" data-paginate="true" data-theme="gaia" data-marpit-pagination="43" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="43" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-paginate="true" data-theme="gaia" data-marpit-pagination="44" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>Problèmes d'évolution</h1>
+<ul>
+<li>Le matériel et les besoins ont changé depuis 1993
+<ul>
+<li><strong>mobiles</strong>, wearables <img class="emoji" draggable="false" alt="📱" src="https://twemoji.maxcdn.com/2/svg/1f4f1.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="⌚" src="https://twemoji.maxcdn.com/2/svg/231a.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="🕶️" src="https://twemoji.maxcdn.com/2/svg/1f576.svg" data-marp-twemoji=""/></li>
+<li><strong>systèmes embarqués</strong>, AI, Vision <img class="emoji" draggable="false" alt="🚗" src="https://twemoji.maxcdn.com/2/svg/1f697.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="🚀" src="https://twemoji.maxcdn.com/2/svg/1f680.svg" data-marp-twemoji=""/></li>
+</ul>
+</li>
+<li>API de plus en plus <strong>complexe</strong>
+<ul>
+<li><strong>drivers</strong> compliqués à coder sans erreur et à optimiser</li>
+<li><strong>extensions</strong> OpenGL non universelles</li>
+<li><strong>subset</strong> et dépréciation des anciennes APIs moins efficaces</li>
+</ul>
+</li>
+<li>Besoin d'une nouvelle API
+<ul>
+<li><strong>bas niveau, universelle, performante et abstraite</strong></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-paginate="true" data-theme="gaia" data-marpit-pagination="45" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1><a href="https://github.com/gpuweb/gpuweb/issues/2">Besoin</a> d'une nouvelle API?</h1>
+<ul>
+<li>Pas forcément: <strong>AZDO</strong>: Approaching Zero Driver Overhead (2016)
+<ul>
+<li>en utilisant &quot;le bon&quot; subset d'OpenGL et les bonnes extensions, on peut obtenir un rendu performant
+<ul>
+<li><a href="https://fr.slideshare.net/CassEveritt/approaching-zero-driver-overhead">https://fr.slideshare.net/CassEveritt/approaching-zero-driver-overhead</a></li>
+<li><a href="https://fr.slideshare.net/tlorach/opengl-nvidia-commandlistapproaching-zerodriveroverhead">https://fr.slideshare.net/tlorach/opengl-nvidia-commandlistapproaching-zerodriveroverhead</a></li>
+</ul>
+</li>
+<li>idée principale
+<ul>
+<li>décharger le CPU <img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> moins de DrawCalls</li>
+<li>éviter que le GPU se tourne les pouces <img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> plus de données</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="46" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://image.slidesharecdn.com/commandlistsiggraphasia2014-141204005310-conversion-gate02/95/opengl-nvidia-commandlist-approaching-zerodriveroverhead-6-638.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="46" data-paginate="true" data-theme="gaia" data-marpit-pagination="46" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="46" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="47" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://image.slidesharecdn.com/approachingzerodriveroverhead-140320164055-phpapp01/95/approaching-zero-driver-overhead-122-638.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-theme="gaia" data-marpit-pagination="47" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="47" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-theme="gaia" data-marpit-pagination="48" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>API Fragmentation <img class="emoji" draggable="false" alt="💥" src="https://twemoji.maxcdn.com/2/svg/1f4a5.svg" data-marp-twemoji=""/></h1>
+<ul>
+<li>Multiplication des APIs propriétaires <img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> non portables <img class="emoji" draggable="false" alt="😦" src="https://twemoji.maxcdn.com/2/svg/1f626.svg" data-marp-twemoji=""/>
+<ul>
+<li>proches du GPU <img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> performantes</li>
+<li>neuves <img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> &quot;propres&quot;</li>
+</ul>
+</li>
+<li><strong>Direct X 12</strong> (Microsoft) : Windows, Xbox</li>
+<li><strong>Mantle</strong> (AMD) transférée à <strong>Khronos</strong> pour devenir <strong>Vulkan</strong>
+<ul>
+<li><strong>nouveau standard ouvert bas-niveau</strong> <img class="emoji" draggable="false" alt="⭐" src="https://twemoji.maxcdn.com/2/svg/2b50.svg" data-marp-twemoji=""/></li>
+</ul>
+</li>
+<li><strong>Metal</strong> (Apple)
+<ul>
+<li>ressemble à Vulkan, bien qu'antérieure</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="white" data-theme="gaia" data-marpit-pagination="49" data-marpit-pagination-total="95" style="--paginate:true;--background-color:white;--theme:gaia;background-color:white;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://assets.hardwarezone.com/img/2016/02/vulkan-explicit-gpu-control.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="49" data-paginate="true" data-background-color="white" data-theme="gaia" data-marpit-pagination="49" data-marpit-pagination-total="95" style="--paginate:true;--background-color:white;--theme:gaia;background-color:white;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="49" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-class="lead invert" data-theme="gaia" class="lead invert" style="--class:lead invert;--theme:gaia;">
+<h1>Vers une réunification des APIs?</h1>
+<p>Quel nouveau subset commun?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="51" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://architosh.com/wp-content/uploads/2017/09/khronos_slide_2.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="51" data-paginate="true" data-theme="gaia" data-marpit-pagination="51" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="51" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-paginate="true" data-theme="gaia" data-marpit-pagination="52" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>WebGL Next == &quot;WebGPU&quot; ?</h1>
+<ul>
+<li>Apple &quot;WebMetal&quot;, API calquée sur Metal</li>
+<li>Proposition partiellement reprise et renommée &quot;WebGPU&quot;
+<ul>
+<li>nom provisoire, <a href="https://news.ycombinator.com/item?id=20954874">API en cours de définition</a></li>
+<li>à la fois <strong>bas niveau</strong> et <strong>orientée objet</strong></li>
+<li>rendu <strong>performant</strong></li>
+<li>subset <strong>web ET natif</strong>, malgré le nom
+<ul>
+<li>un peu comme &quot;Vulkan ES&quot; / &quot;Metal ES&quot;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Remplacerait WebCL, abandonné (Compute Shaders) <img class="emoji" draggable="false" alt="😢" src="https://twemoji.maxcdn.com/2/svg/1f622.svg" data-marp-twemoji=""/></li>
+<li>Compatible <a href="http://maierfelix.github.io">WebAssembly</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="#00000d" data-theme="gaia" data-marpit-pagination="53" data-marpit-pagination-total="95" style="--paginate:true;--background-color:#00000d;--theme:gaia;background-color:#00000d;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://architosh.com/wp-content/uploads/2017/02/architosh_webGL.jpg&quot;);background-size:800px auto;"></figure><figure style="background-image:url(&quot;https://architosh.com/wp-content/uploads/2017/02/architosh_webGPU.jpg&quot;);background-size:800px auto;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="53" data-paginate="true" data-background-color="#00000d" data-theme="gaia" data-marpit-pagination="53" data-marpit-pagination-total="95" style="--paginate:true;--background-color:#00000d;--theme:gaia;background-color:#00000d;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="53" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-class="lead invert" data-theme="gaia" class="lead invert" style="--class:lead invert;--theme:gaia;">
+<h1>C'est bien sympa tout ça mais j'utilise quoi comme API finalement <img class="emoji" draggable="false" alt="⁉️" src="https://twemoji.maxcdn.com/2/svg/2049.svg" data-marp-twemoji=""/></h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-paginate="true" data-class="lead invert" data-footer="https://www.khronos.org/blog/webgl-happenings" data-theme="gaia" class="lead invert" data-marpit-pagination="55" data-marpit-pagination-total="95" style="--paginate:true;--class:lead invert;--footer:https://www.khronos.org/blog/webgl-happenings;--theme:gaia;">
+<blockquote>
+<p>We hope for <strong>universal availability of WebGL 2.0 soon</strong>. If you need to ship your product <strong>today, WebGL 2.0 is the way to go</strong>. WebGL will be <strong>supported indefinitely</strong>. You do not need to worry about it going away.</p>
+</blockquote>
+<blockquote>
+<p><strong>WebGPU</strong>'s timeline is discussed in the answer to the previous question. WebXR and WebAR are already working on WebGPU integration.</p>
+</blockquote>
+<p><a href="https://www.khronos.org/assets/uploads/developers/library/2020-virtual-webgl-meetup/01%20WebGL%20WG%20Updates.pdf">Khronos WebGL meetup</a>, November 18, 2020</p>
+<footer><a href="https://www.khronos.org/blog/webgl-happenings">https://www.khronos.org/blog/webgl-happenings</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-paginate="true" data-class="lead invert" data-footer="https://www.khronos.org/events/webgl-webgpu-meetup-january-2022" data-theme="gaia" class="lead invert" data-marpit-pagination="56" data-marpit-pagination-total="95" style="--paginate:true;--class:lead invert;--footer:https://www.khronos.org/events/webgl-webgpu-meetup-january-2022;--theme:gaia;">
+<blockquote>
+<p><strong>WebGL 2.0</strong> can now be considered <strong>universally available</strong> across browsers, operating systems and devices.<br />
+As an application author, you can <strong>target WebGL 2.0 with confidence.</strong><br />
+We encourage you to <strong>migrate to WebGL 2.0</strong><br />
+It's no longer necessary to maintain a WebGL 1.0 fallback path unless you need to reach absolutely every device.<br />
+In particular, <strong>older Windows machines and Android devices.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>WebGPU</strong> standardization continues; conformance testing in high gear<br />
+Aiming to reach 1.0 in 2022 Q2 (spec and conformance tests).</p>
+</blockquote>
+<p><a href="https://docs.google.com/presentation/d/1r9ZSEbfCfaTDE0-xT0-BMHjcYW1X-SUnUB-NO1TxDI0/preview?slide=id.gf7dc91f55f_0_14">Khronos WebGL + WebGPU meetup</a>, January 25, 2022</p>
+<footer><a href="https://www.khronos.org/events/webgl-webgpu-meetup-january-2022">https://www.khronos.org/events/webgl-webgpu-meetup-january-2022</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-header="https://caniuse.com/webgl" data-theme="gaia" data-marpit-pagination="57" data-marpit-pagination-total="95" style="--paginate:true;--header:https://caniuse.com/webgl;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://www.scichart.com/documentation/js/current/images/can-i-use-webgl1.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="57" data-paginate="true" data-header="https://caniuse.com/webgl" data-theme="gaia" data-marpit-pagination="57" data-marpit-pagination-total="95" style="--paginate:true;--header:https://caniuse.com/webgl;--theme:gaia;" data-marpit-advanced-background="content">
+<header><a href="https://caniuse.com/webgl">https://caniuse.com/webgl</a></header>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="57" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-paginate="true" data-theme="gaia" data-marpit-pagination="58" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>WebGL 1.0 <img class="emoji" draggable="false" alt="✅" src="https://twemoji.maxcdn.com/2/svg/2705.svg" data-marp-twemoji=""/></h1>
+<ul>
+<li>disponible pour <strong>97,5%</strong> des utilisateurs!
+<ul>
+<li>données janvier 2021
+<ul>
+<li>cf <a href="https://caniuse.com/webgl">https://caniuse.com/webgl</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>y compris navigateurs <strong>mobiles</strong>
+<ul>
+<li>Chrome for Android</li>
+<li>iOS Safari</li>
+</ul>
+</li>
+</ul>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> <strong>disponible partout!</strong> <img class="emoji" draggable="false" alt="🎉" src="https://twemoji.maxcdn.com/2/svg/1f389.svg" data-marp-twemoji=""/></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-header="https://caniuse.com/webgl2 [janvier 2021]" data-theme="gaia" data-marpit-pagination="59" data-marpit-pagination-total="95" style="--paginate:true;--header:https://caniuse.com/webgl2 [janvier 2021];--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://applech2.com/wp-content/uploads/2020/10/Can-I-Use-WebGL2.jpg&quot;);background-size:120%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="59" data-paginate="true" data-header="https://caniuse.com/webgl2 [janvier 2021]" data-theme="gaia" data-marpit-pagination="59" data-marpit-pagination-total="95" style="--paginate:true;--header:https://caniuse.com/webgl2 [janvier 2021];--theme:gaia;" data-marpit-advanced-background="content">
+<header><a href="https://caniuse.com/webgl2">https://caniuse.com/webgl2</a> [janvier 2021]</header>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="59" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-paginate="true" data-theme="gaia" data-marpit-pagination="60" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1><a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a> <img class="emoji" draggable="false" alt="⚠️" src="https://twemoji.maxcdn.com/2/svg/26a0.svg" data-marp-twemoji=""/></h1>
+<ul>
+<li>disponible pour <strong>84,76%</strong> des utilisateurs
+<ul>
+<li>données <strong>janvier 2022</strong>
+<ul>
+<li>cf <a href="https://caniuse.com/webgl2">https://caniuse.com/webgl2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Standard chez Apple depuis iOS 15! (septembre 2021) <img class="emoji" draggable="false" alt="🎉" src="https://twemoji.maxcdn.com/2/svg/1f389.svg" data-marp-twemoji=""/></li>
+</ul>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> <strong>officiel, <a href="https://webgl2fundamentals.org/webgl/lessons/webgl1-to-webgl2.html">commencer à coder avec!</a></strong> (vérifier la disponibilité)</p>
+<ul>
+<li>&quot;forward-compatible&quot;: code WebGL 1.0 fonctionne en WebGL 2.0</li>
+<li><a href="https://github.com/visgl/luma.gl">polyfill</a> WebGL 1.0 vers subset WebGL 2.0, si possible (<img class="emoji" draggable="false" alt="⚠️" src="https://twemoji.maxcdn.com/2/svg/26a0.svg" data-marp-twemoji=""/> shaders)</li>
+<li>mais il faut connaître WebGL 1.0 pour comprendre le code existant</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="61" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://aws1.discourse-cdn.com/standard17/uploads/threejs/original/2X/8/88812eb62b224ebca03b9a9f8f985b1360426867.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="61" data-paginate="true" data-theme="gaia" data-marpit-pagination="61" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1>WebGL 2.0 sur iOS</h1>
+<p>Réglages &gt; Safari &gt; Avancé &gt; Experimental Features<br />
+</p>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> Tester en allant sur:</p>
+<ul>
+<li><a href="https://webglreport.com/?v=2">https://webglreport.com/?v=2</a></li>
+<li><a href="https://get.webgl.org/webgl2/">https://get.webgl.org/webgl2/</a></li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="61" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62" data-paginate="true" data-theme="gaia" data-marpit-pagination="62" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>WebGL 2.0 : <a href="https://webgl2fundamentals.org/webgl/lessons/webgl1-to-webgl2.html">extensions standardisées</a></h1>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    Depth Textures (WEBGL_depth_texture)
+    Floating Point Textures (OES_texture_float/OES_texture_float_linear)
+    Half Floating Point Textures (OES_texture_half_float/OES_texture_half_float_linear)
+    Vertex Array Objects (OES_vertex_array_object)
+    Standard Derivatives (OES_standard_derivatives)
+    Instanced Drawing (ANGLE_instanced_arrays)
+    UNSIGNED_INT indices (OES_element_index_uint)
+    Setting gl_FragDepth (EXT_frag_depth)
+    Blend Equation MIN/MAX (EXT_blend_minmax)
+    Direct texture LOD access (EXT_shader_texture_lod)
+    Multiple Draw Buffers (WEBGL_draw_buffers)
+    Texture access in vertex shaders
+</span></span></foreignObject></svg></code></pre>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> même si WebGL 2.0 n'est pas supporté, on peut s'en approcher en utilisant WebGL 1.0 + des <strong>extensions</strong>!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63" data-paginate="true" data-theme="gaia" data-marpit-pagination="63" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>WebGL 1.0.1 <img class="emoji" draggable="false" alt="✅" src="https://twemoji.maxcdn.com/2/svg/2705.svg" data-marp-twemoji=""/></h1>
+<p><a href="https://github.com/jdashg/misc/blob/master/webgl/webgl-v1.1.js">WebGL 1.0.1</a> == WebL 1.0 + <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices">extensions omniprésentes</a></p>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>ANGLE_instanced_arrays
+EXT_blend_minmax
+OES_element_index_uint
+OES_standard_derivatives
+OES_vertex_array_object
+WEBGL_debug_renderer_info
+WEBGL_lose_context
+</span></span></foreignObject></svg></code></pre>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> <strong>disponible partout!</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64" data-paginate="true" data-theme="gaia" data-marpit-pagination="64" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>WebGL 1.0.2 <img class="emoji" draggable="false" alt="✅" src="https://twemoji.maxcdn.com/2/svg/2705.svg" data-marp-twemoji=""/></h1>
+<p>WebGL 1.0.2 == WebL 1.0.1 + <a href="https://jdashg.github.io/misc/webgl/webgl-feature-levels.html">extensions omniprésentes en 2021</a></p>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EXT_texture_filter_anisotropic
+OES_texture_float
+OES_texture_float_linear
+OES_texture_half_float
+OES_texture_half_float_linear
+WEBGL_depth_texture 
+</span></span></foreignObject></svg></code></pre>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> <strong>disponible partout!</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65" data-paginate="true" data-theme="gaia" data-marpit-pagination="65" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>WebGL 1.0.3 <img class="emoji" draggable="false" alt="⚠️" src="https://twemoji.maxcdn.com/2/svg/26a0.svg" data-marp-twemoji=""/></h1>
+<p>WebGL 1.0.3 == WebL 1.0.2 + <a href="https://jdashg.github.io/misc/webgl/webgl-feature-levels.html">extensions omniprésentes en 2022</a>:</p>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EXT_shader_texture_lod
+EXT_sRGB
+EXT_frag_depth
+</span></span></foreignObject></svg></code></pre>
+<ul>
+<li>et une non supportée sur Android Browser et Samsung Internet</li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>WEBGL_draw_buffers 
+</span></span></foreignObject></svg></code></pre>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> <strong>vérifier la disponibilité avant usage</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" data-paginate="true" data-theme="gaia" data-marpit-pagination="66" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>WebGL 2.0 extensions <img class="emoji" draggable="false" alt="⚠️" src="https://twemoji.maxcdn.com/2/svg/26a0.svg" data-marp-twemoji=""/></h1>
+<p>Extensions Web GL 2.0 <a href="https://jdashg.github.io/misc/webgl/webgl-feature-levels.html">omniprésentes en 2022</a>:</p>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EXT_texture_filter_anisotropic
+OES_texture_float_linear
+WEBGL_debug_renderer_info
+WEBGL_lose_context 
+</span></span></foreignObject></svg></code></pre>
+<ul>
+<li>et une incompatible avec Safari macOS <img class="emoji" draggable="false" alt="❌" src="https://twemoji.maxcdn.com/2/svg/274c.svg" data-marp-twemoji=""/> : problème pour <strong>GPGPU</strong></li>
+</ul>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EXT_color_buffer_float
+</span></span></foreignObject></svg></code></pre>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> <strong>vérifier la disponibilité avant usage</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="67" data-marpit-pagination-total="95" style="--paginate:true;--class:lead invert;--theme:gaia;">
+<h1><img class="emoji" draggable="false" alt="⚠️" src="https://twemoji.maxcdn.com/2/svg/26a0.svg" data-marp-twemoji=""/> Disponible != sans bug</h1>
+<blockquote>
+<p><strong>#WebGL2</strong> is a rubbish job on <strong>#IOS14</strong>. On Ipad pro more than half of the conformance tests fail ( 153553 over 260803 - tested here: <a href="https://khronos.org/registry/webgl/sdk/tests/webgl-conformance-tests.html%E2%80%A6">https://khronos.org/registry/webgl/sdk/tests/webgl-conformance-tests.html…</a> ). For GPGPU I still use WebGL1 for IOS devices.</p>
+</blockquote>
+<p><a href="https://twitter.com/xavierbourry/status/1287842100160102402?s=20">@xavierbourry</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68" data-paginate="true" data-theme="gaia" data-marpit-pagination="68" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1><a href="https://webkit.org/blog/9528/webgpu-and-wsl-in-safari/">WebGPU</a> (rappels)</h1>
+<ul>
+<li>API bas-niveau prometteuse, performante, proposée par Apple</li>
+<li>proche de <a href="https://developer.apple.com/metal/"><strong>Metal</strong></a>, Vulkan et DirectX 12
+<ul>
+<li>se <a href="https://developer.apple.com/videos/graphics-and-games/metal">documenter sur Metal</a> pour comprendre les concepts</li>
+</ul>
+</li>
+<li>nouveau langage de shaders: <a href="https://gpuweb.github.io/gpuweb/wgsl.html"><strong>WGSL</strong></a>
+<ul>
+<li>texte, se retrouve compilé en SPIR-V (Vulkan)</li>
+</ul>
+</li>
+<li><a href="https://gpuweb.github.io/gpuweb/">en cours de définition</a> par Apple et le W3C</li>
+<li><a href="https://webkit.org/demos/webgpu/">demos</a> et <a href="https://alain.xyz/blog/raw-webgpu">code minimaliste</a></li>
+</ul>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> sans doute l'avenir de la 3D sur le Web, <strong>à garder à l'œil!</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69" data-paginate="true" data-theme="gaia" data-marpit-pagination="69" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>Conclusion: quelle API utiliser?</h1>
+<ul>
+<li>Commencer par <strong>WebGL 1.0</strong>, nombreux exemples (API de 11 ans!)
+<ul>
+<li>pour comprendre les <strong><em>concepts</em></strong>
+<ul>
+<li>machine à états, pipeline, buffers, shaders</li>
+<li>cf cours OpenGL!</li>
+</ul>
+</li>
+<li>et <strong>intégration</strong> avec une page web
+<ul>
+<li>cf cours HTML / JavaScript / CSS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Aborder les nouveautés apportées par <strong>WebGL 2.0</strong></li>
+<li>Utiliser des APIs haut niveau: <strong>THREE.js</strong>, Babylon, A-Frame etc.
+<ul>
+<li>pour une transition transparente vers WebGPU!</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="70" data-marpit-pagination-total="95" style="--paginate:true;--class:lead invert;--theme:gaia;">
+<h1>WebGL</h1>
+<p>Concepts</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71" data-paginate="true" data-theme="gaia" data-marpit-pagination="71" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>Concepts &gt; Syntaxe</h1>
+<ul>
+<li>Les APIs évoluent</li>
+<li>Le matériel aussi</li>
+<li>mais il y a des <strong>bases communes</strong> à toutes les APIs, et à tous les GPUs</li>
+<li>La syntaxe et l'API sont moins importantes que les <strong>concepts, communs, transposables</strong></li>
+</ul>
+<p><img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> comprendre <strong>comment fonctionne un GPU</strong> pour l'exploiter au maximum de ses <strong>performances</strong><br />
+<img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> <strong>adaptation facilitée</strong> à d'autres APIs, OS ou architectures</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="72" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="72" data-marpit-pagination-total="95" style="--paginate:true;--class:lead;--theme:gaia;">
+<h1>CPU vs <strong>GPU</strong></h1>
+<p>Rappels</p>
+<blockquote>
+<p><em>There's a freaking supercomputer in your browser,<br />
+and nobody seems to have noticed!</em></p>
+</blockquote>
+<p><a href="https://vimeo.com/97329154">Steve Sanderson</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="73" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://2.bp.blogspot.com/-hNBj-v6c5As/WR8UefJAFkI/AAAAAAAAAis/2KXxy8EgSSE6gsLoj6dbuQZaYnWdofrcACLcB/s1600/GPU_vs_CPU.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="73" data-paginate="true" data-theme="gaia" data-marpit-pagination="73" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="73" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="white" data-footer="www.thebookofshaders.com" data-theme="gaia" data-marpit-pagination="74" data-marpit-pagination-total="95" style="--paginate:true;--background-color:white;--footer:www.thebookofshaders.com;--theme:gaia;background-color:white;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;https://thebookofshaders.com/01/00.jpeg&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;https://thebookofshaders.com/01/03.jpeg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="74" data-paginate="true" data-background-color="white" data-footer="www.thebookofshaders.com" data-theme="gaia" data-marpit-pagination="74" data-marpit-pagination-total="95" style="--paginate:true;--background-color:white;--footer:www.thebookofshaders.com;--theme:gaia;background-color:white;background-image:none;" data-marpit-advanced-background="content">
+<p>CPU<br />
+</p>
+<footer><a href="http://www.thebookofshaders.com">www.thebookofshaders.com</a></footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="74" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="white" data-footer="www.thebookofshaders.com" data-theme="gaia" data-marpit-pagination="75" data-marpit-pagination-total="95" style="--paginate:true;--background-color:white;--footer:www.thebookofshaders.com;--theme:gaia;background-color:white;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://thebookofshaders.com/01/04.jpeg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="75" data-paginate="true" data-background-color="white" data-footer="www.thebookofshaders.com" data-theme="gaia" data-marpit-pagination="75" data-marpit-pagination-total="95" style="--paginate:true;--background-color:white;--footer:www.thebookofshaders.com;--theme:gaia;background-color:white;background-image:none;" data-marpit-advanced-background="content">
+<p>GPU</p>
+<footer><a href="http://www.thebookofshaders.com">www.thebookofshaders.com</a></footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="75" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="76" data-paginate="true" data-theme="gaia" data-marpit-pagination="76" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>But</h1>
+<p>Envoyer <strong>le plus de données possible</strong> au GPU, et les traiter le plus <strong>rapidement</strong> possible</p>
+<ul>
+<li>&quot;<strong>upload</strong>&quot; (CPU <img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> GPU) <strong>lent</strong> <img class="emoji" draggable="false" alt="🐢" src="https://twemoji.maxcdn.com/2/svg/1f422.svg" data-marp-twemoji=""/>
+<ul>
+<li><strong>buffers</strong> pour <strong>grouper</strong> les données à transférer</li>
+</ul>
+</li>
+<li>traitement sur place très rapide
+<ul>
+<li>par les <strong>shaders</strong>
+<ul>
+<li>travaillent en <strong>parallèle</strong></li>
+<li>instructions <strong>simples</strong></li>
+<li><strong>compilés</strong> en langage machine pour GPU</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77" data-paginate="true" data-theme="gaia" data-marpit-pagination="77" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>Contraintes</h1>
+<ul>
+<li><strong>Buffers peu flexibles</strong> pour données <strong>dynamiques</strong></li>
+<li>Conversion de <strong>tableaux</strong> en <strong>textures</strong> (pour calculs <strong>GPGPU</strong>)
+<ul>
+<li><strong>conversion</strong> coûteuse pour données dynamiques</li>
+<li>perte de <strong>précision</strong> potentielle</li>
+</ul>
+</li>
+<li><strong>Shaders compliqués</strong> à coder
+<ul>
+<li>pixels <strong>isolés</strong>, traités indépendamment</li>
+<li>instructions <strong>limitées</strong></li>
+<li><strong>performances</strong> et <strong>debug</strong> pas évidents</li>
+</ul>
+</li>
+<li>affichage rapide mais &quot;<strong>download</strong>&quot; (CPU <img class="emoji" draggable="false" alt="⬅️" src="https://twemoji.maxcdn.com/2/svg/2b05.svg" data-marp-twemoji=""/> GPU) <strong><em>très</em> lent</strong> <img class="emoji" draggable="false" alt="🐌" src="https://twemoji.maxcdn.com/2/svg/1f40c.svg" data-marp-twemoji=""/></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="78" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="78" data-marpit-pagination-total="95" style="--paginate:true;--class:lead;--theme:gaia;">
+<h1>OpenGL, est une <strong>machine à états</strong></h1>
+<p>Rappels</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-theme="gaia" data-marpit-pagination="79" data-marpit-pagination-total="95" style="--paginate:true;--background-color:black;--theme:gaia;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://webglfundamentals.org/webgl/lessons/resources/webglfundamentals-webgl-state-diagram.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="79" data-paginate="true" data-background-color="black" data-theme="gaia" data-marpit-pagination="79" data-marpit-pagination-total="95" style="--paginate:true;--background-color:black;--theme:gaia;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="79" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="80" data-paginate="true" data-theme="gaia" data-marpit-pagination="80" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>WebGL est donc aussi une <a href="https://webglfundamentals.org/webgl/lessons/resources/webgl-state-diagram.html">machine à états</a></h1>
+<ul>
+<li>préparation des <strong>données</strong>
+<ul>
+<li>format, type...</li>
+</ul>
+</li>
+<li>préparation de l'<strong>état</strong>
+<ul>
+<li>position, couleur, blending...</li>
+</ul>
+</li>
+<li>rendu
+<ul>
+<li><strong>envoi au GPU</strong> pour traitements par <strong>shaders</strong></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="81" data-class="lead" data-theme="gaia" class="lead" style="--class:lead;--theme:gaia;">
+<h1>OpenGL <strong>Pipeline</strong></h1>
+<p>Rappels</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-background-color="white" data-theme="gaia" style="--background-color:white;--theme:gaia;background-color:white;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://opentechschool-brussels.github.io/intro-to-webGL-and-shaders/assets/log1_graphicPipeline.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="82" data-background-color="white" data-theme="gaia" style="--background-color:white;--theme:gaia;background-color:white;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="83" data-class="lead" data-footer="https://webglfundamentals.org/webgl/lessons/resources/fragment-shader-anim.html" data-theme="gaia" class="lead" style="--class:lead;--footer:https://webglfundamentals.org/webgl/lessons/resources/fragment-shader-anim.html;--theme:gaia;">
+<h1>Rasterization</h1>
+<p><em>Illustration interactive</em></p>
+<p><a href="https://webglfundamentals.org/webgl/lessons/webgl-how-it-works.html">WebGL Fundamentals</a></p>
+<p>by<br />
+<strong>Gregg Tavares</strong> (<a href="https://twitter.com/greggman">@greggman</a>)<br />
+Chrome WebGL implementor</p>
+<footer><a href="https://webglfundamentals.org/webgl/lessons/resources/fragment-shader-anim.html">https://webglfundamentals.org/webgl/lessons/resources/fragment-shader-anim.html</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="84" data-paginate="true" data-theme="gaia" data-marpit-pagination="84" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<iframe style=
+ "position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+  width: 100%;
+  height: 100%;
+  frameborder: 0;"
+   src="https://webglfundamentals.org/webgl/lessons/resources/fragment-shader-anim.html">
+   </iframe>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="85" data-paginate="true" data-theme="gaia" data-marpit-pagination="85" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>Importance des shaders</h1>
+<p>Permettent d'exploiter au maximum le GPU</p>
+<ul>
+<li><strong>rapidité</strong> d'exécution
+<ul>
+<li>des <strong>milliers de cœurs</strong> dans le GPU!</li>
+<li>une fois que les données sont sur le GPU, le code est aussi rapide quelle que soit l'API ou le langage</li>
+</ul>
+</li>
+<li><strong>flexibilité</strong> du rendu
+<ul>
+<li>le pipeline était fixe, non programmable avant 2001</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="86" data-paginate="true" data-theme="gaia" data-marpit-pagination="86" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>Programmation des shaders</h1>
+<ul>
+<li>l'application envoie au GPU:
+<ul>
+<li>des <strong>buffers</strong> (vertex, normales, connectivité...) et des <strong>textures</strong></li>
+<li>les <strong>shaders</strong> à compiler et à exécuter</li>
+</ul>
+</li>
+<li>les <strong>vertex shaders appelés une fois pour chaque vertex</strong></li>
+<li>chaque triangle de vertex est converti en fragments (<em>rasterization</em>)</li>
+<li>les <s>pixel</s> <strong>fragment shaders appelés sur chaque fragment</strong>
+<ul>
+<li>les données en entrée (couleur, profondeur, normales) sont <a href="https://webglfundamentals.org/webgl/lessons/webgl-how-it-works.html"><strong>interpolées</strong> par rapport aux sommets de chaque triangle</a>!</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-theme="gaia" data-marpit-pagination="87" data-marpit-pagination-total="95" style="--paginate:true;--background-color:black;--theme:gaia;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;http://www.unilim.fr/pages_perso/guillaume.gilet/Enseignement/Cours/fig/PipelineGL4.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="87" data-paginate="true" data-background-color="black" data-theme="gaia" data-marpit-pagination="87" data-marpit-pagination-total="95" style="--paginate:true;--background-color:black;--theme:gaia;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="87" data-marpit-pagination-total="95"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="88" data-class="lead" data-footer="https://acko.net/files/fullfrontal/fullfrontal/webglmath/shaders.html" data-theme="gaia" class="lead" style="--class:lead;--footer:https://acko.net/files/fullfrontal/fullfrontal/webglmath/shaders.html;--theme:gaia;">
+<h1>Du triangle au pixel</h1>
+<p><em>Illustration interactive</em></p>
+<p><a href="https://acko.net/files/fullfrontal/fullfrontal/webglmath/shaders.html"><strong>Making WebGL Dance</strong><br />
+</a><br />
+by<br />
+<strong>Steven Wittens</strong></p>
+<footer><a href="https://acko.net/files/fullfrontal/fullfrontal/webglmath/shaders.html">https://acko.net/files/fullfrontal/fullfrontal/webglmath/shaders.html</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="89" data-theme="gaia" style="--theme:gaia;"><iframe style=
+ "position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+  width: 100%;
+  height: 109%;
+  frameborder: 0;"
+   src="https://acko.net/files/fullfrontal/fullfrontal/webglmath/shaders.html">
+   </iframe>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="90" data-paginate="true" data-theme="gaia" data-marpit-pagination="90" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>GLSL: Langage de programmation</h1>
+<ul>
+<li>
+<p>variables</p>
+<ul>
+<li><strong>uniform</strong>: <strong>entrée</strong>, fournie par l'application, <strong>constante</strong> pour tout le programme</li>
+<li><strong>attribute</strong>: <strong>entrée</strong> de vertex shader, fournie par l'application: <strong>donnée du vertex buffer</strong>, <strong>varie par vertex</strong></li>
+<li><strong>varying</strong>: <strong>sortie</strong> de vertex shader / <strong>entrée</strong> de fragment shader</li>
+</ul>
+</li>
+<li>
+<p>fonctions: dialecte du C</p>
+</li>
+<li>
+<p>GLSL pour WebGL 1.0, cf <a href="https://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf">page 3</a></p>
+</li>
+<li>
+<p>GLSL pour WebGL 2.0: version OpenGL ES 3.0, cf <a href="https://www.khronos.org/files/webgl20-reference-guide.pdf">page 8</a></p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="91" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="91" data-marpit-pagination-total="95" style="--paginate:true;--class:lead invert;--theme:gaia;">
+<h1>WebGL</h1>
+<p><strong>Let's code!</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="92" data-paginate="true" data-theme="gaia" data-marpit-pagination="92" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;"></section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="93" data-paginate="true" data-theme="gaia" data-marpit-pagination="93" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<h1>Annexes</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="94" data-paginate="true" data-theme="gaia" data-marpit-pagination="94" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;">
+<ul>
+<li>Histoire de WebGL</li>
+</ul>
+<p><a href="https://web.eecs.umich.edu/~sugih/courses/eecs487/lectures/20-History+ES+WebGL.pdf">https://web.eecs.umich.edu/~sugih/courses/eecs487/lectures/20-History+ES+WebGL.pdf</a></p>
+<ul>
+<li>Cours WebGL 2</li>
+</ul>
+<p><a href="https://perso.univ-rennes1.fr/pierre.nerzic/IMR2/IMR2%20-%20Synth%C3%A8se%20d'images%20-%20CM2.pdf">https://perso.univ-rennes1.fr/pierre.nerzic/IMR2/IMR2 - Synthèse d'images - CM2.pdf</a></p>
+<ul>
+<li>Outils d'analyse, vérification, dump, debug WebGL</li>
+</ul>
+<p><a href="https://github.com/greggman/webgl-helpers#webgl-gl-error-checkjs">https://github.com/greggman/webgl-helpers#webgl-gl-error-checkjs</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="95" data-paginate="true" data-theme="gaia" data-marpit-pagination="95" data-marpit-pagination-total="95" style="--paginate:true;--theme:gaia;"></section>
+<script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>![bg](https://images.unsplash.com/photo-1594047752131-1ec0a6dfa4fc)</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>&lt;!-- _footer: photo de couverture par @Bappie: https://images.unsplash.com/photo-1594047752131-1ec0a6dfa4fc</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p># ![height:110px](https://www.isep.fr/wp-content/themes/isep/img/logo_isep.svg)</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>![bg right](https://d201n44z4ifond.cloudfront.net/wp-content/uploads/sites/6/2019/10/16165332/Screen-Shot-2019-10-15-at-12.56.22-PM.png)</p><p>![bg left:50%](https://events.3ds.com/sites/default/files/styles/playground_experience_medium/public/2019-03/immersive-collaboration-experience-tribe-2-experience-1_0.PNG)</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>![bg](https://media.wired.com/photos/59267509f3e2356fd80094d1/master/pass/Singapore_Bishan_windsim_HP.jpg)</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>![bg fit](https://mms.businesswire.com/media/20141112006720/en/441072/4/Dassault_Systemes_Living_Heart_1.jpg)</p><p>![bg 110%](http://www.cao.fr/images_cp/plein/6772.jpg)</p></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>source: https://web.eecs.umich.edu/~sugih/courses/eecs487/lectures/20-History+ES+WebGL.pdf</p></div><div class="bespoke-marp-note" data-index="33" tabindex="0"><p>![bg right vertical fit](https://steemitimages.com/p/KWcVEiwEzuiBTRjkbQErt6ge69ftc1GVX4fCr3en9K5bs5hCcEWsc6RNrn4oJbz7d748cj3ToFWMzCn4gM)</p></div><div class="bespoke-marp-note" data-index="36" tabindex="0"><p>WebGL stack</p></div><div class="bespoke-marp-note" data-index="86" tabindex="0"><p>![bg fit](https://tech.metail.com/wp-content/uploads/2018/05/webgl01.png)</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.5.2/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";const e=document.body,t=(...e)=>history.replaceState(...e),n="presenter",r="next",o=["",n,r],a="data-bespoke-marp-",i=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},s=()=>e.dataset.bespokeView,l=e=>new URLSearchParams(location.search).get(e),c=(e,n={})=>{var r;const o={location,setter:t,...n},a=new URLSearchParams(o.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?a.set(t,n):a.delete(t)}try{o.setter({...null!==(r=window.history.state)&&void 0!==r?r:{}},"",i(a,o.location))}catch(e){console.error(e)}},d=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(e){return!1}})(),f=e=>{try{return localStorage.getItem(e)}catch(e){return null}},u=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},m=e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}},g=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},p=e=>{e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach((e=>e.classList.add("bespoke-marp-slide"))),e.on("activate",(t=>{const n="bespoke-marp-active",r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach((e=>{e.classList.remove(n),g(e,!0)})),o.add(n),g(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}}))},v=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${a}fragment`,(i?"":"in")+"active");const s=`${a}current-fragment`;t===r&&n===o?e.setAttribute(s,"current"):e.removeAttribute(s)}))})),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",(({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}})),e.on("prev",(({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)})),o(0,0)},h=document,y=()=>!(!h.fullscreenEnabled&&!h.webkitFullscreenEnabled),x=()=>!(!h.fullscreenElement&&!h.webkitFullscreenElement),w=e=>{e.fullscreen=()=>{y()&&(async()=>{return x()?null===(e=h.exitFullscreen||h.webkitExitFullscreen)||void 0===e?void 0:e.call(h):((e=h.body)=>{var t;return null===(t=e.requestFullscreen||e.webkitRequestFullscreen)||void 0===t?void 0:t.call(e)})();var e})()},document.addEventListener("keydown",(t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!y()||(e.fullscreen(),t.preventDefault())}))},b="bespoke-marp-inactive",k=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout((()=>{r.add(b),o()}),e),r.contains(b)&&(r.remove(b),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},E=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],L=e=>{e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(E.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))},$=e=>{window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute(`${a}load`,e)}}))},P=({interval:e=250}={})=>t=>{document.addEventListener("keydown",(e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,o=0;t.parent.addEventListener("wheel",(a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),(null==e?void 0:e.parentElement)&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const l=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let f;(a.deltaX>0||a.deltaY>0)&&(f="next"),(a.deltaX<0||a.deltaY<0)&&(f="prev"),f&&(t[f](),o=Date.now())}))},S=(e=".bespoke-marp-osc")=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${a}osc=${JSON.stringify(e)}]`).forEach(n)};return y()||n("fullscreen",(e=>e.style.display="none")),d||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?null==e||e.fullscreen():"presenter"===n&&e.openPresenterView()}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:o})=>{n("prev",(e=>e.disabled=0===t&&0===o)),n("next",(n=>n.disabled=t===e.slides.length-1&&o===r.length-1))})),e.on("marp-active",(()=>g(t,!1))),e.on("marp-inactive",(()=>g(t,!0))),y()&&(e=>{for(const t of["","webkit"])h.addEventListener(t+"fullscreenchange",e)})((()=>n("fullscreen",(e=>e.classList.toggle("exit",y()&&x())))))}},I=e=>{window.addEventListener("message",(t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}}))};var T=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let A=e=>String(e).replace(/[&<>"']/g,(e=>`&${C[e]};`)),C={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},N="dangerouslySetInnerHTML",K={className:"class",htmlFor:"for"},O={};function D(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==N&&(r+=` ${K[e]?K[e]:A(e)}="${A(t[e])}"`);r+=">"}if(-1===T.indexOf(e)){if(t[N])r+=t[N].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===O[e]?e:A(e)}r+=e?`</${e}>`:""}return O[r]=!0,r}const M=({children:e})=>D(null,null,...e),q="bespoke-marp-presenter-",_={container:`${q}container`,next:`${q}next`,nextContainer:`${q}next-container`,noteContainer:`${q}note-container`,infoContainer:`${q}info-container`,infoPage:`${q}info-page`,infoPageText:`${q}info-page-text`,infoPagePrev:`${q}info-page-prev`,infoPageNext:`${q}info-page-next`,infoTime:`${q}info-time`,infoTimer:`${q}info-timer`},U=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=_.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",D(M,null,D("div",{class:_.nextContainer},D("iframe",{class:_.next,src:"?view=next"})),D("div",{class:_.noteContainer}),D("div",{class:_.infoContainer},D("div",{class:_.infoPage},D("button",{class:_.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),D("span",{class:_.infoPageText}),D("button",{class:_.infoPageNext,tabindex:"-1",title:"Next"},"Next")),D("time",{class:_.infoTime,title:"Current time"}),D("div",{class:_.infoTimer})))),t})(e.parent)),(e=>{r(_.nextContainer).addEventListener("click",(()=>e.next()));const t=r(_.next),n=(o=t,(e,t)=>{var n;return null===(n=o.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var o;t.addEventListener("load",(()=>{r(_.nextContainer).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>n(e,t)))}));const a=document.querySelectorAll(".bespoke-marp-note");a.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(_.noteContainer).appendChild(e)})),e.on("activate",(()=>a.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide()))))),e.on("activate",(({index:t})=>{r(_.infoPageText).textContent=`${t+1} / ${e.slides.length}`}));const i=r(_.infoPagePrev),s=r(_.infoPageNext);i.addEventListener("click",(t=>{i.blur(),e.prev({fragment:!t.shiftKey})})),s.addEventListener("click",(t=>{s.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{i.disabled=0===t&&0===r,s.disabled=t===e.slides.length-1&&r===n.length-1}));const l=()=>r(_.infoTime).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)},V=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:X},presenterUrl:{enumerable:!0,get:F}}),d&&document.addEventListener("keydown",(t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))};function X(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,q+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function F(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),i(e)}const B=e=>{const t=s();return t===r&&e.appendChild(document.createElement("span")),{"":V,[n]:U,[r]:I}[t]},R=e=>{e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))},j=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},H=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),l=o(0,r(n||0,a[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((j(location.hash.slice(1))||1)-1,t.fragment?j(l("f")||""):null)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||c({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{o(),window.addEventListener("hashchange",(()=>r((()=>{o({fragment:!1}),c({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>o()))})),n=!1}),0)}},Y=(e={})=>{var n;const r=e.key||(null===(n=window.history.state)||void 0===n?void 0:n.marpBespokeSyncKey)||Math.random().toString(36).slice(2),o=`bespoke-marp-sync-${r}`;var a;a={marpBespokeSyncKey:r},c({},{setter:(e,...n)=>t({...e,...a},...n)});const i=()=>{const e=f(o);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=i(),n={...t,...e(t)};return u(o,JSON.stringify(n)),n},l=()=>{window.removeEventListener("pageshow",l),s((e=>({reference:(e.reference||0)+1})))};return e=>{l(),Object.defineProperty(e,"syncKey",{value:r,enumerable:!0});let t=!0;setTimeout((()=>{e.on("fragment",(e=>{t&&s((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(n=>{if(n.key===o&&n.oldValue&&n.newValue){const r=JSON.parse(n.oldValue),o=JSON.parse(n.newValue);if(r.index!==o.index||r.fragmentIndex!==o.fragmentIndex)try{t=!1,e.slide(o.index,{fragment:o.fragmentIndex})}finally{t=!0}}}));const n=()=>{const{reference:e}=i();void 0===e||e<=1?m(o):s((()=>({reference:e-1})))};window.addEventListener("pagehide",(e=>{e.persisted&&window.addEventListener("pageshow",l),n()})),e.on("destroy",n)}},{PI:J,abs:W,sqrt:z,atan2:G}=Math,Q={passive:!0},Z=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",(({touches:e})=>{r=1===e.length?a(e[0]):void 0}),Q),o.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=z(W(n)**2+W(o)**2),r.radian=G(n,o)}else r=void 0})),o.addEventListener("touchend",(o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+J)%(2*J)-J;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}}),Q)},ee="_tA",te=e=>{const t=document.documentTransition;if(!t)return;let n;e._tP=!1;const r=(n,{back:r,cond:o})=>a=>{const i=e.slides[e.slide()].querySelector("section[data-transition]");if(!i)return!0;const s=document.querySelector(".bespoke-marp-osc"),l=s?[s]:void 0;if(e._tP){if(a._tA){e._tP=!1;try{t.start({sharedElements:l}).catch((()=>{}))}catch(e){}return!0}}else{if(!o(a))return!0;e._tP=t.prepare({rootTransition:a.back||r?i.dataset.transitionBack:i.dataset.transition,sharedElements:l}).then((()=>n(a))).catch((()=>n(a)))}return!1};e.on("prev",r((t=>e.prev({...t,[ee]:!0})),{back:!0,cond:e=>{var t;return e.index>0&&!((null===(t=e.fragment)||void 0===t||t)&&n.fragmentIndex>0)}})),e.on("next",r((t=>e.next({...t,[ee]:!0})),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout((()=>{e.on("slide",r((t=>e.slide(t.index,{...t,[ee]:!0})),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))}),0),e.on("fragment",(e=>{n=e}))};let ne;const re=()=>(void 0===ne&&(ne="wakeLock"in navigator&&navigator.wakeLock),ne),oe=async()=>{const e=re();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},ae=async()=>{if(!re())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await oe(),e};((t=document.getElementById("p"))=>{(()=>{const t=l("view");e.dataset.bespokeView=t===r||t===n?t:""})();const a=(e=>{const t=l(e);return c({[e]:void 0}),t})("sync")||void 0;var i,d,f,u,m,g,h,y,x,b,E,I;i=t,d=((...e)=>{const t=o.findIndex((e=>s()===e));return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[1,1,0],Y({key:a})],[[1,1,1],B(t)],[[1,1,0],L],[[1,1,1],p],[[1,0,0],k()],[[1,1,1],$],[[1,1,1],H({history:!1})],[[1,1,0],P()],[[1,1,0],w],[[1,0,0],R],[[1,1,0],Z()],[[1,0,0],S()],[[1,0,0],te],[[1,1,1],v],[[1,1,0],ae]),u=1===(i.parent||i).nodeType?i.parent||i:document.querySelector(i.parent||i),m=[].filter.call("string"==typeof i.slides?u.querySelectorAll(i.slides):i.slides||u.children,(function(e){return"SCRIPT"!==e.nodeName})),g={},h=function(e,t){return(t=t||{}).index=m.indexOf(e),t.slide=e,t},b=function(e,t){m[e]&&(f&&x("deactivate",h(f,t)),f=m[e],x("activate",h(f,t)))},E=function(e,t){var n=m.indexOf(f)+e;x(e>0?"next":"prev",h(f,t))&&b(n,t)},I={off:y=function(e,t){g[e]=(g[e]||[]).filter((function(e){return e!==t}))},on:function(e,t){return(g[e]||(g[e]=[])).push(t),y.bind(null,e,t)},fire:x=function(e,t){return(g[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},slide:function(e,t){if(!arguments.length)return m.indexOf(f);x("slide",h(m[e],t))&&b(e,t)},next:E.bind(null,1),prev:E.bind(null,-1),parent:u,slides:m,destroy:function(e){x("destroy",h(f,e)),g={}}},(d||[]).forEach((function(e){e(I)})),f||b(0)})()}();</script></body></html>

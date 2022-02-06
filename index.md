@@ -2,15 +2,15 @@
 
 # Web 3D in 2022
 
-## [Presentation](./web3d_presentation_20220202.html)
+## [Presentation](./web3d_presentation_20220206.html)
 
-## [Projects](./web3d_projects_20220202.html)
+## [Projects](./web3d_projects_20220206.html)
 
 ---
 
 # Web AR in 2021
 
-## [Presentation](./ar_presentation_20210201.html)
+## [Presentation](./ar_presentation_20210206.html)
 
 ## [Projects](./ar_projects_20210201.html)
 

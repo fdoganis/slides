@@ -12,7 +12,7 @@
 
 ## [Presentation](./ar_presentation_20220206.html)
 
-## [Projects](./ar_projects_20220206.html)
+## [Projects](./ar_projects_20220209.html)
 
 ## [Extra: body tracking](./bodytracking.md)
 

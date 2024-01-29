@@ -1,6 +1,6 @@
 
 
-# Web 3D in 2023
+# Web 3D in 2024
 
 ## [Presentation](./web3d_presentation_20240129.html)
 

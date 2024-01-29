@@ -2,9 +2,9 @@
 
 # Web 3D in 2023
 
-## [Presentation](./web3d_presentation_20230204.html)
+## [Presentation](./web3d_presentation_20240129.html)
 
-## [Projects](./web3d_projects_20230303.html)
+## [Projects](./web3d_projects_20240129.html)
 
 ---
 

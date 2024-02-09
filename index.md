@@ -6,6 +6,8 @@
 
 ## [Projects](./web3d_projects_20240129.html)
 
+## [Extra: physics with Cannon](./cannon.md)
+
 ---
 
 # Web AR in 2023

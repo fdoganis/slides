@@ -2,15 +2,11 @@
 
 A few tips for using the Cannon phyiscs library with THREE.js
 
-
-## Basic THREE JS example
-
-https://github.com/pmndrs/cannon-es/blob/master/examples/threejs.html
+## Basic THREE JS example
 
 https://github.com/pmndrs/cannon-es/blob/master/examples/threejs.html
 
 ## THREE vs CANNON
-
 
 | THREE | CANNON |
 | --- | --- |
@@ -27,15 +23,12 @@ https://github.com/pmndrs/cannon-es/blob/master/examples/threejs.html
 
 See https://pmndrs.github.io/cannon-es/docs/
 
-
 ```javascript
 const world = new CANNON.World({
   gravity: new CANNON.Vec3(0, -9.81, 0)
 })
 
 ```
-
-
 
 ## Update
 
@@ -64,9 +57,9 @@ animate()
 
 https://github.com/schteppe/cannon.js/issues/257
 
-
 https://stackoverflow.com/questions/72719561/applyimpulse-and-applyforce-accumulate-forces-they-dont-replace-them
 
 ##  Trigger
 
 https://github.com/pmndrs/cannon-es/blob/master/examples/trigger.html
+

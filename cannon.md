@@ -63,3 +63,14 @@ https://stackoverflow.com/questions/72719561/applyimpulse-and-applyforce-accumul
 
 https://github.com/pmndrs/cannon-es/blob/master/examples/trigger.html
 
+## Debugger
+
+https://www.npmjs.com/package/cannon-es-debugger
+
+![](https://i.imgur.com/2Bf8KfJ.png)
+
+try it here:
+
+https://pmndrs.github.io/cannon-es-debugger/
+
+

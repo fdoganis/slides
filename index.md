@@ -2,9 +2,9 @@
 
 # Web 3D in 2024
 
-## [Presentation](./web3d_presentation_20240129.html)
+## [Presentation](./web3d_presentation_20240216.html)
 
-## [Projects](./web3d_projects_20240129.html)
+## [Projects](./web3d_projects_20240216.html)
 
 ## [Extra: physics with Cannon](./cannon.md)
 

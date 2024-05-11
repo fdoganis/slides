@@ -20,6 +20,12 @@
 
 ---
 
+# Project Development
+
+## [Guide](./project_20240512.html)
+
+---
+
 # Atelier Web 3D AR VR 2021
 
 ## [Atelier de programmation (stage découverte)](./Atelier_programmation_Web3D_AR_VR.html)

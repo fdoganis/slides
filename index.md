@@ -1,4 +1,10 @@
+# ENSIMAG Technological Conference - 2024-10-04
 
+## [AR Introduction](./ar_tech_conf_20240929.html)
+
+## [WebXR Projects](./webxr_intro_20240929.html)
+
+---
 
 # Web 3D in 2024
 

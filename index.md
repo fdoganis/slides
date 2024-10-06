@@ -1,4 +1,27 @@
-# ENSIMAG Technological Conference - 2024-10-04
+
+# EPITA Augmented Reality Course - 2024-10-09
+
+## Web 3D
+
+### Presentation
+- [Online](./web3d_presentation_EPITA_20241006.html)
+- [PDF](./web3d_presentation_EPITA_20241006.pdf)
+
+### Projects
+- [Online](./web3d_projects_20240216.html)
+
+## Web AR
+
+### Presentation
+- [Online](./ar_tech_conf_20241005.html)
+
+### Projects
+- [Online](./ar_projects_20240226.html)
+
+
+---
+
+# ENSIMAG Technology Conference - 2024-10-04
 
 ## [AR Introduction](./ar_tech_conf_20241005.html)
 
@@ -12,7 +35,6 @@
 
 ## [Projects](./web3d_projects_20240216.html)
 
-## [Extra: physics with Cannon](./cannon.md)
 
 ---
 
@@ -22,13 +44,16 @@
 
 ## [Projects](./ar_projects_20240226.html)
 
-## [Extra: body tracking](./bodytracking.md)
 
 ---
 
-# Project Development
+# Extras
 
-## [Guide](./project_20240512.html)
+## [Project Development Guide](./project_20240512.html)
+
+## [Physics with Cannon](./cannon.md)
+
+## [Body tracking](./bodytracking.md)
 
 ---
 

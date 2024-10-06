@@ -8,7 +8,9 @@
 - [PDF](./web3d_presentation_EPITA_20241006.pdf)
 
 ### Projects
-- [Online](./web3d_projects_20240216.html)
+- [Online](./web3d_projects_EPITA_20241007.html)
+- [PDF](./web3d_projects_EPITA_20241007.pdf)
+
 
 ## Web AR
 

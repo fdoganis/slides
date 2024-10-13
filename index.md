@@ -51,6 +51,8 @@
 
 # Extras
 
+## [THREE.js Tips](./threejs_tips.md)
+
 ## [Project Development Guide](./project_20240512.html)
 
 ## [Physics with Cannon](./cannon.md)

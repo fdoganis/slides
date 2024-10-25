@@ -73,4 +73,9 @@ try it here:
 
 https://pmndrs.github.io/cannon-es-debugger/
 
+## Tutorial
+
+Excellent tutorial with code demonstrating dice physics
+
+https://tympanus.net/codrops/2023/01/25/crafting-a-dice-roller-with-three-js-and-cannon-es/
 

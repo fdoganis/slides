@@ -15,10 +15,10 @@
 ## Web AR
 
 ### Presentation
-- [Online](./ar_tech_conf_20241005.html)
+- [Online](./ar_presentation_20241028.html)
 
 ### Projects
-- [Online](./ar_projects_20240226.html)
+- [Online](./ar_projects_20241028.html)
 
 
 ---

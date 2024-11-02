@@ -15,10 +15,12 @@
 ## Web AR
 
 ### Presentation
-- [Online](./ar_presentation_20241028.html)
+- [Online](./ar_presentation_EPITA_20241102.html)
+- [PDF](./ar_presentation_EPITA_20241102.pdf)
 
 ### Projects
-- [Online](./ar_projects_20241028.html)
+- [Online](./ar_projects_EPITA_20241102.html)
+- [PDF](./ar_projects_EPITA_20241102.html)
 
 
 ---

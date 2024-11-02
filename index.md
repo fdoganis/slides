@@ -20,7 +20,7 @@
 
 ### Projects
 - [Online](./ar_projects_EPITA_20241102.html)
-- [PDF](./ar_projects_EPITA_20241102.html)
+- [PDF](./ar_projects_EPITA_20241102.pdf)
 
 
 ---

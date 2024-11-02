@@ -190,3 +190,17 @@ https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language
 - Stats
 - VR stats
 
+### Dump SceneGraph
+
+```js
+(function printGraph( obj ) {
+    console.group( ' <%o> ' + obj.name, obj );
+    obj.children.forEach( printGraph );    
+    console.groupEnd();
+} ( scene ) );
+```
+
+See https://github.com/mrdoob/three.js/issues/10961
+
+
+

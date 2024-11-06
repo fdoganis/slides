@@ -133,7 +133,9 @@ https://github.com/mrdoob/three.js/blob/master/examples/webgl_geometry_dynamic.h
 
 ## Instancing
 
-See batching example
+You can draw thusands copies of the same object for free!
+
+See instancing example: https://threejs.org/examples/webgl_instancing_performance
 
 ## TWEEN / GSAP for smooth interpolation
 

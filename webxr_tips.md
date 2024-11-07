@@ -6,182 +6,252 @@ Subtleties and best practices
 - you can search the examples
 - you can check the code of each example by clicking on the `<>` icon
 
+### 1️⃣ AR Cones
 
-## Give a `name` to your objects 
+https://threejs.org/examples/webxr_ar_cones
 
-so that you can use [`getObjectByName`](https://threejs.org/docs/#api/en/core/Object3D.getObjectByName)
+Simplest AR example: when you tap on your mobile a cone appears
+- WebXR AR module ```immersive-ar``` initilization sequence
+- ```select``` event, XR equivalent to ```click```
+
+### 2️⃣ AR Hit Test
+
+https://threejs.org/examples/webxr_ar_hittest
+
+Cast a ray on real world planar surfaces
+- WebXR ```hit-test``` feature request
+- interaction with the world
+
+
+### 3️⃣ XR Dragging
+
+![](https://threejs.org/examples/screenshots/webxr_xr_dragging.jpg)
+
+https://threejs.org/examples/webxr_xr_dragging
+
+Select cubes and drag them around
+- ```selectstart``` and ```selectend``` events, XR equivalents to ```mousedown``` or ```touchstart``` and ```mouseup``` or ```touchend```
+- ```object.attach()``` method to temporarily make an object follow the controller
+- interesting use of ```object.userData```
+- ```ShadowMaterial``` on the ground
+- check if the current event comes from the ```screen``` of the device using
 
 ```js
-scene.getObjectByName('name')
+event.data.targetRayMode === 'screen'
 ```
 
-It also makes debugging easier.
+See WebXR API
 
-:warning: Slow method, do not use during the animation loop.
-:point_right: Retrieve the object once and [store it in a variable](https://discourse.threejs.org/t/effeciency-of-getobjectbyname-getobjectid/55014/2)
+https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRayMode
 
-## [`userData`](https://threejs.org/docs/#api/en/core/Object3D.userData) is your friend
 
-You can store anything in it, here are a few [examples](https://github.com/mrdoob/three.js/search?utf8=%E2%9C%93&q=userdata): 
+which points to
 
-```js
-obj.userData.velocity.x = ...
-```
-See https://threejs.org/examples/webxr_xr_cubes.html
+https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API/Inputs
 
-```js
-obj.userData.isSelecting = true
-```
-See https://threejs.org/examples/webxr_xr_sculpt.html
+### 4️⃣ Ball Shooter
 
-```js
-userData.physicsBody
-```
-See https://threejs.org/examples/physics_ammo_cloth.html
+https://threejs.org/examples/webxr_xr_ballshooter
 
-```js
-object.userData.mass
-```
-See https://threejs.org/examples/physics_ammo_break.html
+![](https://threejs.org/examples/screenshots/webxr_xr_ballshooter.jpg)
 
-## Performance issues? Check the number of draw calls
+- instancing for improved performance
+- ```connected``` and ```disconnected``` events on controller
 
-```js
-console.log(renderer.info.render.calls) 
-```
+## Advanced Features
 
-## [`Group`](https://threejs.org/docs/index.html?q=group#api/en/objects/Group) your objects
+### Depth sensing for realistic occlusions
 
-Consider this as a single matrix, an empty object with children but no geometry 
+![](https://threejs.org/examples/screenshots/webxr_xr_dragging_custom_depth.jpg)
 
-## Avoid scaling your objects
+https://threejs.org/examples/webxr_xr_dragging_custom_depth
 
-- Add to group, and transform group
-- Or [`applyMatrix4`](https://threejs.org/docs/#api/en/core/Object3D.applyMatrix4) on geometry
+Ask for the depth of the frame to hide virtual object behind real ones (not widely implemented, works great on Meta Quest 3)
 
-:warning: Slow! Modifies the vertex buffer!
+- WebXR ```depth-sensing``` feature request
+- custom depth processing on the GPU using shaders
 
-## Use [`lookAt`](https://threejs.org/docs/index.html#api/en/core/Object3D.lookAt) for easy rotations
+### Mesh occlusions
 
-Often used for the camera but can be used for any object.
+You can use any mesh to occlude virtual objects. You need to set ```colorWrite = false```, ```depthWrite = true``` and ```depthTest = true```.
+Works great with hands or wit a mesh of the real world that you might have scanned beforehand
 
-See the last part of https://threejs.org/manual/#en/scenegraph
+### AR Shadows
 
-## Hide / Show objects with [`obj.visible`](https://threejs.org/docs/index.html#api/en/core/Object3D.visible)
+Shadows are essential in AR and VR. They give cues to the brain to understand how far an object is from the ground.
 
-## Parse children
+Use ```ShadowMaterial``` a transparent material which can receive shadows
 
-- using `traverse`
-- See webgl_loader_3ds :
+https://threejs.org/docs/#api/en/materials/ShadowMaterial
+
+Example: https://threejs.org/examples/webxr_xr_dragging
+
 
 ```js
-object.traverse / scene.traverse 
-  if(child.isMesh) child.material.map = ...
+const floorGeometry = new THREE.PlaneGeometry( 6, 6 );
+const floorMaterial = new THREE.ShadowMaterial( { opacity: 0.25, blending: THREE.CustomBlending, transparent: false } );
+const floor = new THREE.Mesh( floorGeometry, floorMaterial );
+floor.rotation.x = - Math.PI / 2;
+floor.receiveShadow = true;
+scene.add( floor );
+
 ```
 
-- using `obj.children.includes`
-or other [Array](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/) methods
+### Haptic feedback
 
+![](https://threejs.org/examples/screenshots/webxr_xr_haptics.jpg)
 
-## Object manipulation
+https://threejs.org/examples/webxr_xr_haptics
 
-```js
-obj.position.set
-
-obj.rotateX
-
-obj.position.distanceTo // most basic collision detection
-```
-
-## Center an object in its bounding box
+Make your VR controller vibrate
 
 ```js
-const mesh = new THREE.Mesh(geometry, createMaterial());
-geometry.computeBoundingBox();
-geometry.boundingBox.getCenter(mesh.position).multiplyScalar(-1);
-```
+const supportHaptic = 'hapticActuators' in gamepad && gamepad.hapticActuators != null && gamepad.hapticActuators.length > 0;
 
-See https://threejs.org/manual/#en/primitives
-(search textgeometry)
+if(supportHaptic) {
+  gamepad.hapticActuators[0].pulse(intensity, 100);
 
-## How to modify Geometry
-
-Example: 
-
-```js
- 
-const position = geometry.attributes.position;
-
-position.usage = THREE.DynamicDrawUsage;
-for ( let i = 0; i < position.count; i ++ ) {
-  const y = 35 * Math.sin( i / 2 );
-  position.setY( i, y );
 }
 ```
 
-See 
-
-https://sbcode.net/threejs/geometry-to-buffergeometry/
-
-https://github.com/mrdoob/three.js/blob/master/examples/webgl_geometry_dynamic.html
-
-
-## Instancing
-
-See batching example
-
-## TWEEN / GSAP for smooth interpolation
-
-- GSAP : cannot be used in commercial projects, avoid it
-- TWEEN : import TWEEN
+On your android phone you can use the vibration API (sadly unavailable on iOS as of nov 2024))
 
 ```js
-import TWEEN from 'three/addons/libs/tween.module.js';
+navigator.vibrate(200); // vibrate for 200ms
+navigator.vibrate([
+  100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
+]); // Vibrate 'SOS' in Morse.
+```
+
+### Eye tracking (Apple Vision Pro)
+
+
+
+Use ```transient-pointer```
+
+See https://webkit.org/blog/15162/introducing-natural-input-for-webxr-in-apple-vision-pro/
+
+
+### WebXR Lighting
+
+ https://github.com/immersive-web/lighting-estimation/blob/main/lighting-estimation-explainer.md
+
+on iOS
+
+```js
+frame.getGlobalLightEstimate().then(lightProbe => {
+  const ambientIntensity = lightProbe.indirectIrradiance; // @TODO: Fix me
+  ambientLight.intensity = ambientIntensity;
+  directionalLight.intensity = ambientIntensity * 0.5;
+});
+```
+
+### WebXR world sensing
+
+
+https://github.com/immersive-web/real-world-geometry
+
+https://immersive-web.github.io/real-world-meshing/
+
+
+iOS
+
+https://github.com/MozillaReality/webxr-ios-js/blob/master/examples/sensing/index.html
+
+
+
+```js
+let worldInfo = frame.worldInformation;
+
+if (worldInfo.meshes) 
+...
+
 ```
 
 
-Tutorial:
+## Device Detection
 
-https://sbcode.net/threejs/tween/
+Make your WebXR app as responsive and cross-platform as possible. Reuse this code (MIT License) to detect the type of your current device
+
+https://github.com/aframevr/aframe/blob/master/src/utils/device.js
+
+Alternativly, you can use
+
+```js
+event.data.targetRayMode === 'screen'
+```
+
+as explained earlier
+
+## Gestures
+
+No more gestures, they need to be recoded from scratch. Here is an example (**WARNING: DO NOT reuse as-is, GPL license**)
+
+https://github.com/NikLever/XRGestures/
+
+## You can't move the camera!
+
+The camera is "connected" to your head (or phone camera)
+
+### Retrieve the head of the user
+
+In raw WebXR: 
+
+```js
+XRFrame.getViewerPose();
+```
+
+In THREE.js, the pose of the head of the user is copied to the current camera, see
+
+three.js/src/renderers/webxr
+/WebXRManager.js
+
+You simply need to retrieve the position of the camera to get the head of the user
 
 
 
-## Lifecycle / dispose
+## No more HTML Buttons
 
-See https://threejs.org/manual/#en/cleanup
+Unless WebXR DOM overlays are supported
 
-## Shadows / Lights
+https://github.com/immersive-web/dom-overlays
 
-See https://threejs.org/examples/webgl_lights_hemisphere
- 
-## Three js Math
+## Hand detection
 
-:warning: Objects are referenced, not copied by default.
-Use `clone()`
-Define and reuse temp vectors, quaternions, matrices
-     
+See https://threejs.org/examples/webxr_vr_handinput_profiles
 
-## Matrices
+## Controller / Gamepad
 
-Local matrix: relative to parent
-World matrix: relative to scene
-       
-## Custom shaders
+Use Gamepad API https://www.w3.org/TR/gamepad/
+WebXR Gamepad API https://immersive-web.github.io/webxr-gamepads-module/#dom-xrinputsource-gamepad
 
-## Three Shading Language (NEW!)
+Or a wrapper suche as https://github.com/felixtrz/gamepad-wrapper
 
-https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language
+## WebXR Viewer / XR Player (iOS only)
 
-- Simpler than raw `glsl`
-- More robust
-- Optimized
-- Renderer agnostic (your shaders will still work with `webgpu`)
+### Face
 
-## Useful for debugging
+https://github.com/MozillaReality/webxr-ios-js/blob/master/examples/face_tracking/index.html
 
-- Helpers
-- Orbitcontrols
-- Dat.gui
-- Stats
-- VR stats
+No WebXR equivalent
+
+https://github.com/immersive-web/body-tracking/blob/main/explainer.md
+
+
+
+### Image detection
+
+https://github.com/MozillaReality/webxr-ios-js/blob/master/examples/image_detection/index.html
+
+See WebXR tracked image draft
+
+https://github.com/MozillaReality/webxr-ios-js/blob/master/examples/image_detection/index.html
+
+
+https://immersive-web.github.io/marker-tracking/
+
+
+## Fonts
+
+Use 3D Text, troika text, MeshUI or vrsandbox example HTMLMesh
 

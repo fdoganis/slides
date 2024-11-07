@@ -61,6 +61,8 @@
 
 ## [Body tracking](./bodytracking.md)
 
+## [WebXR Tips](./webxr_tips.md)
+
 ---
 
 # Atelier Web 3D AR VR 2021

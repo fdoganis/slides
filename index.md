@@ -41,38 +41,13 @@
           <img src="./web3d_projects.png"  alt="Projects" width = 480px >
          </a>
     </td>
-  </tr>
-  <tr>
-    <td> 
-          <a href="./threejs_tips.md">
-          <strong>THREE.js Tips</strong>
-         </a>
-    </td>
-  </tr>
-  <tr>
-    <td> 
-          <a href="./threejs_tips.md">
-          <img src="https://user-images.githubusercontent.com/5307958/38454395-eba34a8a-3a90-11e8-9c95-680a7aea037f.png"  alt="THREE.js Tips" width = 480px >
-         </a>
-    </td>
-  </tr>
-  <tr>
-      <td> 
-          <a href="./cannon.md">
-          <strong>Physics with Cannon</strong>
-         </a>
-      </td>
-  </tr>
-  <tr>
-    <td> 
-          <a href="./cannon.md">
-          <img src="https://pmndrs.github.io/cannon-es/screenshots/performance.png"  alt="Physics" width = 480px >
-         </a>
-    </td>
-  </tr>      
+  </tr>  
 </table>
 
 
+- Extras
+  - [THREE.js Tips](./threejs_tips.md)
+  - [Physics with Cannon](./cannon.md)
 
 # Web AR Course
 
@@ -107,37 +82,12 @@
          </a>
     </td>
   </tr>
-  <tr>
-    <td> 
-          <a href="./webxr_tips.md">
-          <strong>WebXR Tips</strong>
-         </a>
-    </td>
-  </tr>
-  <tr>
-    <td> 
-          <a href="./webxr_tips.md">
-          <img src="https://immersive-web.github.io/webxr-samples/media/logo/webxr-logo.svg"  alt="WebXR Tips" width = 480px >
-         </a>
-    </td>
-  </tr>
-  <tr>
-    <td> 
-          <a href="./bodytracking.md">
-          <strong>Body Tracking</strong>
-         </a>
-    </td>
-  </tr>      
-  <tr>
-    <td> 
-          <a href="./bodytracking.md">
-          <img src="https://camo.githubusercontent.com/d8bf9cd2301888bd4f1551dc8187833fe1cc7137f7b19e896651f8195dec9ff9/68747470733a2f2f6d65646961706970652e6465762f6173736574732f696d672f70686f746f732f686f6c69737469635f312e6a7067"  alt="Body Tracking" width = 480px >
-         </a>
-    </td>
-  </tr>      
 </table>
 
 
+- Extras
+  - [WebXR Tips](./webxr_tips.md)
+  - [Body tracking](./bodytracking.md)
 
 
 

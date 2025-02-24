@@ -11,9 +11,6 @@
 ## Web 3D Course
 
 
-
-
-
 <table style="padding:10px">
   <tr>
     <td> 
@@ -22,7 +19,6 @@
          </a>
          <a href="./web3d_presentation_20250201.pdf">[PDF]</a>
     </td>
-
   </tr>
   <tr>
     <td> 
@@ -30,7 +26,6 @@
           <img src="./web3d_presentation.png"  alt="Presentation" width = 480px >
          </a>
     </td>
-
   </tr>
     <tr>
     <td> 
@@ -74,7 +69,6 @@
          </a>
     </td>
   </tr>      
-  
 </table>
 
 
@@ -141,7 +135,6 @@
          </a>
     </td>
   </tr>      
-  
 </table>
 
 

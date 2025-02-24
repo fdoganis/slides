@@ -105,13 +105,17 @@
 # [Project Development](./project_20240512.html)
 
 <table style="padding:10px">
+<tr>
+         <a href="./ar_presentation_20250224.html">
+         <strong>Project Development Guide</strong>
+</tr>
   <tr>
     <td> 
          <a href="./ar_presentation_20250224.html">
-         <strong>Project Development Guide</strong>
           <img src="https://images.unsplash.com/photo-1527567018838-584d3468eb85"  alt="Project Development Guide" width = 480px >
          </a>
     </td>
+    </tr>
 </table>
 
 

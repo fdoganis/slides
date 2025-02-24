@@ -102,16 +102,17 @@
 
 
 
-# [Project Development](./project_20240512.html)
+# Project Development
 
 <table style="padding:10px">
 <tr>
-         <a href="./ar_presentation_20250224.html">
+         <a href="./project_20240512.html">
          <strong>Project Development Guide</strong>
+         </a>
 </tr>
   <tr>
     <td> 
-         <a href="./ar_presentation_20250224.html">
+         <a href="./project_20240512.html">
           <img src="https://images.unsplash.com/photo-1527567018838-584d3468eb85"  alt="Project Development Guide" width = 480px >
          </a>
     </td>

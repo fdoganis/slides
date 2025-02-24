@@ -73,7 +73,6 @@
 </table>
 
 
----
 
 # Web AR Course
 
@@ -145,24 +144,23 @@
 # Project Development
 
 <table style="padding:10px">
-<tr>
-  <td> 
+  <tr>
+    <td> 
          <a href="./project_20240512.html">
          <strong>Project Development Guide</strong>
          </a>
-          </td>
-</tr>
+    </td>
+  </tr>
   <tr>
     <td> 
          <a href="./project_20240512.html">
           <img src="https://images.unsplash.com/photo-1527567018838-584d3468eb85"  alt="Project Development Guide" width = 480px >
          </a>
     </td>
-    </tr>
+  </tr>
 </table>
 
 
----
 
 # 2024
 
@@ -195,9 +193,6 @@
 
 
 
-
----
-
 <br>
 
 <a href="https://ensimag.grenoble-inp.fr"><img src="https://upload.wikimedia.org/wikipedia/fr/5/54/Grenoble_INP_-_Ensimag_%28logo%29.svg" width="100" ></a>
@@ -210,7 +205,7 @@
 
 ## [WebXR Projects](./webxr_intro_20241005.html)
 
----
+
 
 # 2021
 
@@ -221,7 +216,6 @@
 
 ## [Atelier de programmation (stage découverte)](./Atelier_programmation_Web3D_AR_VR.html)
 
----
 
 
 ## Source: https://github.com/fdoganis/slides

@@ -55,29 +55,29 @@
 <table style="padding:10px">
   <tr>
     <td> 
-         <a href="./ar_presentation_20250224.html">
+         <a href="./ar_presentation_ENSG_20250224.html">
          <strong>Presentation</strong>
          </a>
-         <a href="./ar_presentation_20250224.pdf">[PDF]</a>
+         <a href="./ar_presentation_ENSG_20250224.pdf">[PDF]</a>
     </td>
   </tr>
   <tr>
     <td> 
-         <a href="./ar_presentation_20250224.html">
+         <a href="./ar_presentation_ENSG_20250224.html">
           <img src="./ar_presentation.png"  alt="Presentation" width = 480px >
          </a>
     </td>
   </tr>
   <tr>
     <td> 
-          <a href="./ar_projects_202502241.html">
-          <strong>Projects</strong>
-          <a href="./ar_projects_202502241.pdf">[PDF]</a>
+          <a href="./ar_projects_ENSG_20250224.html">
+          <strong>Projects</strong></a>
+          <a href="./ar_projects_ENSG_20250224.pdf">[PDF]</a>
     </td>
   </tr>
   <tr>
     <td> 
-          <a href="./ar_projects_202502241.html">
+          <a href="./ar_projects_ENSG_20250224.html">
           <img src="./ar_projects.png"  alt="Projects" width = 480px >
          </a>
     </td>

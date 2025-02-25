@@ -49,7 +49,7 @@
   - [THREE.js Tips](./threejs_tips.md)
   - [Physics with Cannon](./cannon.md)
 
-# Web AR Course
+## Web AR Course
 
 
 <table style="padding:10px">
@@ -91,7 +91,7 @@
 
 
 
-# Project Development
+## Project Development
 
 <table style="padding:10px">
   <tr>

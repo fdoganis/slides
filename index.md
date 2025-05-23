@@ -2,6 +2,30 @@
 # 2025
 
 
+
+<a href="https://ensg.eu/"><img src="
+https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-Cit%C3%A9_%28partenariat_Wikim%C3%A9dia%29.svg" width="100" ></a>
+
+<table style="padding:10px">
+  <tr>
+    <td> 
+         <a href="./etudiants_sante_num.html">
+         <strong>Comment intéresser les étudiants en informatique aux projets de santé numérique (FR)</strong>
+         </a>
+        <a href="./etudiants_sante_num.pdf">[PDF]</a>
+    </td>
+  </tr>
+  <tr>
+    <td> 
+         <a href="./etudiants_sante_num.html">
+          <img src="./etudiants_sante_num.png"  alt="Comment intéresser les étudiants en informatique aux projets de santé numérique (FR)" width = 480px >
+         </a>
+    </td>
+  </tr>
+</table>
+
+
+
 <br>
 
 <a href="https://ensg.eu/"><img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Logo-ENSG-couleur-2023.svg" width="100" ></a>

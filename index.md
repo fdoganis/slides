@@ -2,6 +2,28 @@
 # 2025
 
 
+<table style="padding:10px">
+  <tr>
+    <td> 
+         <a href="./gaussian_splats_web.html">
+         <strong>Gaussian What?! Rendering Gaussian Splats on the Web</strong>
+         </a>
+        <a href="./gaussian_splats_web.pdf">[PDF]</a>
+    </td>
+  </tr>
+  <tr>
+    <td> 
+         <a href="./gaussian_splats_web.html">
+          <img src="./gaussian_splats_web.png"  alt="Gaussian What?! Rendering Gaussian Splats on the Web" width = 480px >
+         </a>
+    </td>
+  </tr>
+</table>
+
+
+
+<br>
+
 
 <a href="https://ensg.eu/"><img src="
 https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-Cit%C3%A9_%28partenariat_Wikim%C3%A9dia%29.svg" width="100" ></a>

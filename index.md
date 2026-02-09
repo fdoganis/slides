@@ -1,56 +1,8 @@
 
-# 2025
+# 2026
 
 
-<table style="padding:10px">
-  <tr>
-    <td> 
-         <a href="./gaussian_splats_web.html">
-         <strong>Gaussian What?! Rendering Gaussian Splats on the Web</strong>
-         </a>
-        <a href="./gaussian_splats_web.pdf">[PDF]</a>
-    </td>
-  </tr>
-  <tr>
-    <td> 
-         <a href="./gaussian_splats_web.html">
-          <img src="./gaussian_splats_web.png"  alt="Gaussian What?! Rendering Gaussian Splats on the Web" width = 480px >
-         </a>
-    </td>
-  </tr>
-</table>
-
-
-
-<br>
-
-
-<a href="https://ensg.eu/"><img src="
-https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-Cit%C3%A9_%28partenariat_Wikim%C3%A9dia%29.svg" width="100" ></a>
-
-<table style="padding:10px">
-  <tr>
-    <td> 
-         <a href="./etudiants_sante_num.html">
-         <strong>Comment intéresser les étudiants en informatique aux projets de santé numérique (FR)</strong>
-         </a>
-        <a href="./etudiants_sante_num.pdf">[PDF]</a>
-    </td>
-  </tr>
-  <tr>
-    <td> 
-         <a href="./etudiants_sante_num.html">
-          <img src="./etudiants_sante_num.png"  alt="Comment intéresser les étudiants en informatique aux projets de santé numérique (FR)" width = 480px >
-         </a>
-    </td>
-  </tr>
-</table>
-
-
-
-<br>
-
-<a href="https://ensg.eu/"><img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Logo-ENSG-couleur-2023.svg" width="100" ></a>
+<a href="https://geodata-paris.fr/"><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Logo_GeoData_Paris_2025.svg" width="100" ></a>
 
 <br>
 
@@ -60,30 +12,30 @@ https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-C
 <table style="padding:10px">
   <tr>
     <td> 
-         <a href="./web3d_presentation_20250201.html">
+         <a href="./web3d_presentation_20260209.html">
          <strong>Presentation</strong>
          </a>
-         <a href="./web3d_presentation_20250201.pdf">[PDF]</a>
+         <a href="./web3d_presentation_20260209.pdf">[PDF]</a>
     </td>
   </tr>
   <tr>
     <td> 
-         <a href="./web3d_presentation_20250201.html">
+         <a href="./web3d_presentation_20260209.html">
           <img src="./web3d_presentation.png"  alt="Presentation" width = 480px >
          </a>
     </td>
   </tr>
   <tr>
     <td> 
-          <a href="./web3d_projects_20250201.html">
+          <a href="./web3d_projects_20260209.html">
           <strong>Projects</strong>
          </a>
-          <a href="./web3d_projects_20250201.pdf">[PDF]</a>
+          <a href="./web3d_projects_20260209.pdf">[PDF]</a>
     </td>
   </tr>
   <tr>
     <td> 
-          <a href="./web3d_projects_20250201.html">
+          <a href="./web3d_projects_20260209.html">
           <img src="./web3d_projects.png"  alt="Projects" width = 480px >
          </a>
     </td>
@@ -156,6 +108,58 @@ https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-C
   </tr>
 </table>
 
+
+
+# 2025
+
+
+<table style="padding:10px">
+  <tr>
+    <td> 
+         <a href="./gaussian_splats_web.html">
+         <strong>Gaussian What?! Rendering Gaussian Splats on the Web</strong>
+         </a>
+        <a href="./gaussian_splats_web.pdf">[PDF]</a>
+    </td>
+  </tr>
+  <tr>
+    <td> 
+         <a href="./gaussian_splats_web.html">
+          <img src="./gaussian_splats_web.png"  alt="Gaussian What?! Rendering Gaussian Splats on the Web" width = 480px >
+         </a>
+    </td>
+  </tr>
+</table>
+
+
+
+<br>
+
+
+<a href="https://u-paris.fr/"><img src="
+https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-Cit%C3%A9_%28partenariat_Wikim%C3%A9dia%29.svg" width="100" ></a>
+
+<table style="padding:10px">
+  <tr>
+    <td> 
+         <a href="./etudiants_sante_num.html">
+         <strong>Comment intéresser les étudiants en informatique aux projets de santé numérique (FR)</strong>
+         </a>
+        <a href="./etudiants_sante_num.pdf">[PDF]</a>
+    </td>
+  </tr>
+  <tr>
+    <td> 
+         <a href="./etudiants_sante_num.html">
+          <img src="./etudiants_sante_num.png"  alt="Comment intéresser les étudiants en informatique aux projets de santé numérique (FR)" width = 480px >
+         </a>
+    </td>
+  </tr>
+</table>
+
+
+
+<br>
 
 
 # 2024

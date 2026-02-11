@@ -5,7 +5,7 @@
 # 2026
 
 
-<a href="https://geodata-paris.fr/"><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Logo_GeoData_Paris_2025.svg" width="100" ></a>
+<a href="https://geodata-paris.fr/"><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Logo_GeoData_Paris_2025.svg" width="250" ></a>
 
 <br>
 
@@ -140,7 +140,7 @@
 
 
 <a href="https://u-paris.fr/"><img src="
-https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-Cit%C3%A9_%28partenariat_Wikim%C3%A9dia%29.svg" width="100" ></a>
+https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-Cit%C3%A9_%28partenariat_Wikim%C3%A9dia%29.svg" width="200" ></a>
 
 <table style="padding:10px">
   <tr>
@@ -169,7 +169,7 @@ https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-C
 
 <br>
 
-<a href="https://www.epita.fr"><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Epita.png/640px-Epita.png" width="100" ></a>
+<a href="https://www.epita.fr"><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Epita.png/640px-Epita.png" width="150" ></a>
 
 <br>
 
@@ -198,7 +198,7 @@ https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-C
 
 <br>
 
-<a href="https://ensimag.grenoble-inp.fr"><img src="https://upload.wikimedia.org/wikipedia/fr/5/54/Grenoble_INP_-_Ensimag_%28logo%29.svg" width="100" ></a>
+<a href="https://ensimag.grenoble-inp.fr"><img src="https://upload.wikimedia.org/wikipedia/fr/5/54/Grenoble_INP_-_Ensimag_%28logo%29.svg" width="200" ></a>
 
 <br>
 
@@ -212,7 +212,7 @@ https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-C
 
 # 2021
 
-<a href="https://www.3ds.com"><img src="https://upload.wikimedia.org/wikipedia/fr/1/14/Logo-dassault-systemes-3ds.svg" width="100" ></a>
+<a href="https://www.3ds.com"><img src="https://upload.wikimedia.org/wikipedia/fr/1/14/Logo-dassault-systemes-3ds.svg" width="200" ></a>
 
 
 # Atelier Web 3D AR VR

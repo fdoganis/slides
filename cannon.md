@@ -19,7 +19,7 @@ A few tips for using the Cannon phyiscs library with THREE.js
 | .quaternion| .quaternion |
 | static object| body.mass = 0 |
 
-> [!WARNING]
+> \[!WARNING]
 > `THREE` and `CANNON` objects don't always have the same conventions for the center of the object and its dimensions.
 
 ```javascript
@@ -43,7 +43,7 @@ More info here:
 
 [https://sbcode.net/threejs/physics-cannonjs/](https://sbcode.net/threejs/physics-cannonjs/)
 
-# Init wth gravity
+## Init with gravity
 
 See [https://pmndrs.github.io/cannon-es/docs/]([https://pmndrs.github.io/cannon-es/docs/)
 

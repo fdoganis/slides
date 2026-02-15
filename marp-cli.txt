@@ -55,4 +55,8 @@ section {
 
 ```
 
+No install:
 
+```
+npx @marp-team/marp-cli@latest ./project.md --html
+```

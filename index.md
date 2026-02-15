@@ -97,14 +97,14 @@
 <table style="padding:10px">
   <tr>
     <td> 
-         <a href="./project_20240512.html">
+         <a href="./project.html">
          <strong>Project Development Guide</strong>
          </a>
     </td>
   </tr>
   <tr>
     <td> 
-         <a href="./project_20240512.html">
+         <a href="./project.html">
           <img src="https://images.unsplash.com/photo-1527567018838-584d3468eb85"  alt="Project Development Guide" width = 480px >
          </a>
     </td>

@@ -60,3 +60,11 @@ No install:
 ```
 npx @marp-team/marp-cli@latest ./project.md --html
 ```
+
+PDF:
+
+```
+npx @marp-team/marp-cli@latest ./project.md --html --pdf
+
+npx compress-pdf --file project.pdf --output project_comp.pdf
+```

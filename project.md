@@ -468,8 +468,8 @@ a {
 **E**ntity **C**omponent **S**ystem 
 
 
-![bg right fit vertical](https://blog.mozvr.com/content/images/2019/10/ECSY-Architecture.svg)
-![bg right fit](https://blog.mozvr.com/content/images/2019/10/Circles-and-balls-example-1.svg)
+![bg right fit vertical](https://ecsyjs.github.io/ecsy/docs/manual/images/ECSY%20Architecture.svg)
+![bg right fit](https://ecsyjs.github.io/ecsy/docs/manual/images/dragons.svg)
 
 ##  Articles
 - [Mozilla](https://blog.mozvr.com/introducing-ecsy/)

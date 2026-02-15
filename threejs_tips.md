@@ -22,8 +22,9 @@ scene.getObjectByName('name')
 
 It also makes debugging easier.
 
-:warning: Slow method, do not use during the animation loop.
-:point_right: Retrieve the object once and [store it in a variable](https://discourse.threejs.org/t/effeciency-of-getobjectbyname-getobjectid/55014/2)
+⚠️ **Slow** method, do not use during the animation loop.
+
+👉 Retrieve the object once and [store it in a variable](https://discourse.threejs.org/t/effeciency-of-getobjectbyname-getobjectid/55014/2)
 
 ## [`userData`](https://threejs.org/docs/#api/en/core/Object3D.userData) is your friend
 
@@ -32,22 +33,22 @@ You can store anything in it, here are a few [examples](https://github.com/mrdoo
 ```js
 obj.userData.velocity.x = ...
 ```
-See https://threejs.org/examples/webxr_xr_cubes.html
+See [https://threejs.org/examples/webxr_xr_cubes.html](https://threejs.org/examples/webxr_xr_cubes.html)
 
 ```js
 obj.userData.isSelecting = true
 ```
-See https://threejs.org/examples/webxr_xr_sculpt.html
+See [https://threejs.org/examples/webxr_xr_sculpt.html](https://threejs.org/examples/webxr_xr_sculpt.html)
 
 ```js
 userData.physicsBody
 ```
-See https://threejs.org/examples/physics_ammo_cloth.html
+See [https://threejs.org/examples/physics_ammo_cloth.html](https://threejs.org/examples/physics_ammo_cloth.html)
 
 ```js
 object.userData.mass
 ```
-See https://threejs.org/examples/physics_ammo_break.html
+See [https://threejs.org/examples/physics_ammo_break.html](https://threejs.org/examples/physics_ammo_break.html)
 
 ## Performance issues? Check the number of draw calls
 
@@ -64,7 +65,7 @@ Consider this as a single matrix, an empty object with children but no geometry
 - Add to group, and transform group
 - Or [`applyMatrix4`](https://threejs.org/docs/#api/en/core/Object3D.applyMatrix4) on geometry
 
-:warning: Slow! Modifies the vertex buffer!
+⚠️ **Slow**! Modifies the vertex buffer!
 
 ## Use [`lookAt`](https://threejs.org/docs/index.html#api/en/core/Object3D.lookAt) for easy rotations
 
@@ -106,7 +107,7 @@ geometry.computeBoundingBox();
 geometry.boundingBox.getCenter(mesh.position).multiplyScalar(-1);
 ```
 
-See https://threejs.org/manual/#en/primitives
+See [https://threejs.org/manual/#en/primitives](https://threejs.org/manual/#en/primitives)
 (search textgeometry)
 
 ## How to modify Geometry
@@ -126,16 +127,17 @@ for ( let i = 0; i < position.count; i ++ ) {
 
 See 
 
-https://sbcode.net/threejs/geometry-to-buffergeometry/
+[https://sbcode.net/threejs/geometry-to-buffergeometry/](https://sbcode.net/threejs/geometry-to-buffergeometry/)
 
-https://github.com/mrdoob/three.js/blob/master/examples/webgl_geometry_dynamic.html
+[https://github.com/mrdoob/three.js/blob/master/examples/webgl_geometry_dynamic.html](https://github.com/mrdoob/three.js/blob/master/examples/webgl_geometry_dynamic.html)
 
 
 ## Instancing
 
 You can draw thusands copies of the same object for free!
 
-See instancing example: https://threejs.org/examples/webgl_instancing_performance
+See instancing example: [https://threejs.org/examples/webgl_instancing_performance](https://threejs.org/examples/webgl_instancing_performance
+)
 
 ## TWEEN / GSAP for smooth interpolation
 
@@ -149,22 +151,24 @@ import TWEEN from 'three/addons/libs/tween.module.js';
 
 Tutorial:
 
-https://sbcode.net/threejs/tween/
+[https://sbcode.net/threejs/tween/](https://sbcode.net/threejs/tween/)
 
 
 
 ## Lifecycle / dispose
 
-See https://threejs.org/manual/#en/cleanup
+See [https://threejs.org/manual/#en/cleanup](https://threejs.org/manual/#en/cleanup)
 
 ## Shadows / Lights
 
-See https://threejs.org/examples/webgl_lights_hemisphere
+See [https://threejs.org/examples/webgl_lights_hemisphere](https://threejs.org/examples/webgl_lights_hemisphere)
  
 ## Three js Math
 
-:warning: Objects are referenced, not copied by default.
+⚠️ Objects are **referenced**, not copied by default.
+
 Use `clone()`
+
 Define and reuse temp vectors, quaternions, matrices
      
 
@@ -177,7 +181,7 @@ World matrix: relative to scene
 
 ## Three Shading Language (NEW!)
 
-https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language
+[https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language](https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language)
 
 - Simpler than raw `glsl`
 - More robust
@@ -202,7 +206,7 @@ https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language
 } ( scene ) );
 ```
 
-See https://github.com/mrdoob/three.js/issues/10961
+See [https://github.com/mrdoob/three.js/issues/10961](https://github.com/mrdoob/three.js/issues/10961)
 
 
 

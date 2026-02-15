@@ -19,7 +19,7 @@ A few tips for using the Cannon phyiscs library with THREE.js
 | .quaternion| .quaternion |
 | static object| body.mass = 0 |
 
-`:warning:` `THREE` and `CANNON` objects don't always have the same conventions for the center of the object and its dimensions.
+⚠️ `THREE` and `CANNON` objects don't always have the same conventions for the center of the object and its dimensions.
 
 ```javascript
 const cubeGeometry = new THREE.BoxGeometry(1, 1, 1)

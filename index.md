@@ -47,7 +47,7 @@
 
 
 - Extras
-  - [THREE.js Tips](./threejs_tips.md)
+  - [**THREE.js Tips**](./threejs_tips.md) ⭐️
   - [Physics with Cannon](./cannon.md)
 
 ## Web AR Course
@@ -87,7 +87,7 @@
 
 
 - Extras
-  - [WebXR Tips](./webxr_tips.md)
+  - [**WebXR Tips**](./webxr_tips.md) ⭐️
   - [Body tracking](./bodytracking.md)
 
 
@@ -169,7 +169,7 @@ https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-C
 
 <br>
 
-<a href="https://www.epita.fr"><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Epita.png/640px-Epita.png" width="150" ></a>
+<a href="https://www.epita.fr"><img src="https://upload.wikimedia.org/wikipedia/fr/d/d8/Epita.png" width="150" ></a>
 
 <br>
 
@@ -224,4 +224,4 @@ https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Universit%C3%A9_Paris-C
 ## Source: https://github.com/fdoganis/slides
 
 <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/fdoganis/slides" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star fdoganis/slides on GitHub">Star</a>
+<a class="github-button" href="https://github.com/fdoganis/slides" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star fdoganis/slides on GitHub">Star fdoganis/slides on GitHub</a>

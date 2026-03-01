@@ -255,3 +255,13 @@ https://immersive-web.github.io/marker-tracking/
 
 Use 3D Text, troika text, MeshUI or vrsandbox example HTMLMesh
 
+
+## Best Alternative iOS WebXR Browsers
+
+| Logo | App Name | Open Source | App Clip? | Launch URL format | Pros | Cons |
+|---|---|:-:|:-:|---|---|---|
+| ![HelloXR](https://www.google.com/s2/favicons?sz=64&domain_url=https://helloxr.app) | [HelloXR](https://apps.apple.com/us/app/helloxr/id6757726359) | ✅ | ✅| `https://helloxr.app/?url=<url>` | [Open](https://github.com/wem-technology/ios-webxr) + Fast + App Clip + simple URL param | Solo project; docs vary |
+| ![Needle Go](https://www.google.com/s2/favicons?sz=64&domain_url=https://engine.needle.tools) | [Needle Go (Needle App Clip)](https://apps.apple.com/us/app/needle-go/id6757205152) | ⚠️ (no License) | ✅| `https://appclip.needle.tools/ar?url=<url>` | [**Free to use + works with vanilla three.js**](https://engine.needle.tools/docs/how-to-guides/xr/ios-webxr-app-clip.html) ⭐️ | Hosted App Clip; licensing for commercial usage |
+| ![XRBrowser](https://github.com/arenaxr.png?size=64)| [XRBrowser](https://apps.apple.com/us/app/xr-browser/id1588029989) | ✅| ❌| App install + deep link (scheme) `xrbrowser://<url>`  | [Open iOS WebXR viewer lineage](https://github.com/arenaxr/XRBrowser) | Not an App Clip |
+| ![Mozilla WebXR iOS](https://raw.githubusercontent.com/mozilla-mobile/webxr-ios/refs/heads/master/XRViewer/Resources/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5%402x.png) | [Mozilla WebXR Viewer](https://apps.apple.com/us/app/webxr-viewer/id1295998056) | ✅| ❌| App install + deep link (scheme) `webxrviewer://<url>` | [Original open reference implementation](https://github.com/mozilla-mobile/webxr-ios) | Not an App Clip; unmaintained |
+| ![Brrrowser](https://raw.githubusercontent.com/Web3Kev/Brrrowser/refs/heads/main/assets/IconBrrr.png)| [Brrrowser](https://apps.apple.com/us/app/brrrowser/id6747417026) | ❌ (uses HelloXR) | ⚠️ (undocumented) | Undocumented | WebXR + [**Advanced Haptics**](https://github.com/Web3Kev/Brrrowser) ⭐️| App Clip trigger URL/host not published|
